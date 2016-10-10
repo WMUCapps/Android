@@ -1,7 +1,6 @@
 package wmuc.radio;
 
-import android.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +9,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Schedule extends AppCompatActivity implements View.OnClickListener {
+public class Schedule extends Activity implements View.OnClickListener {
 
     private Button DIGButton;
     private Button FMButton;
