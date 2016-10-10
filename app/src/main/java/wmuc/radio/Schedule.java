@@ -20,7 +20,7 @@ public class Schedule extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-
+ 
         DIGButton = (Button) findViewById(R.id.DIG);
         DIGButton.setOnClickListener(this);
         FMButton = (Button) findViewById(R.id.FM);
