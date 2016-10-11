@@ -20,7 +20,7 @@ public class Schedule extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
- 
+
         DIGButton = (Button) findViewById(R.id.DIG);
         DIGButton.setOnClickListener(this);
         FMButton = (Button) findViewById(R.id.FM);
@@ -59,7 +59,7 @@ public class Schedule extends Activity implements View.OnClickListener {
             sh.setText("Digital");
             webView.loadUrl("http://wmuc.umd.edu/station/schedule/0/2?#now");
         }
-        if (v == FMButton && sh.getText().equals("Digital")) {
+        else if (v == FMButton && sh.getText().equals("Digital")) {
             sh.setText("FM");
             webView.loadUrl("http://wmuc.umd.edu/station/schedule?#now");
         }

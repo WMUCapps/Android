@@ -56,7 +56,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Animation dig_grow_to_pause;
     private Animation pause_dig;
     private Animation fm_grow_to_pause;
-    private MediaCodecAudioTrackRenderer audioRenderer;
+    private MediaCodecAudioTrackRenderer audioRenderer ;
     private PlayerControl playerControl;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
@@ -246,7 +246,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
     private void addDrawerItems() {
         String[] osArray = {"Schedule", "Settings" };
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
+        mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
