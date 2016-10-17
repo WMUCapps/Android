@@ -1,8 +1,7 @@
 package wmuc.radio;
 
-import android.app.ActionBar;
+import android.app.Activity;
 import android.graphics.drawable.AnimationDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +9,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 
-public class settings extends AppCompatActivity  implements View.OnClickListener {
+public class settings extends Activity implements View.OnClickListener {
 
 
     private CheckBox kit;
