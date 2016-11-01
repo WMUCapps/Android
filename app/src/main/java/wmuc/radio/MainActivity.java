@@ -3,19 +3,26 @@ package wmuc.radio;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.exoplayer.ExoPlayer;
@@ -42,54 +49,114 @@ public class MainActivity extends Activity implements OnClickListener {
     private ProgressBar playSeekBar;
     private boolean enableButton = true;
     private boolean playing = false;
-    private Animation justslideLeft;
-    private Animation justslideRightCenter;
-    private Animation justShrinkLeft;
-    private Animation justShrinkRight;
     private boolean digHit = false;
     private  boolean fmHit = false;
-    private Animation slideRight;
-    private Animation shrinkRight;
-    private Animation slideLeft;
-    private Animation shrinkLeft;
-    private Animation pause_fm;
-    private Animation dig_grow_to_pause;
-    private Animation pause_dig;
-    private Animation fm_grow_to_pause;
     private MediaCodecAudioTrackRenderer audioRenderer ;
     private PlayerControl playerControl;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
+    private final int ORIGINAL = 0, SHIFTED = 1;
+    private int originalHeight = 0;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-/*
+
     private void moveViewToScreenCenter( View view )
     {
+        RelativeLayout root = (RelativeLayout) findViewById(R.id.root);
+        float xDest;
+        DisplayMetrics dm = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+        int originalPos[] = new int[2];
+        view.getLocationOnScreen(originalPos);
+        int viewOffset = dm.heightPixels - root.getMeasuredHeight();
+
+        xDest = dm.widthPixels/2;
+        xDest -= (view.getMeasuredWidth() / 2);
+
+        float heightAdj = dm.heightPixels/2 - (originalHeight/2) - viewOffset;
+
+
+        TranslateAnimation move = new TranslateAnimation(0, xDest - originalPos[0], 0, heightAdj - originalPos[1]);
+        move.setDuration(400);
+        //anim.setInterpolator(new DecelerateInterpolator());
+        move.setFillAfter( true );
+        Log.d("Original Position!!", ": " + originalPos[0]);
+        view.startAnimation(move);
+    }
+
+    private void growAnim ( View view ) {
+        view.setPivotX(view.getMeasuredWidth()/2);
+        view.setPivotY(view.getMeasuredHeight()/2);
+        ScaleAnimation grow = new ScaleAnimation(1f,1.5f,1f,1.5f);
+        grow.setDuration(400);
+        grow.setFillAfter( true );
+        view.startAnimation(grow);
+    }
+
+    private void moveViewToRightSide( View view , int state)
+    {
+        TranslateAnimation move;
         view.setPivotX(50);
         view.setPivotY(50);
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics( dm );
         int originalPos[] = new int[2];
         view.getLocationOnScreen(originalPos);
-        float xDest = dm.widthPixels/2;
+        float xDest =(float)11 * dm.widthPixels/12;
         xDest -= (view.getWidth()/2);
         AnimationSet anim = new AnimationSet (true);
-        float heightAdj = (float)1.5 * view.getHeight()/2;
+        float heightAdj = (float)1.2 * view.getHeight()/2;
 
-        TranslateAnimation move = new TranslateAnimation(0, xDest - originalPos[0], 0, heightAdj);
-        ScaleAnimation grow = new ScaleAnimation(1f,1.5f,1f,1.5f);
+
+        if(state == SHIFTED) {
+            move = new TranslateAnimation((float) -.55 * dm.widthPixels / 2,
+                    xDest - originalPos[0], 0, heightAdj);
+        } else {
+            move = new TranslateAnimation(0, xDest - originalPos[0], 0, heightAdj);
+        }
+        ScaleAnimation shrink = new ScaleAnimation(1f,.65f,1f,.65f);
         anim.addAnimation(move);
-        anim.addAnimation(grow);
+        anim.addAnimation(shrink);
         anim.setDuration(400);
         anim.setInterpolator(new DecelerateInterpolator());
         anim.setFillAfter( true );
         view.startAnimation(anim);
     }
 
-*/
+    private void moveViewToLeftSide( View view , int state)
+    {
+        TranslateAnimation move;
+        view.setPivotX(50);
+        view.setPivotY(50);
+        DisplayMetrics dm = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+        int originalPos[] = new int[2];
+        view.getLocationOnScreen(originalPos);
+        float xDest =(float)0.50 * dm.widthPixels/3;
+        xDest -= (view.getWidth()/2);
+        AnimationSet anim = new AnimationSet (true);
+        float heightAdj = (float)1.2 * view.getHeight()/2;
+
+        if(state == SHIFTED) {
+            move = new TranslateAnimation((float) .4 * dm.widthPixels / 2,
+                    xDest - originalPos[0], 0, heightAdj);
+        } else {
+            move = new TranslateAnimation(0, xDest - originalPos[0], 0, heightAdj);
+        }
+        ScaleAnimation shrink = new ScaleAnimation(1f,.65f,1f,.65f);
+        anim.addAnimation(move);
+        anim.addAnimation(shrink);
+        anim.setDuration(400);
+        anim.setInterpolator(new DecelerateInterpolator());
+        anim.setFillAfter( true );
+        view.startAnimation(anim);
+    }
+
+
     public void onClick(View v) {
         playing = playerControl.isPlaying();
         Log.d("THE BUCK STOPS HERE", "hopefully " + playing);
@@ -98,12 +165,14 @@ public class MainActivity extends Activity implements OnClickListener {
             if (v == DIGButton && !digHit) {
 
                 if (!fmHit){
-                v.startAnimation(justslideRightCenter);
-                FMButton.startAnimation(justShrinkRight);
-            }
+                    moveViewToScreenCenter(findViewById(R.id.DIG));
+                    //growAnim(findViewById(R.id.DIG));
+                    moveViewToRightSide(findViewById(R.id.FM), ORIGINAL);
+                }
                 else{
-                    v.startAnimation(slideRight);
-                    FMButton.startAnimation(shrinkRight);
+                    moveViewToScreenCenter(findViewById(R.id.DIG));
+                    //growAnim(findViewById(R.id.DIG));
+                    moveViewToRightSide(findViewById(R.id.FM), SHIFTED);
                 }
 
                 digHit = true;
@@ -120,12 +189,14 @@ public class MainActivity extends Activity implements OnClickListener {
             else if (v == FMButton && !fmHit) {
 
                 if (!digHit) {
-                v.startAnimation(justslideLeft);
-                    DIGButton.startAnimation(justShrinkLeft);
+                    moveViewToScreenCenter(findViewById(R.id.FM));
+                    growAnim(findViewById(R.id.FM));
+                    moveViewToLeftSide(findViewById(R.id.DIG), ORIGINAL);
                 }
                 else{
-                    v.startAnimation(slideLeft);
-                    DIGButton.startAnimation(shrinkLeft);
+                    moveViewToScreenCenter(findViewById(R.id.FM));
+                    growAnim(findViewById(R.id.FM));
+                    moveViewToLeftSide(findViewById(R.id.DIG), SHIFTED);
                 }
 
 
@@ -140,15 +211,11 @@ public class MainActivity extends Activity implements OnClickListener {
             }
             else if (v == playButton) {
                 if (fmHit && playing) {
-                    FMButton.startAnimation(pause_fm);
                     stopPlaying();
-                    DIGButton.startAnimation(dig_grow_to_pause);
-                    fmHit = false;
+                    playing = false;
                 } else if (digHit && playing) {
                     stopPlaying();
-                    DIGButton.startAnimation(pause_dig);
-                    FMButton.startAnimation(fm_grow_to_pause);
-                    digHit = false;
+                    playing = false;
                 } else if (!fmHit && !digHit && !playing) {
                     Context context = getApplicationContext();
                     CharSequence text = "Please select a station.";
@@ -158,9 +225,8 @@ public class MainActivity extends Activity implements OnClickListener {
                     toast.show();
 
                 } else {
-                    if (!playing) {
+                        initializeExoPlayer();
                         startPlaying();
-                    }
                 }
             }
         }
@@ -192,6 +258,7 @@ public class MainActivity extends Activity implements OnClickListener {
         DIGButton.setOnClickListener(this);
         FMButton = (ImageButton) findViewById(R.id.FM);
         FMButton.setOnClickListener(this);
+        originalHeight = findViewById(R.id.DIG).getMeasuredHeight();
         initializeExoPlayer();
 
 
@@ -219,18 +286,6 @@ public class MainActivity extends Activity implements OnClickListener {
         Log.d("Creating", "does the log even work");
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        justslideRightCenter = AnimationUtils.loadAnimation(this, R.anim.anim_slide_right);
-        justShrinkRight = AnimationUtils.loadAnimation(this, R.anim.just_shrink_right);
-        justslideLeft = AnimationUtils.loadAnimation(this, R.anim.anim_slide_left);
-        justShrinkLeft = AnimationUtils.loadAnimation(this, R.anim.just_shrink_left);
-        slideRight = AnimationUtils.loadAnimation(this, R.anim.anim_slide_dig_right);
-        shrinkRight = AnimationUtils.loadAnimation(this, R.anim.shrink_fm_right);
-        slideLeft = AnimationUtils.loadAnimation(this, R.anim.anim_slide_fm_left);
-        shrinkLeft = AnimationUtils.loadAnimation(this, R.anim.shrink_dg_left);
-        pause_fm = AnimationUtils.loadAnimation(this, R.anim.pause_fm);
-        dig_grow_to_pause = AnimationUtils.loadAnimation(this, R.anim.dig_grow_to_pause);
-        pause_dig = AnimationUtils.loadAnimation(this, R.anim.pause_dig);
-        fm_grow_to_pause = AnimationUtils.loadAnimation(this, R.anim.fm_grow_to_pause);
         setContentView(R.layout.activity_main);
         initializeUIElements();
 
