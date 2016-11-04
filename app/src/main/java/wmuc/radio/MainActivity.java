@@ -64,7 +64,7 @@ public class MainActivity extends Activity implements OnClickListener {
      */
     private GoogleApiClient client;
 
-    private void moveViewToScreenCenter( final View view ){
+    private void moveViewToScreenCenter( final View view, int pos ){
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics( dm );
 
@@ -78,10 +78,15 @@ public class MainActivity extends Activity implements OnClickListener {
         animSet.setFillAfter(true);
         animSet.setDuration(400);
         animSet.setInterpolator(new DecelerateInterpolator());
-        TranslateAnimation translate = new TranslateAnimation( 0, xDelta , 0, yDelta);
+        TranslateAnimation translate;
+        if ( pos == ORIGINAL ) {
+            translate = new TranslateAnimation(0, xDelta, 0, yDelta);
+        } else {
+            translate = new TranslateAnimation(0, xDelta, 120f, yDelta);
+        }
         animSet.addAnimation(translate);
         ScaleAnimation scale;
-        if( view == findViewById(R.id.DIG)) {
+        if (view == findViewById(R.id.DIG)) {
             scale = new ScaleAnimation(1f, 1.5f, 1f, 1.5f, ScaleAnimation.RELATIVE_TO_PARENT, .53f, ScaleAnimation.RELATIVE_TO_PARENT, .5f);
         } else {
             scale = new ScaleAnimation(1f, 1.5f, 1f, 1.5f, ScaleAnimation.RELATIVE_TO_PARENT, .80f, ScaleAnimation.RELATIVE_TO_PARENT, .5f);
@@ -157,11 +162,11 @@ public class MainActivity extends Activity implements OnClickListener {
             if (v == DIGButton && !digHit) {
 
                 if (!fmHit){
-                    moveViewToScreenCenter(findViewById(R.id.DIG));
+                    moveViewToScreenCenter(findViewById(R.id.DIG), ORIGINAL);
                     moveViewToRightSide(findViewById(R.id.FM), ORIGINAL);
                 }
                 else{
-                    moveViewToScreenCenter(findViewById(R.id.DIG));
+                    moveViewToScreenCenter(findViewById(R.id.DIG), SHIFTED);
                     moveViewToRightSide(findViewById(R.id.FM), SHIFTED);
                 }
 
@@ -179,11 +184,11 @@ public class MainActivity extends Activity implements OnClickListener {
             else if (v == FMButton && !fmHit) {
 
                 if (!digHit) {
-                    moveViewToScreenCenter(findViewById(R.id.FM));
+                    moveViewToScreenCenter(findViewById(R.id.FM), ORIGINAL);
                     moveViewToLeftSide(findViewById(R.id.DIG), ORIGINAL);
                 }
                 else{
-                    moveViewToScreenCenter(findViewById(R.id.FM));
+                    moveViewToScreenCenter(findViewById(R.id.FM), SHIFTED);
                     moveViewToLeftSide(findViewById(R.id.DIG), SHIFTED);
                 }
 
