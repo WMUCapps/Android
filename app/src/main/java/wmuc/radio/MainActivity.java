@@ -64,37 +64,30 @@ public class MainActivity extends Activity implements OnClickListener {
      */
     private GoogleApiClient client;
 
-    private void moveViewToScreenCenter( View view )
-    {
-        RelativeLayout root = (RelativeLayout) findViewById(R.id.root);
-        float xDest;
+    private void moveViewToScreenCenter( final View view ){
         DisplayMetrics dm = new DisplayMetrics();
-        this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+        getWindowManager().getDefaultDisplay().getMetrics( dm );
+
         int originalPos[] = new int[2];
-        view.getLocationOnScreen(originalPos);
-        int viewOffset = dm.heightPixels - root.getMeasuredHeight();
+        view.getLocationOnScreen( originalPos );
 
-        xDest = dm.widthPixels/2;
-        xDest -= (view.getMeasuredWidth() / 2);
+        int xDelta = (dm.widthPixels - view.getMeasuredWidth() - originalPos[0])/2;
+        int yDelta = (dm.heightPixels - view.getMeasuredHeight() - originalPos[1])/3;
 
-        float heightAdj = dm.heightPixels/2 - (originalHeight/2) - viewOffset;
-
-
-        TranslateAnimation move = new TranslateAnimation(0, xDest - originalPos[0], 0, heightAdj - originalPos[1]);
-        move.setDuration(400);
-        //anim.setInterpolator(new DecelerateInterpolator());
-        move.setFillAfter( true );
-        Log.d("Original Position!!", ": " + originalPos[0]);
-        view.startAnimation(move);
-    }
-
-    private void growAnim ( View view ) {
-        view.setPivotX(view.getMeasuredWidth()/2);
-        view.setPivotY(view.getMeasuredHeight()/2);
-        ScaleAnimation grow = new ScaleAnimation(1f,1.5f,1f,1.5f);
-        grow.setDuration(400);
-        grow.setFillAfter( true );
-        view.startAnimation(grow);
+        AnimationSet animSet = new AnimationSet(true);
+        animSet.setFillAfter(true);
+        animSet.setDuration(400);
+        animSet.setInterpolator(new DecelerateInterpolator());
+        TranslateAnimation translate = new TranslateAnimation( 0, xDelta , 0, yDelta);
+        animSet.addAnimation(translate);
+        ScaleAnimation scale;
+        if( view == findViewById(R.id.DIG)) {
+            scale = new ScaleAnimation(1f, 1.5f, 1f, 1.5f, ScaleAnimation.RELATIVE_TO_PARENT, .53f, ScaleAnimation.RELATIVE_TO_PARENT, .5f);
+        } else {
+            scale = new ScaleAnimation(1f, 1.5f, 1f, 1.5f, ScaleAnimation.RELATIVE_TO_PARENT, .80f, ScaleAnimation.RELATIVE_TO_PARENT, .5f);
+        }
+        animSet.addAnimation(scale);
+        view.startAnimation(animSet);
     }
 
     private void moveViewToRightSide( View view , int state)
@@ -127,32 +120,31 @@ public class MainActivity extends Activity implements OnClickListener {
         view.startAnimation(anim);
     }
 
-    private void moveViewToLeftSide( View view , int state)
-    {
+    private void moveViewToLeftSide( View view , int state) {
         TranslateAnimation move;
         view.setPivotX(50);
         view.setPivotY(50);
         DisplayMetrics dm = new DisplayMetrics();
-        this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+        this.getWindowManager().getDefaultDisplay().getMetrics(dm);
         int originalPos[] = new int[2];
         view.getLocationOnScreen(originalPos);
-        float xDest =(float)0.50 * dm.widthPixels/3;
-        xDest -= (view.getWidth()/2);
-        AnimationSet anim = new AnimationSet (true);
-        float heightAdj = (float)1.2 * view.getHeight()/2;
+        float xDest = (float) 0.50 * dm.widthPixels / 3;
+        xDest -= (view.getWidth() / 2);
+        AnimationSet anim = new AnimationSet(true);
+        float heightAdj = (float) 1.2 * view.getHeight() / 2;
 
-        if(state == SHIFTED) {
+        if (state == SHIFTED) {
             move = new TranslateAnimation((float) .4 * dm.widthPixels / 2,
                     xDest - originalPos[0], 0, heightAdj);
         } else {
             move = new TranslateAnimation(0, xDest - originalPos[0], 0, heightAdj);
         }
-        ScaleAnimation shrink = new ScaleAnimation(1f,.65f,1f,.65f);
+        ScaleAnimation shrink = new ScaleAnimation(1f, .65f, 1f, .65f);
         anim.addAnimation(move);
         anim.addAnimation(shrink);
         anim.setDuration(400);
         anim.setInterpolator(new DecelerateInterpolator());
-        anim.setFillAfter( true );
+        anim.setFillAfter(true);
         view.startAnimation(anim);
     }
 
@@ -166,12 +158,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
                 if (!fmHit){
                     moveViewToScreenCenter(findViewById(R.id.DIG));
-                    //growAnim(findViewById(R.id.DIG));
                     moveViewToRightSide(findViewById(R.id.FM), ORIGINAL);
                 }
                 else{
                     moveViewToScreenCenter(findViewById(R.id.DIG));
-                    //growAnim(findViewById(R.id.DIG));
                     moveViewToRightSide(findViewById(R.id.FM), SHIFTED);
                 }
 
@@ -190,12 +180,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
                 if (!digHit) {
                     moveViewToScreenCenter(findViewById(R.id.FM));
-                    growAnim(findViewById(R.id.FM));
                     moveViewToLeftSide(findViewById(R.id.DIG), ORIGINAL);
                 }
                 else{
                     moveViewToScreenCenter(findViewById(R.id.FM));
-                    growAnim(findViewById(R.id.FM));
                     moveViewToLeftSide(findViewById(R.id.DIG), SHIFTED);
                 }
 
