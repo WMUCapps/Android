@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     },
@@ -14,5 +10,9 @@
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     }
 ]

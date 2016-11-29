@@ -1,5 +1,6 @@
 package wmuc.radio;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -19,6 +21,7 @@ import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -154,6 +157,12 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus)
+    {
+        super.onWindowFocusChanged(hasFocus);
+    }
+
     public void onClick(View v) {
         playing = playerControl.isPlaying();
         Log.d("THE BUCK STOPS HERE", "hopefully " + playing);
@@ -162,12 +171,12 @@ public class MainActivity extends Activity implements OnClickListener {
             if (v == DIGButton && !digHit) {
 
                 if (!fmHit){
-                    moveViewToScreenCenter(findViewById(R.id.DIG), ORIGINAL);
-                    moveViewToRightSide(findViewById(R.id.FM), ORIGINAL);
+                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), ORIGINAL);
                 }
                 else{
-                    moveViewToScreenCenter(findViewById(R.id.DIG), SHIFTED);
-                    moveViewToRightSide(findViewById(R.id.FM), SHIFTED);
+                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), SHIFTED);
+                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), SHIFTED);
                 }
 
                 digHit = true;
@@ -184,14 +193,13 @@ public class MainActivity extends Activity implements OnClickListener {
             else if (v == FMButton && !fmHit) {
 
                 if (!digHit) {
-                    moveViewToScreenCenter(findViewById(R.id.FM), ORIGINAL);
-                    moveViewToLeftSide(findViewById(R.id.DIG), ORIGINAL);
+                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), ORIGINAL);
                 }
                 else{
-                    moveViewToScreenCenter(findViewById(R.id.FM), SHIFTED);
-                    moveViewToLeftSide(findViewById(R.id.DIG), SHIFTED);
+                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), SHIFTED);
+                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), SHIFTED);
                 }
-
 
                 if (playing)
                     stopPlaying();
@@ -251,7 +259,10 @@ public class MainActivity extends Activity implements OnClickListener {
         DIGButton.setOnClickListener(this);
         FMButton = (ImageButton) findViewById(R.id.FM);
         FMButton.setOnClickListener(this);
-        originalHeight = findViewById(R.id.DIG).getMeasuredHeight();
+        FMButton.setPivotX(FMButton.getMeasuredWidth()/2);
+        DIGButton.setPivotX(DIGButton.getMeasuredWidth()/2);
+        FMButton.setPivotY(FMButton.getMeasuredHeight()/2);
+        DIGButton.setPivotY(DIGButton.getMeasuredHeight()/2);
         initializeExoPlayer();
 
 

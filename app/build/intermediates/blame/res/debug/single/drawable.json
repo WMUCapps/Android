@@ -1,5 +1,17 @@
 [
     {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome32.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome32.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ps.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\ps.png"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome7.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome7.jpg"
+    },
+    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome23.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome23.jpg"
     },
@@ -8,40 +20,44 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome2.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome25.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome25.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\digitalicon2.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\digitalicon2.png"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome12.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome12.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\digitalicon.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\digitalicon.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome15.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome15.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome24.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome24.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome26.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome26.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome11.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome11.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome16.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome16.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_internal_bg.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\launchscreen1.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\launchscreen1.png"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/digitalicon.png",
@@ -56,28 +72,32 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome11.jpg"
     },
     {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome6.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome6.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome9.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome9.jpg"
+    },
+    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/drawable/design_fab_background.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pause.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\pause.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome34.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome34.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_text_cursor_material.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\digitalicon2.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\digitalicon2.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome31.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome31.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
@@ -88,8 +108,8 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/launchscreen1.png"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_radio_material.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome29.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome29.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome25.jpg",
@@ -104,8 +124,16 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome3.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fmicon.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\fmicon.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cat_animation.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\cat_animation.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome35.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome35.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome12.jpg",
@@ -120,28 +148,24 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome18.jpg"
     },
     {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome4.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome4.jpg"
+    },
+    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/wmuc.png",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/wmuc.png"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome23.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome23.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome28.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome28.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome34.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome34.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_switch_thumb_material.xml"
-    },
-    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome18.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome18.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/digitalicon2.png",
@@ -150,10 +174,6 @@
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome21.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome21.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
@@ -168,16 +188,16 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/fmicon2.png"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pause1.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\pause1.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome12.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome12.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome22.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome22.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_check_material.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome13.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome13.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome27.jpg",
@@ -192,32 +212,24 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_ratingbar_full_material.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome29.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome29.jpg"
-    },
-    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_check_material.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wmuc.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\wmuc.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome19.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome19.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome4.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome4.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/fmicon.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/fmicon.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome35.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome35.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/fmicon.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/fmicon.png"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/play1.png",
@@ -228,32 +240,48 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome1.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome10.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome10.jpg"
-    },
-    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome25.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome25.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_switch_thumb_material.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome28.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome28.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome7.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome7.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome3.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome3.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fmicon.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\fmicon.png"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pause.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\pause.png"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/launchscreen.png",
@@ -264,188 +292,140 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/drawable/design_snackbar_background.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome6.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome6.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome32.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome32.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\launchscreen1.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\launchscreen1.png"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome19.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome19.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome9.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome9.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_light.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_track_material.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome22.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome22.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circular_progress_bar.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\circular_progress_bar.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome13.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome13.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome16.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome16.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_textfield_search_material.xml"
-    },
-    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome15.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome15.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome34.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome34.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_light.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pause1.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\pause1.png"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\play.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\play.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome10.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome10.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome20.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome20.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome32.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome32.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome17.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome17.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome5.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome5.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome29.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome29.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome18.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome18.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome33.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome33.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_top_material.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_snackbar_background.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome4.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome4.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_edit_text_material.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome31.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome31.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_borderless_material.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome8.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome8.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome30.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome30.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fluffy.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\fluffy.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\os.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\os.png"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_text_cursor_material.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\play1.png",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\play1.png"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fmicon2.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\fmicon2.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome32.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome32.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/pause1.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/pause1.png"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_snackbar_background.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome6.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome6.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome1.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome1.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome29.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome29.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome31.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome31.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome8.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome8.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome24.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome24.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\launchscreen.png",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\launchscreen.png"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_top_material.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\digitalicon.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\digitalicon.png"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome30.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome30.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome3.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome3.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome23.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome23.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/pause1.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/pause1.png"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome26.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome26.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome6.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome6.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome9.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome9.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\play.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\play.png"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
@@ -456,12 +436,20 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome14.jpg"
     },
     {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wmuc.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\wmuc.png"
+    },
+    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome28.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome28.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome17.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome17.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
@@ -476,28 +464,24 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome33.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome2.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome2.jpg"
-    },
-    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/fluffy.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/fluffy.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome8.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome8.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome31.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome31.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome14.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome14.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fmicon2.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\fmicon2.png"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome5.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome5.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome21.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome21.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
@@ -508,40 +492,16 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/os.png"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cat_animation.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\cat_animation.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ps.png",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\ps.png"
-    },
-    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome26.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome26.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome20.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome20.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome15.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome15.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome30.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome30.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome7.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome7.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome19.jpg",
@@ -556,6 +516,10 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome20.jpg"
     },
     {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
@@ -564,28 +528,24 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome1.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome1.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome24.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome24.jpg"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome27.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome27.jpg"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome21.jpg",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome21.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_colored_material.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome14.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome14.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/ps.png",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/ps.png"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome17.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome17.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/side_nav_bar.xml",
@@ -600,12 +560,40 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome16.jpg"
     },
     {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/play.png",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/play.png"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome13.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/awesome13.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\os.png",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\os.png"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome2.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome2.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome30.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome30.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome33.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome33.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fluffy.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\fluffy.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome8.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome8.jpg"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/awesome10.jpg",
@@ -616,11 +604,23 @@
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
         "merged": "/Users/Evan/AndroidStudioProjects/WMUC/app/build/intermediates/res/merged/debug/drawable/cat_animation.xml",
         "source": "/Users/Evan/AndroidStudioProjects/WMUC/app/src/main/res/drawable/cat_animation.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_light.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome11.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome11.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome5.jpg",
+        "source": "/Users/Evan/AndroidStudioProjects/WMUC/C:\\Users\\Joseph\\Desktop\\Nexus 6p\\Android\\app\\src\\main\\res\\drawable\\awesome5.jpg"
     }
 ]
