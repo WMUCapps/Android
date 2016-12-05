@@ -77,7 +77,7 @@ public class MainActivity extends Activity implements OnClickListener {
         view.getLocationOnScreen( originalPos );
 
 
-        float xDelta = (dm.widthPixels)/2 - (.9f * view.getMeasuredWidth());
+        float xDelta = (dm.widthPixels)/2 - (.87f * view.getMeasuredWidth());
         int yDelta = (dm.heightPixels)/25;
 
         ObjectAnimator moveX, moveY, shrinkX, shrinkY;
