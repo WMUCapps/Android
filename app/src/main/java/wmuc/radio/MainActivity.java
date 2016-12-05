@@ -59,7 +59,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private final int ORIGINAL = 0, SHIFTED = 1;
-    private int originalHeight = 0;
+    private float swipeX1, swipeX2, swipeY1, swipeY2;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -256,6 +256,10 @@ public class MainActivity extends Activity implements OnClickListener {
         DIGButton.setPivotX(DIGButton.getMeasuredWidth()/2);
         FMButton.setPivotY(FMButton.getMeasuredHeight()/2);
         DIGButton.setPivotY(DIGButton.getMeasuredHeight()/2);
+
+        DIGButton.setOnTouchListener(new TouchHandler());
+        FMButton.setOnTouchListener(new TouchHandler());
+
         initializeExoPlayer();
 
 
@@ -381,5 +385,175 @@ public class MainActivity extends Activity implements OnClickListener {
         //before destroying the app
         super.onDestroy();
         exp.release(); // important otherwise song will play even after app has closed.
+    }
+
+    public class TouchHandler implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent touchevent) {
+            switch (touchevent.getAction()) {
+                // when user first touches the screen we get x and y coordinate
+                case MotionEvent.ACTION_DOWN: {
+                    Log.d("Touch down", "success");
+                    swipeX1 = touchevent.getX();
+                    swipeY1 = touchevent.getY();
+                    break;
+                }
+                case MotionEvent.ACTION_UP: {
+                    swipeX2 = touchevent.getX();
+                    swipeY2 = touchevent.getY();
+
+                    // if left to right sweep event on screen
+                    if (swipeX1 < swipeX2)
+                    {
+                        if (enableButton) {
+                            if (view == DIGButton && !digHit) {
+
+                                if (!fmHit){
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                                }
+                                else{
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), SHIFTED);
+                                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), SHIFTED);
+                                }
+
+                                digHit = true;
+                                fmHit = false;
+                                if (playing)
+                                    stopPlaying();
+
+                                currchan = Digitalurl;
+                                initializeExoPlayer();
+
+                                if (playing)
+                                    startPlaying();
+                            }
+                            else if (view == FMButton && !fmHit) {
+
+                                if (!digHit) {
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                                }
+                                else{
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), SHIFTED);
+                                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), SHIFTED);
+                                }
+
+                                if (playing)
+                                    stopPlaying();
+                                currchan = FMurl;
+                                initializeExoPlayer();
+                                digHit = false;
+                                fmHit = true;
+                                if (playing)
+                                    startPlaying();
+                            }
+                            else if (view == playButton) {
+                                if (fmHit && playing) {
+                                    stopPlaying();
+                                    playing = false;
+                                } else if (digHit && playing) {
+                                    stopPlaying();
+                                    playing = false;
+                                } else if (!fmHit && !digHit && !playing) {
+                                    Context context = getApplicationContext();
+                                    CharSequence text = "Please select a station.";
+                                    int duration = Toast.LENGTH_SHORT;
+
+                                    Toast toast = Toast.makeText(context, text, duration);
+                                    toast.show();
+
+                                } else {
+                                    initializeExoPlayer();
+                                    startPlaying();
+                                }
+                            }
+                        }
+                    }
+
+                    // if right to left sweep event on screen
+                    if (swipeX1 > swipeX2)
+                    {
+                        if (enableButton) {
+                            if (view == DIGButton && !digHit) {
+
+                                if (!fmHit){
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                                }
+                                else{
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), SHIFTED);
+                                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), SHIFTED);
+                                }
+
+                                digHit = true;
+                                fmHit = false;
+                                if (playing)
+                                    stopPlaying();
+
+                                currchan = Digitalurl;
+                                initializeExoPlayer();
+
+                                if (playing)
+                                    startPlaying();
+                            }
+                            else if (view == FMButton && !fmHit) {
+
+                                if (!digHit) {
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                                }
+                                else{
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), SHIFTED);
+                                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), SHIFTED);
+                                }
+
+                                if (playing)
+                                    stopPlaying();
+                                currchan = FMurl;
+                                initializeExoPlayer();
+                                digHit = false;
+                                fmHit = true;
+                                if (playing)
+                                    startPlaying();
+                            }
+                            else if (view == playButton) {
+                                if (fmHit && playing) {
+                                    stopPlaying();
+                                    playing = false;
+                                } else if (digHit && playing) {
+                                    stopPlaying();
+                                    playing = false;
+                                } else if (!fmHit && !digHit && !playing) {
+                                    Context context = getApplicationContext();
+                                    CharSequence text = "Please select a station.";
+                                    int duration = Toast.LENGTH_SHORT;
+
+                                    Toast toast = Toast.makeText(context, text, duration);
+                                    toast.show();
+
+                                } else {
+                                    initializeExoPlayer();
+                                    startPlaying();
+                                }
+                            }
+                        }
+                    }
+
+                    // if UP to Down sweep event on screen
+                    if (swipeY1 < swipeY2)
+                    {
+                        //do nothing.
+                    }
+
+                    // if Down to UP sweep event on screen
+                    if (swipeY1 > swipeY2)
+                    {
+                        //do nothing.
+                    }
+                    break;
+                }
+            }
+            return false;
+        }
     }
 }
