@@ -67,93 +67,86 @@ public class MainActivity extends Activity implements OnClickListener {
      */
     private GoogleApiClient client;
 
-    private void moveViewToScreenCenter( final View view, int pos ){
+    private void moveViewToScreenCenter( final ImageButton view, int pos ){
+        view.setPivotX(.5f);
+        view.setPivotY(.5f);
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics( dm );
 
         int originalPos[] = new int[2];
         view.getLocationOnScreen( originalPos );
 
-        int xDelta = (dm.widthPixels - view.getMeasuredWidth() - originalPos[0])/2;
-        int yDelta = (dm.heightPixels - view.getMeasuredHeight() - originalPos[1])/3;
 
-        AnimationSet animSet = new AnimationSet(true);
-        animSet.setFillAfter(true);
-        animSet.setDuration(400);
-        animSet.setInterpolator(new DecelerateInterpolator());
-        TranslateAnimation translate;
-        if ( pos == ORIGINAL ) {
-            translate = new TranslateAnimation(0, xDelta, 0, yDelta);
+        float xDelta = (dm.widthPixels)/2 - (.9f * view.getMeasuredWidth());
+        int yDelta = (dm.heightPixels)/25;
+
+        ObjectAnimator moveX, moveY, shrinkX, shrinkY;
+
+        if(view == (ImageButton) findViewById(R.id.FM)) {
+            moveX = ObjectAnimator.ofFloat(view, View.TRANSLATION_X, xDelta);
         } else {
-            translate = new TranslateAnimation(0, xDelta, 120f, yDelta);
+            moveX = ObjectAnimator.ofFloat(view, View.TRANSLATION_X, -1.3f * xDelta);
         }
-        animSet.addAnimation(translate);
-        ScaleAnimation scale;
-        if (view == findViewById(R.id.DIG)) {
-            scale = new ScaleAnimation(1f, 1.5f, 1f, 1.5f, ScaleAnimation.RELATIVE_TO_PARENT, .53f, ScaleAnimation.RELATIVE_TO_PARENT, .5f);
-        } else {
-            scale = new ScaleAnimation(1f, 1.5f, 1f, 1.5f, ScaleAnimation.RELATIVE_TO_PARENT, .80f, ScaleAnimation.RELATIVE_TO_PARENT, .5f);
-        }
-        animSet.addAnimation(scale);
-        view.startAnimation(animSet);
+        moveY = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, -yDelta);
+        shrinkX = ObjectAnimator.ofFloat(view, View.SCALE_X, 1.3f);
+        shrinkY = ObjectAnimator.ofFloat(view, View.SCALE_Y, 1.3f);
+
+        moveX.start();
+        moveY.start();
+        shrinkX.start();
+        shrinkY.start();
     }
 
-    private void moveViewToRightSide( View view , int state)
+    private void moveViewToRightSide( ImageButton view , int state)
     {
-        TranslateAnimation move;
         view.setPivotX(50);
         view.setPivotY(50);
+
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+
         int originalPos[] = new int[2];
         view.getLocationOnScreen(originalPos);
-        float xDest =(float)11 * dm.widthPixels/12;
-        xDest -= (view.getWidth()/2);
-        AnimationSet anim = new AnimationSet (true);
-        float heightAdj = (float)1.2 * view.getHeight()/2;
+        float xDest = dm.widthPixels/10;
 
+        float heightAdj = view.getHeight() / 3;
+        ObjectAnimator moveX, moveY, shrinkX, shrinkY;
 
-        if(state == SHIFTED) {
-            move = new TranslateAnimation((float) -.55 * dm.widthPixels / 2,
-                    xDest - originalPos[0], 0, heightAdj);
-        } else {
-            move = new TranslateAnimation(0, xDest - originalPos[0], 0, heightAdj);
-        }
-        ScaleAnimation shrink = new ScaleAnimation(1f,.65f,1f,.65f);
-        anim.addAnimation(move);
-        anim.addAnimation(shrink);
-        anim.setDuration(400);
-        anim.setInterpolator(new DecelerateInterpolator());
-        anim.setFillAfter( true );
-        view.startAnimation(anim);
+        moveX = ObjectAnimator.ofFloat(view, View.TRANSLATION_X, xDest);
+        moveY = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, heightAdj);
+        shrinkX = ObjectAnimator.ofFloat(view, View.SCALE_X, .7f);
+        shrinkY = ObjectAnimator.ofFloat(view, View.SCALE_Y, .7f);
+
+        moveX.start();
+        moveY.start();
+        shrinkX.start();
+        shrinkY.start();
     }
 
-    private void moveViewToLeftSide( View view , int state) {
-        TranslateAnimation move;
+    private void moveViewToLeftSide( ImageButton view , int state) {
         view.setPivotX(50);
         view.setPivotY(50);
+
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics(dm);
+
         int originalPos[] = new int[2];
         view.getLocationOnScreen(originalPos);
         float xDest = (float) 0.50 * dm.widthPixels / 3;
         xDest -= (view.getWidth() / 2);
-        AnimationSet anim = new AnimationSet(true);
-        float heightAdj = (float) 1.2 * view.getHeight() / 2;
 
-        if (state == SHIFTED) {
-            move = new TranslateAnimation((float) .4 * dm.widthPixels / 2,
-                    xDest - originalPos[0], 0, heightAdj);
-        } else {
-            move = new TranslateAnimation(0, xDest - originalPos[0], 0, heightAdj);
-        }
-        ScaleAnimation shrink = new ScaleAnimation(1f, .65f, 1f, .65f);
-        anim.addAnimation(move);
-        anim.addAnimation(shrink);
-        anim.setDuration(400);
-        anim.setInterpolator(new DecelerateInterpolator());
-        anim.setFillAfter(true);
-        view.startAnimation(anim);
+        float heightAdj = view.getHeight() / 3;
+        ObjectAnimator moveX, moveY, shrinkX, shrinkY;
+
+        moveX = ObjectAnimator.ofFloat(view, View.TRANSLATION_X, xDest);
+        moveY = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, heightAdj);
+        shrinkX = ObjectAnimator.ofFloat(view, View.SCALE_X, .7f);
+        shrinkY = ObjectAnimator.ofFloat(view, View.SCALE_Y, .7f);
+
+        moveX.start();
+        moveY.start();
+        shrinkX.start();
+        shrinkY.start();
     }
 
 
