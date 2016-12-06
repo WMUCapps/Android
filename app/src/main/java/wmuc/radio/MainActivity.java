@@ -1,21 +1,31 @@
 package wmuc.radio;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.exoplayer.ExoPlayer;
@@ -42,54 +52,110 @@ public class MainActivity extends Activity implements OnClickListener {
     private ProgressBar playSeekBar;
     private boolean enableButton = true;
     private boolean playing = false;
-    private Animation justslideLeft;
-    private Animation justslideRightCenter;
-    private Animation justShrinkLeft;
-    private Animation justShrinkRight;
     private boolean digHit = false;
     private  boolean fmHit = false;
-    private Animation slideRight;
-    private Animation shrinkRight;
-    private Animation slideLeft;
-    private Animation shrinkLeft;
-    private Animation pause_fm;
-    private Animation dig_grow_to_pause;
-    private Animation pause_dig;
-    private Animation fm_grow_to_pause;
     private MediaCodecAudioTrackRenderer audioRenderer ;
     private PlayerControl playerControl;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
+    private final int ORIGINAL = 0, SHIFTED = 1;
+    private float swipeX1, swipeX2, swipeY1, swipeY2;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-/*
-    private void moveViewToScreenCenter( View view )
+
+    private void moveViewToScreenCenter( final ImageButton view, int pos ){
+        view.setPivotX(.5f);
+        view.setPivotY(.5f);
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics( dm );
+
+        int originalPos[] = new int[2];
+        view.getLocationOnScreen( originalPos );
+
+
+        float xDelta = (dm.widthPixels)/2 - (.87f * view.getMeasuredWidth());
+        int yDelta = (dm.heightPixels)/25;
+
+        ObjectAnimator moveX, moveY, shrinkX, shrinkY;
+
+        if(view == (ImageButton) findViewById(R.id.FM)) {
+            moveX = ObjectAnimator.ofFloat(view, View.TRANSLATION_X, xDelta);
+        } else {
+            moveX = ObjectAnimator.ofFloat(view, View.TRANSLATION_X, -1.3f * xDelta);
+        }
+        moveY = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, -yDelta);
+        shrinkX = ObjectAnimator.ofFloat(view, View.SCALE_X, 1.3f);
+        shrinkY = ObjectAnimator.ofFloat(view, View.SCALE_Y, 1.3f);
+
+        moveX.start();
+        moveY.start();
+        shrinkX.start();
+        shrinkY.start();
+    }
+
+    private void moveViewToRightSide( ImageButton view , int state)
     {
         view.setPivotX(50);
         view.setPivotY(50);
+
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+
         int originalPos[] = new int[2];
         view.getLocationOnScreen(originalPos);
-        float xDest = dm.widthPixels/2;
-        xDest -= (view.getWidth()/2);
-        AnimationSet anim = new AnimationSet (true);
-        float heightAdj = (float)1.5 * view.getHeight()/2;
+        float xDest = dm.widthPixels/10;
 
-        TranslateAnimation move = new TranslateAnimation(0, xDest - originalPos[0], 0, heightAdj);
-        ScaleAnimation grow = new ScaleAnimation(1f,1.5f,1f,1.5f);
-        anim.addAnimation(move);
-        anim.addAnimation(grow);
-        anim.setDuration(400);
-        anim.setInterpolator(new DecelerateInterpolator());
-        anim.setFillAfter( true );
-        view.startAnimation(anim);
+        float heightAdj = view.getHeight() / 3;
+        ObjectAnimator moveX, moveY, shrinkX, shrinkY;
+
+        moveX = ObjectAnimator.ofFloat(view, View.TRANSLATION_X, xDest);
+        moveY = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, heightAdj);
+        shrinkX = ObjectAnimator.ofFloat(view, View.SCALE_X, .7f);
+        shrinkY = ObjectAnimator.ofFloat(view, View.SCALE_Y, .7f);
+
+        moveX.start();
+        moveY.start();
+        shrinkX.start();
+        shrinkY.start();
     }
 
-*/
+    private void moveViewToLeftSide( ImageButton view , int state) {
+        view.setPivotX(50);
+        view.setPivotY(50);
+
+        DisplayMetrics dm = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        int originalPos[] = new int[2];
+        view.getLocationOnScreen(originalPos);
+        float xDest = (float) 0.50 * dm.widthPixels / 3;
+        xDest -= (view.getWidth() / 2);
+
+        float heightAdj = view.getHeight() / 3;
+        ObjectAnimator moveX, moveY, shrinkX, shrinkY;
+
+        moveX = ObjectAnimator.ofFloat(view, View.TRANSLATION_X, xDest);
+        moveY = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, heightAdj);
+        shrinkX = ObjectAnimator.ofFloat(view, View.SCALE_X, .7f);
+        shrinkY = ObjectAnimator.ofFloat(view, View.SCALE_Y, .7f);
+
+        moveX.start();
+        moveY.start();
+        shrinkX.start();
+        shrinkY.start();
+    }
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus)
+    {
+        super.onWindowFocusChanged(hasFocus);
+    }
+
     public void onClick(View v) {
         playing = playerControl.isPlaying();
         Log.d("THE BUCK STOPS HERE", "hopefully " + playing);
@@ -98,12 +164,12 @@ public class MainActivity extends Activity implements OnClickListener {
             if (v == DIGButton && !digHit) {
 
                 if (!fmHit){
-                v.startAnimation(justslideRightCenter);
-                FMButton.startAnimation(justShrinkRight);
-            }
+                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                }
                 else{
-                    v.startAnimation(slideRight);
-                    FMButton.startAnimation(shrinkRight);
+                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), SHIFTED);
+                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), SHIFTED);
                 }
 
                 digHit = true;
@@ -120,14 +186,13 @@ public class MainActivity extends Activity implements OnClickListener {
             else if (v == FMButton && !fmHit) {
 
                 if (!digHit) {
-                v.startAnimation(justslideLeft);
-                    DIGButton.startAnimation(justShrinkLeft);
+                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), ORIGINAL);
                 }
                 else{
-                    v.startAnimation(slideLeft);
-                    DIGButton.startAnimation(shrinkLeft);
+                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), SHIFTED);
+                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), SHIFTED);
                 }
-
 
                 if (playing)
                     stopPlaying();
@@ -140,15 +205,11 @@ public class MainActivity extends Activity implements OnClickListener {
             }
             else if (v == playButton) {
                 if (fmHit && playing) {
-                    FMButton.startAnimation(pause_fm);
                     stopPlaying();
-                    DIGButton.startAnimation(dig_grow_to_pause);
-                    fmHit = false;
+                    playing = false;
                 } else if (digHit && playing) {
                     stopPlaying();
-                    DIGButton.startAnimation(pause_dig);
-                    FMButton.startAnimation(fm_grow_to_pause);
-                    digHit = false;
+                    playing = false;
                 } else if (!fmHit && !digHit && !playing) {
                     Context context = getApplicationContext();
                     CharSequence text = "Please select a station.";
@@ -158,9 +219,8 @@ public class MainActivity extends Activity implements OnClickListener {
                     toast.show();
 
                 } else {
-                    if (!playing) {
+                        initializeExoPlayer();
                         startPlaying();
-                    }
                 }
             }
         }
@@ -192,6 +252,14 @@ public class MainActivity extends Activity implements OnClickListener {
         DIGButton.setOnClickListener(this);
         FMButton = (ImageButton) findViewById(R.id.FM);
         FMButton.setOnClickListener(this);
+        FMButton.setPivotX(FMButton.getMeasuredWidth()/2);
+        DIGButton.setPivotX(DIGButton.getMeasuredWidth()/2);
+        FMButton.setPivotY(FMButton.getMeasuredHeight()/2);
+        DIGButton.setPivotY(DIGButton.getMeasuredHeight()/2);
+
+        DIGButton.setOnTouchListener(new TouchHandler());
+        FMButton.setOnTouchListener(new TouchHandler());
+
         initializeExoPlayer();
 
 
@@ -219,18 +287,6 @@ public class MainActivity extends Activity implements OnClickListener {
         Log.d("Creating", "does the log even work");
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        justslideRightCenter = AnimationUtils.loadAnimation(this, R.anim.anim_slide_right);
-        justShrinkRight = AnimationUtils.loadAnimation(this, R.anim.just_shrink_right);
-        justslideLeft = AnimationUtils.loadAnimation(this, R.anim.anim_slide_left);
-        justShrinkLeft = AnimationUtils.loadAnimation(this, R.anim.just_shrink_left);
-        slideRight = AnimationUtils.loadAnimation(this, R.anim.anim_slide_dig_right);
-        shrinkRight = AnimationUtils.loadAnimation(this, R.anim.shrink_fm_right);
-        slideLeft = AnimationUtils.loadAnimation(this, R.anim.anim_slide_fm_left);
-        shrinkLeft = AnimationUtils.loadAnimation(this, R.anim.shrink_dg_left);
-        pause_fm = AnimationUtils.loadAnimation(this, R.anim.pause_fm);
-        dig_grow_to_pause = AnimationUtils.loadAnimation(this, R.anim.dig_grow_to_pause);
-        pause_dig = AnimationUtils.loadAnimation(this, R.anim.pause_dig);
-        fm_grow_to_pause = AnimationUtils.loadAnimation(this, R.anim.fm_grow_to_pause);
         setContentView(R.layout.activity_main);
         initializeUIElements();
 
@@ -329,5 +385,175 @@ public class MainActivity extends Activity implements OnClickListener {
         //before destroying the app
         super.onDestroy();
         exp.release(); // important otherwise song will play even after app has closed.
+    }
+
+    public class TouchHandler implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent touchevent) {
+            switch (touchevent.getAction()) {
+                // when user first touches the screen we get x and y coordinate
+                case MotionEvent.ACTION_DOWN: {
+                    Log.d("Touch down", "success");
+                    swipeX1 = touchevent.getX();
+                    swipeY1 = touchevent.getY();
+                    break;
+                }
+                case MotionEvent.ACTION_UP: {
+                    swipeX2 = touchevent.getX();
+                    swipeY2 = touchevent.getY();
+
+                    // if left to right sweep event on screen
+                    if (swipeX1 < swipeX2)
+                    {
+                        if (enableButton) {
+                            if (view == DIGButton && !digHit) {
+
+                                if (!fmHit){
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                                }
+                                else{
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), SHIFTED);
+                                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), SHIFTED);
+                                }
+
+                                digHit = true;
+                                fmHit = false;
+                                if (playing)
+                                    stopPlaying();
+
+                                currchan = Digitalurl;
+                                initializeExoPlayer();
+
+                                if (playing)
+                                    startPlaying();
+                            }
+                            else if (view == FMButton && !fmHit) {
+
+                                if (!digHit) {
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                                }
+                                else{
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), SHIFTED);
+                                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), SHIFTED);
+                                }
+
+                                if (playing)
+                                    stopPlaying();
+                                currchan = FMurl;
+                                initializeExoPlayer();
+                                digHit = false;
+                                fmHit = true;
+                                if (playing)
+                                    startPlaying();
+                            }
+                            else if (view == playButton) {
+                                if (fmHit && playing) {
+                                    stopPlaying();
+                                    playing = false;
+                                } else if (digHit && playing) {
+                                    stopPlaying();
+                                    playing = false;
+                                } else if (!fmHit && !digHit && !playing) {
+                                    Context context = getApplicationContext();
+                                    CharSequence text = "Please select a station.";
+                                    int duration = Toast.LENGTH_SHORT;
+
+                                    Toast toast = Toast.makeText(context, text, duration);
+                                    toast.show();
+
+                                } else {
+                                    initializeExoPlayer();
+                                    startPlaying();
+                                }
+                            }
+                        }
+                    }
+
+                    // if right to left sweep event on screen
+                    if (swipeX1 > swipeX2)
+                    {
+                        if (enableButton) {
+                            if (view == DIGButton && !digHit) {
+
+                                if (!fmHit){
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                                }
+                                else{
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.DIG), SHIFTED);
+                                    moveViewToLeftSide((ImageButton) findViewById(R.id.FM), SHIFTED);
+                                }
+
+                                digHit = true;
+                                fmHit = false;
+                                if (playing)
+                                    stopPlaying();
+
+                                currchan = Digitalurl;
+                                initializeExoPlayer();
+
+                                if (playing)
+                                    startPlaying();
+                            }
+                            else if (view == FMButton && !fmHit) {
+
+                                if (!digHit) {
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), ORIGINAL);
+                                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), ORIGINAL);
+                                }
+                                else{
+                                    moveViewToScreenCenter((ImageButton) findViewById(R.id.FM), SHIFTED);
+                                    moveViewToRightSide( (ImageButton) findViewById(R.id.DIG), SHIFTED);
+                                }
+
+                                if (playing)
+                                    stopPlaying();
+                                currchan = FMurl;
+                                initializeExoPlayer();
+                                digHit = false;
+                                fmHit = true;
+                                if (playing)
+                                    startPlaying();
+                            }
+                            else if (view == playButton) {
+                                if (fmHit && playing) {
+                                    stopPlaying();
+                                    playing = false;
+                                } else if (digHit && playing) {
+                                    stopPlaying();
+                                    playing = false;
+                                } else if (!fmHit && !digHit && !playing) {
+                                    Context context = getApplicationContext();
+                                    CharSequence text = "Please select a station.";
+                                    int duration = Toast.LENGTH_SHORT;
+
+                                    Toast toast = Toast.makeText(context, text, duration);
+                                    toast.show();
+
+                                } else {
+                                    initializeExoPlayer();
+                                    startPlaying();
+                                }
+                            }
+                        }
+                    }
+
+                    // if UP to Down sweep event on screen
+                    if (swipeY1 < swipeY2)
+                    {
+                        //do nothing.
+                    }
+
+                    // if Down to UP sweep event on screen
+                    if (swipeY1 > swipeY2)
+                    {
+                        //do nothing.
+                    }
+                    break;
+                }
+            }
+            return false;
+        }
     }
 }

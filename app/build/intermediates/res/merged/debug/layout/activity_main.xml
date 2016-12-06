@@ -22,7 +22,7 @@
         android:id="@+id/Play"
         android:background="@null"
         android:adjustViewBounds="true"
-        android:maxWidth="150dp"
+        android:maxWidth="100dp"
         android:maxHeight="150dp"
         android:scaleType="fitCenter"
         android:clickable="true"
@@ -37,16 +37,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/DIG"
         android:adjustViewBounds="true"
-        android:maxWidth="150dp"
-        android:maxHeight="250dp"
+        android:maxWidth="125dp"
+        android:maxHeight="225dp"
         android:scaleType="fitCenter"
         android:longClickable="true"
         android:background="@null"
-        android:paddingTop="60dp"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/Play"
-        android:layout_toStartOf="@+id/Play"
-        android:paddingBottom="50dp" />
+        android:layout_toRightOf="@+id/Play"
+        android:layout_toEndOf="@+id/Play"/>
 
     <ImageButton
         android:src="@drawable/fmicon2"
@@ -55,15 +53,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/FM"
         android:adjustViewBounds="true"
-        android:maxWidth="150dp"
-        android:maxHeight="250dp"
+        android:maxWidth="125dp"
+        android:maxHeight="225dp"
         android:scaleType="fitCenter"
         android:background="@null"
-        android:paddingTop="50dp"
-        android:paddingBottom="50dp"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/Play"
-        android:layout_toEndOf="@+id/Play" />
+        android:layout_toLeftOf="@+id/Play"
+        android:layout_toStartOf="@+id/Play" />
 
     <ImageView
         android:layout_width="wrap_content"
