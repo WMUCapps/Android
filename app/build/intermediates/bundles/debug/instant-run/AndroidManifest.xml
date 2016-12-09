@@ -23,6 +23,12 @@
             android:label="@string/app_name"
             android:launchMode="singleInstance"
             android:theme="@style/Theme.Transparent" >
+            <receiver android:name="wmuc.radio.MusicIntentReceiver" >
+                <intent-filter>
+                    <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                </intent-filter>
+            </receiver>
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,11 +54,6 @@
             android:name="wmuc.radio.menu"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" >
-            <receiver android:name="wmuc.radio.MusicIntentReceiver" >
-                <intent-filter>
-                    <action android:name="android.media.AUDIO_BECOMING_NOISY" />
-                </intent-filter>
-            </receiver>
         </activity>
 
         <service android:name="wmuc.radio.StreamingService" />
