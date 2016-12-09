@@ -30,6 +30,7 @@ import android.widget.Toast;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+
 public class MainActivity extends Activity implements OnClickListener {
     Uri fmURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc-hq");
     Uri digURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc2-high");
@@ -38,14 +39,13 @@ public class MainActivity extends Activity implements OnClickListener {
     private ImageButton playButton;
     private ImageButton DIGButton;
     private ImageButton FMButton;
-    private boolean enableButton = true;
     private boolean playing = false;
     private Animation justslideLeft;
     private Animation justslideRightCenter;
     private Animation justShrinkLeft;
     private Animation justShrinkRight;
     private boolean digHit = false;
-    private  boolean fmHit = false;
+    private boolean fmHit = false;
     private Animation slideRight;
     private Animation shrinkRight;
     private Animation slideLeft;
@@ -54,11 +54,11 @@ public class MainActivity extends Activity implements OnClickListener {
     private ArrayAdapter<String> mAdapter;
     private NotificationCompat.Builder builder;
     private NotificationManager notificationManager;
-    private final int notificationID = (int)System.currentTimeMillis();
+    private final int notificationID = (int) System.currentTimeMillis();
     private RemoteViews remoteViews;
     private Context context;
     private boolean mAudioFocusGranted = false;
-    private AudioManager.OnAudioFocusChangeListener afChangeListener ;
+    private AudioManager.OnAudioFocusChangeListener afChangeListener;
     private Notification note;
     private boolean ongoing;
     private IntentFilter headphoneFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
@@ -71,12 +71,12 @@ public class MainActivity extends Activity implements OnClickListener {
      */
     private GoogleApiClient client;
 
-    public void showNotification () {
+    public void showNotification() {
         remoteViews.setImageViewResource(R.id.img, R.drawable.wmuc);
 
-        Intent playIntent = new Intent ("play_clicked");
-        Intent fmIntent = new Intent ("fm_clicked");
-        Intent digIntent = new Intent ("dig_clicked");
+        Intent playIntent = new Intent("play_clicked");
+        Intent fmIntent = new Intent("fm_clicked");
+        Intent digIntent = new Intent("dig_clicked");
 
         fmIntent.putExtra("id", notificationID);
         digIntent.putExtra("id", notificationID);
@@ -118,116 +118,112 @@ public class MainActivity extends Activity implements OnClickListener {
         note.bigContentView = remoteViews;
         note.contentView = remoteViews;
 
-        notificationManager.notify(notificationID ,note);
+        notificationManager.notify(notificationID, note);
     }
+
     public void onClick(View v) {
         Log.d("THE BUCK STOPS HERE", "hopefully " + playing);
-        if (enableButton) {
-            if (v == DIGButton && !digHit) {
-                Log.d("Digital", "hit the button");
+        if (v == DIGButton && !digHit) {
+            Log.d("Digital", "hit the button");
 
-                if (!fmHit){
-                    v.startAnimation(justslideLeft);
-                    FMButton.startAnimation(justShrinkLeft);
+            if (!fmHit) {
+                v.startAnimation(justslideLeft);
+                FMButton.startAnimation(justShrinkLeft);
+            } else {
+                v.startAnimation(slideLeft);
+                FMButton.startAnimation(shrinkLeft);
             }
-                else{
-                    v.startAnimation(slideLeft);
-                    FMButton.startAnimation(shrinkLeft);
-                }
 
-                currchan = digURI;
-                digHit = true;
-                fmHit = false;
-                if (playing) {
-                    stopService(new Intent(getBaseContext(), StreamingService.class));
-                    Log.d("This one is for", " visibility");
-                }
-
-                if (playing) {
-                    remoteViews = new RemoteViews(getPackageName(), R.layout.dig_play);
-                    startService(new Intent("", currchan ,getBaseContext(), StreamingService.class));
-                    showNotification();
-                }
+            currchan = digURI;
+            digHit = true;
+            fmHit = false;
+            if (playing) {
+                stopService(new Intent(getBaseContext(), StreamingService.class));
+                Log.d("This one is for", " visibility");
             }
-            else if (v == FMButton && !fmHit) {
-                if (!digHit) {
+
+            if (playing) {
+                remoteViews = new RemoteViews(getPackageName(), R.layout.dig_play);
+                startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
+                showNotification();
+            }
+        } else if (v == FMButton && !fmHit) {
+            if (!digHit) {
                 v.startAnimation(justslideRightCenter);
-                    DIGButton.startAnimation(justShrinkRight);
-                }
-                else{
-                    v.startAnimation(slideRight);
-                    DIGButton.startAnimation(shrinkRight);
-                }
-
-
-                if (playing) {
-                    stopService(new Intent(getBaseContext(), StreamingService.class));
-                    Log.d("This one is for", " visibility");
-                }
-                currchan = fmURI;
-                digHit = false;
-                fmHit = true;
-                if (playing){
-                    remoteViews = new RemoteViews(getPackageName(), R.layout.fm_play);
-                    startService(new Intent("", currchan ,getBaseContext(), StreamingService.class));
-                    showNotification();
-                }
+                DIGButton.startAnimation(justShrinkRight);
+            } else {
+                v.startAnimation(slideRight);
+                DIGButton.startAnimation(shrinkRight);
             }
-            else if (v == playButton) {
-                Log.d("FM: "+ fmHit + " DIG: "+ digHit + " playing: " + playing, " In case you were curious");
-                if (fmHit && playing) {
-                    stopService(new Intent(getBaseContext(), StreamingService.class));
-                    playing = false;
-                    playButton.setImageResource(R.drawable.play1);
-                    abandonAudioFocus();
-                    ongoing = false;
-                    remoteViews = new RemoteViews(getPackageName(), R.layout.fm_pause);
+
+
+            if (playing) {
+                stopService(new Intent(getBaseContext(), StreamingService.class));
+                Log.d("This one is for", " visibility");
+            }
+            currchan = fmURI;
+            digHit = false;
+            fmHit = true;
+            if (playing) {
+                remoteViews = new RemoteViews(getPackageName(), R.layout.fm_play);
+                startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
+                showNotification();
+            }
+        } else if (v == playButton) {
+            Log.d("FM: " + fmHit + " DIG: " + digHit + " playing: " + playing, " In case you were curious");
+            if (fmHit && playing) {
+                stopService(new Intent(getBaseContext(), StreamingService.class));
+                playing = false;
+                playButton.setImageResource(R.drawable.play1);
+                abandonAudioFocus();
+                ongoing = false;
+                remoteViews = new RemoteViews(getPackageName(), R.layout.fm_pause);
+                showNotification();
+
+            } else if (digHit && playing) {
+                stopService(new Intent(getBaseContext(), StreamingService.class));
+                playing = false;
+                playButton.setImageResource(R.drawable.play1);
+                abandonAudioFocus();
+                ongoing = false;
+                remoteViews = new RemoteViews(getPackageName(), R.layout.dig_pause);
+                showNotification();
+
+            } else if (!fmHit && !digHit && !playing) {
+                Context context = getApplicationContext();
+                CharSequence text = "Please select a station.";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+                playing = false;
+
+            } else {
+                if (!playing) {
+                    requestAudioFocus();
+                    startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
+                    playing = true;
+                    playButton.setImageResource(R.drawable.pause1);
+                    ongoing = true;
+                    if (fmHit)
+                        remoteViews = new RemoteViews(getPackageName(), R.layout.fm_play);
+
+                    else
+                        remoteViews = new RemoteViews(getPackageName(), R.layout.dig_play);
                     showNotification();
 
-                } else if (digHit && playing) {
-                    stopService(new Intent(getBaseContext(), StreamingService.class));
-                    playing = false;
-                    playButton.setImageResource(R.drawable.play1);
-                    abandonAudioFocus();
-                    ongoing = false;
-                    remoteViews = new RemoteViews(getPackageName(), R.layout.dig_pause);
-                    showNotification();
-
-                } else if (!fmHit && !digHit && !playing) {
-                    Context context = getApplicationContext();
-                    CharSequence text = "Please select a station.";
-                    int duration = Toast.LENGTH_SHORT;
-
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
-                    playing = false;
-
-                } else {
-                    if (!playing) {
-                        requestAudioFocus();
-                        startService(new Intent("", currchan ,getBaseContext(), StreamingService.class));
-                        playing = true;
-                        playButton.setImageResource(R.drawable.pause1);
-                        ongoing = true;
-                        if(fmHit)
-                            remoteViews = new RemoteViews(getPackageName(), R.layout.fm_play);
-
-                        else
-                            remoteViews = new RemoteViews(getPackageName(), R.layout.dig_play);
-                        showNotification();
-
-                    }
                 }
             }
         }
+
     }
 
     private void initializeUIElements() {
 
         currchan = fmURI;
- //       playSeekBar = (ProgressBar) findViewById(R.id.progressBar);
- //       playSeekBar.setMax(100);
- //       playSeekBar.setVisibility(View.INVISIBLE);
+        //       playSeekBar = (ProgressBar) findViewById(R.id.progressBar);
+        //       playSeekBar.setMax(100);
+        //       playSeekBar.setVisibility(View.INVISIBLE);
         playButton = (ImageButton) findViewById(R.id.Play);
         playButton.setOnClickListener(this);
         DIGButton = (ImageButton) findViewById(R.id.DIG);
@@ -236,6 +232,7 @@ public class MainActivity extends Activity implements OnClickListener {
         FMButton.setOnClickListener(this);
 
     }
+
     private boolean requestAudioFocus() {
         if (!mAudioFocusGranted) {
             AudioManager am = (AudioManager) context
@@ -257,6 +254,7 @@ public class MainActivity extends Activity implements OnClickListener {
         }
         return mAudioFocusGranted;
     }
+
     private void abandonAudioFocus() {
         AudioManager am = (AudioManager) context
                 .getSystemService(Context.AUDIO_SERVICE);
@@ -287,7 +285,7 @@ public class MainActivity extends Activity implements OnClickListener {
         shrinkLeft = AnimationUtils.loadAnimation(this, R.anim.shrink_dg_left);
         setContentView(R.layout.activity_main);
         initializeUIElements();
-        mDrawerList = (ListView)findViewById(R.id.navList);
+        mDrawerList = (ListView) findViewById(R.id.navList);
         Log.d("LIST", " " + mDrawerList);
         addDrawerItems();
 
@@ -299,7 +297,7 @@ public class MainActivity extends Activity implements OnClickListener {
         afChangeListener =
                 new AudioManager.OnAudioFocusChangeListener() {
                     public void onAudioFocusChange(int focusChange) {
-                        Log.d( "focus change: ",focusChange + " ");
+                        Log.d("focus change: ", focusChange + " ");
                         if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
                             Log.d("Transient", "AudioFocus");
                             onClick(playButton);
@@ -307,21 +305,22 @@ public class MainActivity extends Activity implements OnClickListener {
                             Log.d("Gained", "Audio Focus");
                             onClick(playButton);
                         } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
-                            Log.wtf("Lost Audio Focus","");
+                            Log.wtf("Lost Audio Focus", "");
                             stopService(new Intent(getBaseContext(), StreamingService.class));
                             playing = false;
                             playButton.setImageResource(R.drawable.play1);
                             abandonAudioFocus();
                             ongoing = false;
                             remoteViews = new RemoteViews(getPackageName(), R.layout.dig_pause);
-                            showNotification();                        }
+                            showNotification();
+                        }
                     }
                 };
 
     }
 
     private void addDrawerItems() {
-        String[] osArray = {"Schedule", "Settings" };
+        String[] osArray = {"Schedule", "Settings"};
         mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
 
@@ -331,35 +330,35 @@ public class MainActivity extends Activity implements OnClickListener {
                 Log.d("TEST", "ID " + id);
                 if (id == 1) {
                     startActivity(new Intent(getApplicationContext(), settings.class));
-                }
-                else if (id == 0) {
+                } else if (id == 0) {
                     startActivity(new Intent(getApplicationContext(), Schedule.class));
                 }
 
             }
         });
     }
-/*
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            startActivity(new Intent(getApplicationContext(), settings.class));
-            return true;
-        }
-        else if (id == R.id.action_schedule) {
-            startActivity(new Intent(getApplicationContext(), Schedule.class));
-            return true;
-        }
+    /*
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            // Handle action bar item clicks here. The action bar will
+            // automatically handle clicks on the Home/Up button, so long
+            // as you specify a parent activity in AndroidManifest.xml.
+            int id = item.getItemId();
 
-        return super.onOptionsItemSelected(item);
-    }
-*/
+            //noinspection SimplifiableIfStatement
+            if (id == R.id.action_settings) {
+                startActivity(new Intent(getApplicationContext(), settings.class));
+                return true;
+            }
+            else if (id == R.id.action_schedule) {
+                startActivity(new Intent(getApplicationContext(), Schedule.class));
+                return true;
+            }
+
+            return super.onOptionsItemSelected(item);
+        }
+    */
     @Override
     public void onStart() {
         super.onStart();
@@ -407,7 +406,7 @@ public class MainActivity extends Activity implements OnClickListener {
         this.unregisterReceiver(fm_listener);
         this.unregisterReceiver(dig_listener);
         this.unregisterReceiver(hRemoval);
-        Log.wtf("Bye Bye now","");
+        Log.wtf("Bye Bye now", "");
         notificationManager.cancel(notificationID);
         super.onDestroy();
 
@@ -417,34 +416,32 @@ public class MainActivity extends Activity implements OnClickListener {
     private BroadcastReceiver dig_listener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.d("this one's for dig"," digital that is");
+            Log.d("this one's for dig", " digital that is");
             onClick(DIGButton);
         }
     };
     private BroadcastReceiver fm_listener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.d("this one's for fm"," frequency modulation that is");
+            Log.d("this one's for fm", " frequency modulation that is");
             onClick(FMButton);
         }
     };
     private BroadcastReceiver play_listener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.d("play","or is it pause hm");
+            Log.d("play", "or is it pause hm");
             onClick(playButton);
 
         }
     };
-    private class MusicIntentReceiver extends BroadcastReceiver
-    {
+
+    private class MusicIntentReceiver extends BroadcastReceiver {
         @Override
-        public void onReceive(Context cntx, Intent intent)
-        {
+        public void onReceive(Context cntx, Intent intent) {
             String action = intent.getAction();
 
-            if(action.compareTo(AudioManager.ACTION_AUDIO_BECOMING_NOISY) == 0)
-            {
+            if (action.compareTo(AudioManager.ACTION_AUDIO_BECOMING_NOISY) == 0) {
                 stopService(new Intent(getBaseContext(), StreamingService.class));
                 playing = false;
                 playButton.setImageResource(R.drawable.play1);
@@ -454,5 +451,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 showNotification();
             }
         }
-    };  /* end HeadsetIntentReceiver  */
+    }
+
+    ;  /* end HeadsetIntentReceiver  */
 }
