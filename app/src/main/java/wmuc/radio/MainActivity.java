@@ -13,7 +13,7 @@ import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,8 +32,8 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends Activity implements OnClickListener {
-    Uri fmURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc-hq");
-    Uri digURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc2-high");
+    private final Uri fmURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc-hq");
+    private final Uri digURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc2-high");
     private static final String TAG = "WMUC";
     private Uri currchan;
     private ImageButton playButton;
@@ -61,8 +61,8 @@ public class MainActivity extends Activity implements OnClickListener {
     private AudioManager.OnAudioFocusChangeListener afChangeListener;
     private Notification note;
     private boolean ongoing;
-    private IntentFilter headphoneFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
-    private MusicIntentReceiver hRemoval = new MusicIntentReceiver();
+    private final IntentFilter headphoneFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
+    private final MusicIntentReceiver hRemoval = new MusicIntentReceiver();
 
 
     /**
@@ -73,6 +73,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
     public void showNotification() {
         remoteViews.setImageViewResource(R.id.img, R.drawable.wmuc);
+        remoteViews.setTextViewText(R.id.infotext,"HELLO MOM");
 
         Intent playIntent = new Intent("play_clicked");
         Intent fmIntent = new Intent("fm_clicked");
@@ -113,11 +114,11 @@ public class MainActivity extends Activity implements OnClickListener {
         builder.setContentIntent(pendingIntent);
         builder.setPriority(Notification.PRIORITY_MAX);
         builder.setOngoing(ongoing);
+        builder.setStyle(new NotificationCompat.MediaStyle());
         builder.setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
         note = builder.build();
         note.bigContentView = remoteViews;
         note.contentView = remoteViews;
-
         notificationManager.notify(notificationID, note);
     }
 
@@ -233,7 +234,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
     }
 
-    private boolean requestAudioFocus() {
+    private void requestAudioFocus() {
         if (!mAudioFocusGranted) {
             AudioManager am = (AudioManager) context
                     .getSystemService(Context.AUDIO_SERVICE);
@@ -246,16 +247,17 @@ public class MainActivity extends Activity implements OnClickListener {
 
             if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                 mAudioFocusGranted = true;
+                Log.d("Focus", "Gained");
             } else {
                 // FAILED
                 Log.e(TAG,
                         ">>>>>>>>>>>>> FAILED TO GET AUDIO FOCUS <<<<<<<<<<<<<<<<<<<<<<<<");
             }
         }
-        return mAudioFocusGranted;
     }
 
     private void abandonAudioFocus() {
+        Log.d("ABANDONED", ": Audio Focus");
         AudioManager am = (AudioManager) context
                 .getSystemService(Context.AUDIO_SERVICE);
         int result = am.abandonAudioFocus(afChangeListener);
@@ -306,7 +308,7 @@ public class MainActivity extends Activity implements OnClickListener {
                             onClick(playButton);
                         } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
                             Log.wtf("Lost Audio Focus", "");
-                            stopService(new Intent(getBaseContext(), StreamingService.class));
+                            stopService(new Intent(context, StreamingService.class));
                             playing = false;
                             playButton.setImageResource(R.drawable.play1);
                             abandonAudioFocus();
@@ -413,21 +415,21 @@ public class MainActivity extends Activity implements OnClickListener {
 
     }
 
-    private BroadcastReceiver dig_listener = new BroadcastReceiver() {
+    private final BroadcastReceiver dig_listener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.d("this one's for dig", " digital that is");
             onClick(DIGButton);
         }
     };
-    private BroadcastReceiver fm_listener = new BroadcastReceiver() {
+    private final BroadcastReceiver fm_listener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.d("this one's for fm", " frequency modulation that is");
             onClick(FMButton);
         }
     };
-    private BroadcastReceiver play_listener = new BroadcastReceiver() {
+    private final BroadcastReceiver play_listener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.d("play", "or is it pause hm");

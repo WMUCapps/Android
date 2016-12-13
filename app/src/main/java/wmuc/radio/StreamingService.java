@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.IBinder;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.android.exoplayer.ExoPlayer;
 import com.google.android.exoplayer.MediaCodecAudioTrackRenderer;
@@ -13,14 +12,13 @@ import com.google.android.exoplayer.MediaCodecSelector;
 import com.google.android.exoplayer.extractor.ExtractorSampleSource;
 import com.google.android.exoplayer.upstream.DefaultAllocator;
 import com.google.android.exoplayer.upstream.DefaultUriDataSource;
-import com.google.android.exoplayer.util.PlayerControl;
 
 /**
  * Created by Joseph on 11/14/2016.
  */
 public class StreamingService extends Service{
 
-    ExoPlayer exp;
+    private ExoPlayer exp;
     private MediaCodecAudioTrackRenderer audioRenderer ;
     private final String TAG = "WMUC";
 

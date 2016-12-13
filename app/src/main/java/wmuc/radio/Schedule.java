@@ -14,7 +14,7 @@ public class Schedule extends Activity implements View.OnClickListener {
     private Button DIGButton;
     private Button FMButton;
     private TextView sh;
-    WebView webView;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

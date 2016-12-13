@@ -44,8 +44,8 @@
         android:layout_toRightOf="@+id/fmnotif"
         android:layout_marginLeft="18dp"
         android:layout_marginStart="18dp"
-        android:layout_centerVertical="true"
-        />
+        android:layout_alignTop="@+id/fmnotif"
+    />
 
     <TextView
         android:layout_width="wrap_content"
