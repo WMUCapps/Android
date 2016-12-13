@@ -22,31 +22,14 @@
         android:id="@+id/Play"
         android:background="@null"
         android:adjustViewBounds="true"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
         android:scaleType="fitCenter"
         android:clickable="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="50dp" />
-
-    <ImageButton
-        android:src="@drawable/digitalicon2"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/DIG"
-        android:adjustViewBounds="true"
-        android:maxWidth="150dp"
-        android:maxHeight="250dp"
-        android:scaleType="fitCenter"
-        android:longClickable="true"
-        android:background="@null"
-        android:paddingTop="60dp"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/Play"
-        android:layout_toStartOf="@+id/Play"
-        android:paddingBottom="50dp" />
+        android:paddingBottom="0dp"
+        android:layout_below="@+id/FM" />
 
     <ImageButton
         android:src="@drawable/fmicon2"
@@ -58,9 +41,27 @@
         android:maxWidth="150dp"
         android:maxHeight="250dp"
         android:scaleType="fitCenter"
+        android:longClickable="true"
         android:background="@null"
-        android:paddingTop="50dp"
-        android:paddingBottom="50dp"
+        android:paddingTop="0dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/Play"
+        android:layout_toStartOf="@+id/Play"
+        android:paddingBottom="0dp" />
+
+    <ImageButton
+        android:src="@drawable/digitalicon2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DIG"
+        android:adjustViewBounds="true"
+        android:maxWidth="150dp"
+        android:maxHeight="250dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/Play"
         android:layout_toEndOf="@+id/Play" />
@@ -77,19 +78,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp" />
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/Play"
-        android:layout_alignRight="@+id/Play"
-        android:layout_alignEnd="@+id/Play"
-        android:layout_alignBottom="@+id/Play"
-        android:layout_alignLeft="@+id/Play"
-        android:progressDrawable="@drawable/circular_progress_bar"
-        android:paddingBottom="53dp"></ProgressBar>
-
 
 </RelativeLayout>
     <ListView

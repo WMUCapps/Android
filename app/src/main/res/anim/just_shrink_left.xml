@@ -11,9 +11,9 @@
         android:pivotX="50%"
         android:pivotY="50%"
         android:duration="400"
-        ></scale>
+        />
     <translate
         android:toXDelta="-4%p"
         android:duration = "400"
-        ></translate>
+        />
 </set>
