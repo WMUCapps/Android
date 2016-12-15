@@ -23,6 +23,17 @@
                 </intent-filter>
             </receiver>
 
+            <receiver android:name=".NotificationBroadcastReciver"
+                android:enabled="true"
+                android:exported="true">
+                <intent-filter>
+                    <action android:name="PLAY_BUTTON_ACTION"></action>
+                    <action android:name="SWITCH_BUTTON_FILTER"></action>
+
+                </intent-filter>
+
+            </receiver>
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
