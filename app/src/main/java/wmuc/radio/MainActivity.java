@@ -90,7 +90,7 @@ public class MainActivity extends Activity implements OnClickListener {
         fm.putExtra("message", "fm");
         fm.setAction("FM_BUTTON_ACTION");
         PendingIntent fmIntent = PendingIntent.getBroadcast(this, 123, fm, PendingIntent.FLAG_UPDATE_CURRENT);
- 
+
         Intent dig = new Intent();
         dig.putExtra("message", "fm");
         dig.setAction("DIG_BUTTON_ACTION");
