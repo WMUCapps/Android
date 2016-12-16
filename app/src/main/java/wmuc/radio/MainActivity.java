@@ -55,15 +55,17 @@ public class MainActivity extends Activity implements OnClickListener {
     private NotificationCompat.Builder builder;
     private NotificationManager notificationManager;
     private final int notificationID = (int) System.currentTimeMillis();
-    private RemoteViews remoteViews;
     private Context context;
     private boolean mAudioFocusGranted = false;
     private AudioManager.OnAudioFocusChangeListener afChangeListener;
-    private Notification note;
     private boolean ongoing;
     private final IntentFilter headphoneFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
     private final MusicIntentReceiver hRemoval = new MusicIntentReceiver();
-
+    private final IntentFilter playfFilter = new IntentFilter("PLAY_BUTTON_ACTION");
+    private final IntentFilter fmFilter = new IntentFilter("FM_BUTTON_ACTION");
+    private final IntentFilter digFilter = new IntentFilter("DIG_BUTTON_ACTION");
+    private final NotificationBroadcastReciver NBR = new NotificationBroadcastReciver();
+    private String channel;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -72,59 +74,46 @@ public class MainActivity extends Activity implements OnClickListener {
     private GoogleApiClient client;
 
     public void showNotification() {
-        remoteViews.setImageViewResource(R.id.img, R.drawable.wmuc);
-        remoteViews.setTextViewText(R.id.infotext,"HELLO MOM");
-
-        Intent playIntent = new Intent("play_clicked");
-        Intent fmIntent = new Intent("fm_clicked");
-        Intent digIntent = new Intent("dig_clicked");
-
-        fmIntent.putExtra("id", notificationID);
-        digIntent.putExtra("id", notificationID);
-        playIntent.putExtra("id", notificationID);
-
-        PendingIntent p_button_intent = PendingIntent.getBroadcast(context, 123, playIntent, 0);
-        remoteViews.setOnClickPendingIntent(R.id.playnotif, p_button_intent);
-
-        PendingIntent fm_button_intent = PendingIntent.getBroadcast(context, 123, fmIntent, 0);
-        remoteViews.setOnClickPendingIntent(R.id.fmnotif, fm_button_intent);
-
-        PendingIntent dig_button_intent = PendingIntent.getBroadcast(context, 123, digIntent, 0);
-        remoteViews.setOnClickPendingIntent(R.id.dignotif, dig_button_intent);
-
-        IntentFilter dig = new IntentFilter();
-        dig.addAction("dig_clicked");
-        registerReceiver(this.dig_listener, dig);
-
-        IntentFilter fm = new IntentFilter();
-        fm.addAction("fm_clicked");
-        registerReceiver(this.fm_listener, fm);
-
-        IntentFilter play = new IntentFilter();
-        play.addAction("play_clicked");
-        registerReceiver(this.play_listener, play);
-
-        Intent nIntent = new Intent(context, MainActivity.class);
-        nIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        nIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, nIntent, 0);
         builder = new NotificationCompat.Builder(context);
         builder.setSmallIcon(R.drawable.wmuc);
         builder.setAutoCancel(false);
-        builder.setContentIntent(pendingIntent);
         builder.setPriority(Notification.PRIORITY_MAX);
         builder.setOngoing(ongoing);
-        builder.setStyle(new NotificationCompat.MediaStyle());
-        builder.setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
-        note = builder.build();
-        note.bigContentView = remoteViews;
-        note.contentView = remoteViews;
-        notificationManager.notify(notificationID, note);
+        builder.setContentTitle(channel);
+        builder.setPriority(Notification.PRIORITY_MAX);
+        Intent play = new Intent();
+        play.putExtra("message", "play");
+        play.setAction("PLAY_BUTTON_ACTION");
+        PendingIntent playIntent = PendingIntent.getBroadcast(this, 123, play, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Intent fm = new Intent();
+        fm.putExtra("message", "fm");
+        fm.setAction("FM_BUTTON_ACTION");
+        PendingIntent fmIntent = PendingIntent.getBroadcast(this, 123, fm, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Intent dig = new Intent();
+        dig.putExtra("message", "fm");
+        dig.setAction("DIG_BUTTON_ACTION");
+        PendingIntent digIntent = PendingIntent.getBroadcast(this, 123, dig, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        if(ongoing)
+            builder.addAction(0, "Pause", playIntent);
+        else
+            builder.addAction(0, "Play", playIntent);
+
+        builder.addAction(0, "FM", fmIntent);
+        builder.addAction(0, "Digital", digIntent);
+
+        builder.setContentIntent(playIntent);
+        notificationManager.notify(notificationID, builder.build());
     }
 
     public void onClick(View v) {
         Log.d("THE BUCK STOPS HERE", "hopefully " + playing);
         if (v == DIGButton && !digHit) {
+            channel = "WMUC: Digital";
+            showNotification();
+
             Log.d("Digital", "hit the button");
 
             if (!fmHit) {
@@ -144,11 +133,12 @@ public class MainActivity extends Activity implements OnClickListener {
             }
 
             if (playing) {
-                remoteViews = new RemoteViews(getPackageName(), R.layout.dig_play);
                 startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
-                showNotification();
             }
         } else if (v == FMButton && !fmHit) {
+            channel = "WMUC: FM";
+            showNotification();
+
             if (!digHit) {
                 v.startAnimation(justslideRightCenter);
                 DIGButton.startAnimation(justShrinkRight);
@@ -166,11 +156,10 @@ public class MainActivity extends Activity implements OnClickListener {
             digHit = false;
             fmHit = true;
             if (playing) {
-                remoteViews = new RemoteViews(getPackageName(), R.layout.fm_play);
                 startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
-                showNotification();
             }
         } else if (v == playButton) {
+
             Log.d("FM: " + fmHit + " DIG: " + digHit + " playing: " + playing, " In case you were curious");
             if (fmHit && playing) {
                 stopService(new Intent(getBaseContext(), StreamingService.class));
@@ -178,7 +167,6 @@ public class MainActivity extends Activity implements OnClickListener {
                 playButton.setImageResource(R.drawable.play1);
                 abandonAudioFocus();
                 ongoing = false;
-                remoteViews = new RemoteViews(getPackageName(), R.layout.fm_pause);
                 showNotification();
 
             } else if (digHit && playing) {
@@ -187,7 +175,6 @@ public class MainActivity extends Activity implements OnClickListener {
                 playButton.setImageResource(R.drawable.play1);
                 abandonAudioFocus();
                 ongoing = false;
-                remoteViews = new RemoteViews(getPackageName(), R.layout.dig_pause);
                 showNotification();
 
             } else if (!fmHit && !digHit && !playing) {
@@ -206,11 +193,10 @@ public class MainActivity extends Activity implements OnClickListener {
                     playing = true;
                     playButton.setImageResource(R.drawable.pause1);
                     ongoing = true;
-                    if (fmHit)
-                        remoteViews = new RemoteViews(getPackageName(), R.layout.fm_play);
+                    if(fmHit)
+                        channel = "WMUC: FM";
 
-                    else
-                        remoteViews = new RemoteViews(getPackageName(), R.layout.dig_play);
+                    else channel = "WMUC: Digital";
                     showNotification();
 
                 }
@@ -295,6 +281,9 @@ public class MainActivity extends Activity implements OnClickListener {
         notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
         registerReceiver(hRemoval, headphoneFilter);
+        registerReceiver(NBR,playfFilter);
+        registerReceiver(NBR,fmFilter);
+        registerReceiver(NBR,digFilter);
 
         afChangeListener =
                 new AudioManager.OnAudioFocusChangeListener() {
@@ -313,7 +302,6 @@ public class MainActivity extends Activity implements OnClickListener {
                             playButton.setImageResource(R.drawable.play1);
                             abandonAudioFocus();
                             ongoing = false;
-                            remoteViews = new RemoteViews(getPackageName(), R.layout.dig_pause);
                             showNotification();
                         }
                     }
@@ -404,39 +392,15 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     protected void onDestroy() {
         //before destroying the app
-        this.unregisterReceiver(play_listener);
-        this.unregisterReceiver(fm_listener);
-        this.unregisterReceiver(dig_listener);
         this.unregisterReceiver(hRemoval);
+        this.unregisterReceiver(NBR);
+
         Log.wtf("Bye Bye now", "");
         notificationManager.cancel(notificationID);
         super.onDestroy();
 
 
     }
-
-    private final BroadcastReceiver dig_listener = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.d("this one's for dig", " digital that is");
-            onClick(DIGButton);
-        }
-    };
-    private final BroadcastReceiver fm_listener = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.d("this one's for fm", " frequency modulation that is");
-            onClick(FMButton);
-        }
-    };
-    private final BroadcastReceiver play_listener = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.d("play", "or is it pause hm");
-            onClick(playButton);
-
-        }
-    };
 
     private class MusicIntentReceiver extends BroadcastReceiver {
         @Override
@@ -449,11 +413,19 @@ public class MainActivity extends Activity implements OnClickListener {
                 playButton.setImageResource(R.drawable.play1);
                 abandonAudioFocus();
                 ongoing = false;
-                remoteViews = new RemoteViews(getPackageName(), R.layout.dig_pause);
                 showNotification();
             }
         }
     }
-
-    ;  /* end HeadsetIntentReceiver  */
+    private class NotificationBroadcastReciver extends BroadcastReceiver{
+        public void onReceive(Context context, Intent intent) {
+            Log.d("HELP", "Me, the sun is rising again");
+            if(intent.getAction().equals("PLAY_BUTTON_ACTION"))
+                onClick(playButton);
+            else if (intent.getAction().equals("FM_BUTTON_ACTION"))
+                onClick(FMButton);
+            else if (intent.getAction().equals("DIG_BUTTON_ACTION"))
+                onClick(DIGButton);
+        }
+    }
 }
