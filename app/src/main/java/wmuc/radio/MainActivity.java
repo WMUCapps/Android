@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -65,6 +66,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private final IntentFilter digFilter = new IntentFilter("DIG_BUTTON_ACTION");
     private final NotificationBroadcastReciver NBR = new NotificationBroadcastReciver();
     private String channel;
+    float swipeX1,swipeY1,swipeX2,swipeY2;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -216,6 +218,8 @@ public class MainActivity extends Activity implements OnClickListener {
         DIGButton.setOnClickListener(this);
         FMButton = (ImageButton) findViewById(R.id.FM);
         FMButton.setOnClickListener(this);
+        DIGButton.setOnTouchListener(new TouchHandler());
+        FMButton.setOnTouchListener(new TouchHandler());
 
     }
 
@@ -305,6 +309,8 @@ public class MainActivity extends Activity implements OnClickListener {
                         }
                     }
                 };
+
+
 
     }
 
@@ -427,4 +433,49 @@ public class MainActivity extends Activity implements OnClickListener {
                 onClick(DIGButton);
         }
     }
+
+    private class TouchHandler implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent touchevent) {
+            switch (touchevent.getAction()) {
+                // when user first touches the screen we get x and y coordinate
+                case MotionEvent.ACTION_DOWN: {
+                    swipeX1 = touchevent.getX();
+                    swipeY1 = touchevent.getY();
+                    break;
+                }
+                case MotionEvent.ACTION_UP: {
+                    swipeX2 = touchevent.getX();
+                    swipeY2 = touchevent.getY();
+
+                    // if left to right sweep event on screen
+                    if (swipeX1 < swipeX2) {
+                        onClick(view);
+
+                    }
+
+                    // if right to left sweep event on screen
+                    if (swipeX1 > swipeX2) {
+                        onClick(view);
+
+                    }
+
+                    // if UP to Down sweep event on screen
+                    if (swipeY1 < swipeY2) {
+                    //do nothing.
+                    }
+
+                    // if Down to UP sweep event on screen
+                    if (swipeY1 > swipeY2) {
+                    //do nothing.
+                    }
+                    break;
+                }
+            }
+            return false;
+        }
+    }
+
+
+
+
 }

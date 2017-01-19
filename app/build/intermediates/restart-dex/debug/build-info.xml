@@ -5,27 +5,41 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="118592785243010"
+    timestamp="120464341442803"
     token="5213937656713194737"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="3061" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="521" />
     <task
         name="verifier"
-        duration="0" />
+        duration="15" />
 
     <artifact
-        location="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+        type="DEX" />
 
+    <build
+        timestamp="118592785243010"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="120464341442803"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
+    </build>
     <build
         timestamp="498442533420717"
         verifier="FULL_BUILD_REQUESTED" >
