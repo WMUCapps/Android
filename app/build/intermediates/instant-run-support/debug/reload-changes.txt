@@ -1,8 +1,0 @@
-CHANGED,C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\wmuc\radio\MainActivity$5$override.class
-CHANGED,C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\wmuc\radio\MainActivity$1$override.class
-CHANGED,C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\wmuc\radio\MainActivity$3$override.class
-CHANGED,C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\wmuc\radio\MainActivity$MusicIntentReceiver$override.class
-CHANGED,C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\wmuc\radio\MainActivity$2$override.class
-CHANGED,C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\wmuc\radio\MainActivity$override.class
-CHANGED,C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\wmuc\radio\MainActivity$4$override.class

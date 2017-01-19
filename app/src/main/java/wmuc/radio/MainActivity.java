@@ -24,7 +24,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.RemoteViews;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
