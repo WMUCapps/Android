@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Jan 19 14:15:48 EST 2017
+#Thu Jan 19 15:26:36 EST 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png
@@ -9,7 +9,7 @@
 164.set=ANDROID_RESOURCE
 26.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png
 209.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
-78.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\notification_template_lines.xml
+78.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_search_api_mtrl_alpha.png
 21.set=ANDROID_RESOURCE
 53.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png
 107.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -68,7 +68,7 @@
 63.set=ANDROID_RESOURCE
 6.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 5.set=ANDROID_RESOURCE
-256.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png
+256.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-v23\\abc_control_background_material.xml
 179.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\design_layout_snackbar_include.xml
 102.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-v21\\ic_menu_send.xml
 231.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-v21\\abc_action_bar_item_background_material.xml
@@ -138,7 +138,7 @@
 128.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-v21\\ic_menu_manage.xml
 73.set=ANDROID_RESOURCE
 7.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
-257.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-v23\\abc_control_background_material.xml
+257.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\abc_primary_text_disable_only_material_dark.xml
 103.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\menu_main.xml
 232.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\com.google.android.gms-play-services-basement-8.1.0_fb01c563f9666360293a3e6b0c21c4df12c86853\\classes.dex
 155.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png
@@ -177,7 +177,7 @@
 67.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\awesome3.jpg
 219.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png
 42.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml
-117.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png
+117.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\awesome17.jpg
 94.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png
 148.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 69.set=ANDROID_RESOURCE
@@ -206,12 +206,12 @@
 129.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\notification_template_big_media.xml
 83.set=DEX
 8.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
-258.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\abc_primary_text_disable_only_material_dark.xml
+258.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png
 104.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_alert_dialog_button_bar_material.xml
 233.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\anim\\shrink_fm_right.xml
 156.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\common_signin_btn_text_dark.xml
 240.set=ANDROID_RESOURCE
-131.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png
+131.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\notification_template_big_media_narrow.xml
 181.set=ANDROID_RESOURCE
 44.set=ANDROID_RESOURCE
 260.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\support_simple_spinner_dropdown_item.xml
@@ -248,7 +248,7 @@
 12.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 68.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\menu_schedule.xml
 43.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_7\\classes.dex
-118.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\awesome17.jpg
+118.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\ps.png
 95.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color-v23\\abc_color_highlight_material.xml
 149.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 79.set=ANDROID_RESOURCE
@@ -283,7 +283,7 @@
 157.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_screen_simple_overlay_action_mode.xml
 250.set=ANDROID_RESOURCE
 191.set=ANDROID_RESOURCE
-132.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\notification_template_big_media_narrow.xml
+132.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png
 54.set=ANDROID_RESOURCE
 261.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\cat_animation.xml
 184.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\select_dialog_singlechoice_material.xml
@@ -298,7 +298,7 @@
 165.set=ANDROID_RESOURCE
 63.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 215.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_71b54bf547a93562a3c0b7d8a70879f830e72c8e
-84.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png
+84.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\design_navigation_item_header.xml
 138.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 22.set=ANDROID_RESOURCE
 113.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -316,8 +316,8 @@
 13.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 69.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\anim\\design_fab_out.xml
 44.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\fm_pause.xml
-119.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\ps.png
-96.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png
+119.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png
+96.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\anim\\abc_slide_out_bottom.xml
 89.set=ANDROID_RESOURCE
 248.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\play1.png
 202.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -352,7 +352,7 @@
 210.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\awesome5.jpg
 133.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_ratingbar_full_material.xml
 64.set=ANDROID_RESOURCE
-262.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-ldrtl-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png
+262.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\anim\\abc_popup_exit.xml
 185.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_item_background_holo_light.xml
 6.set=ANDROID_RESOURCE
 160.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_btn_radio_material.xml
@@ -365,7 +365,7 @@
 33.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\com.android.support-design-23.1.1_8548087e2ca9840127438275f4b42a973dcb9923\\classes.dex
 64.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 216.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
-85.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\design_navigation_item_header.xml
+85.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png
 139.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_f2562a837dbb24f3cd76ac2e313867a2d7f9cf39
 32.set=ANDROID_RESOURCE
 60.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml
@@ -387,7 +387,7 @@
 228.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 99.set=ANDROID_RESOURCE
 104.set=ANDROID_RESOURCE
-97.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\anim\\abc_slide_out_bottom.xml
+97.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\awesome14.jpg
 20.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_btn_check_material.xml
 249.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\dig_pause.xml
 203.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -419,10 +419,10 @@
 80.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 236.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_screen_toolbar.xml
 159.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
-211.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png
+211.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\content_menu.xml
 134.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-ldrtl-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png
 74.set=DEX
-263.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\anim\\abc_popup_exit.xml
+263.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-ldrtl-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png
 186.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_activity_chooser_view_list_item.xml
 161.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\design_layout_tab_icon.xml
 192.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -459,7 +459,7 @@
 46.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_text_cursor_material.xml
 229.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 114.set=ANDROID_RESOURCE
-98.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\awesome14.jpg
+98.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png
 21.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_list_menu_item_checkbox.xml
 204.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 73.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\awesome22.jpg
@@ -486,7 +486,7 @@ count=265
 38.set=ANDROID_RESOURCE
 81.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 237.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_dialog_title_material.xml
-212.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\content_menu.xml
+212.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\menu.xml
 135.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\awesome9.jpg
 84.set=ANDROID_RESOURCE
 264.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png
@@ -554,7 +554,7 @@ count=265
 48.set=ANDROID_RESOURCE
 82.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
 238.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\design_fab_background.xml
-213.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\menu.xml
+213.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png
 136.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\wmuc.png
 94.set=ANDROID_RESOURCE
 205.set=ANDROID_RESOURCE
@@ -735,7 +735,7 @@ count=265
 25.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\common_full_open_on_phone.png
 154.set=ANDROID_RESOURCE
 208.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_
-77.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_search_api_mtrl_alpha.png
+77.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\notification_template_lines.xml
 11.set=ANDROID_RESOURCE
 52.file=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\abc_btn_colored_material.xml
 106.base=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1

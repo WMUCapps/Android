@@ -13,14 +13,19 @@ import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.animation.AnimatorCompatHelper;
 import android.support.v7.app.NotificationCompat;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
@@ -74,6 +79,45 @@ public class MainActivity extends Activity implements OnClickListener {
      */
     private GoogleApiClient client;
 
+    private void moveToCenter(View v){
+        DisplayMetrics dm = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+        Log.wtf("Display Metrics", " "+ dm);
+        int xDest = dm.widthPixels/2;
+        xDest -= (v.getMeasuredWidth()*1.5/2);
+        int originalPos[] = new int[2];
+        Log.wtf("x Destination", " "+ xDest);
+        v.getLocationOnScreen( originalPos );
+        Log.wtf("x origin", " "+ originalPos[0]);
+
+        AnimationSet a = new AnimationSet(true);
+        TranslateAnimation slideAnim;
+
+        if(fmHit) {
+            slideAnim = new TranslateAnimation(115, xDest - originalPos[0], 0, 0);
+            Log.d("Dig hit", "HIT");
+        }else
+            slideAnim = new TranslateAnimation(-25, xDest-originalPos[0],0,0);
+        slideAnim.setDuration(400);
+        slideAnim.setFillAfter(true);
+        ScaleAnimation scaleAnim;
+
+
+        if(fmHit||digHit) {
+            scaleAnim = new ScaleAnimation(.7f, 1.5f, .7f, 1.5f, 0, 200f);
+        }
+        else
+            scaleAnim = new ScaleAnimation(1f, 1.5f, 1f, 1.5f, 0, 200f);
+
+        scaleAnim.setDuration(400);
+        scaleAnim.setFillAfter( true );
+
+        a.addAnimation(scaleAnim);
+        a.addAnimation(slideAnim);
+        a.setFillAfter(true);
+        v.startAnimation(a);
+    }
+
     public void showNotification() {
         builder = new NotificationCompat.Builder(context);
         builder.setSmallIcon(R.drawable.wmuc);
@@ -118,10 +162,10 @@ public class MainActivity extends Activity implements OnClickListener {
             Log.d("Digital", "hit the button");
 
             if (!fmHit) {
-                v.startAnimation(justslideLeft);
+                moveToCenter(v);
                 FMButton.startAnimation(justShrinkLeft);
             } else {
-                v.startAnimation(slideLeft);
+                moveToCenter(v);
                 FMButton.startAnimation(shrinkLeft);
             }
 
@@ -141,10 +185,10 @@ public class MainActivity extends Activity implements OnClickListener {
             showNotification();
 
             if (!digHit) {
-                v.startAnimation(justslideRightCenter);
+                moveToCenter(v);
                 DIGButton.startAnimation(justShrinkRight);
             } else {
-                v.startAnimation(slideRight);
+                moveToCenter(v);
                 DIGButton.startAnimation(shrinkRight);
             }
 
