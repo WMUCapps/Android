@@ -84,12 +84,12 @@
         "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
     {
-        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fluffy.jpg",
-        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable\\fluffy.jpg"
-    },
-    {
         "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fluffy.jpg",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable\\fluffy.jpg"
     },
     {
         "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
