@@ -1,4 +1,4 @@
-package wmuc.radio;
+package appinventor.ai_bengg.WMUC_Radio;
 
 import android.app.Service;
 import android.content.Intent;
