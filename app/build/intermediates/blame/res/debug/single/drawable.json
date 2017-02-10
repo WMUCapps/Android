@@ -144,12 +144,12 @@
         "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable\\awesome12.jpg"
     },
     {
-        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ps.png",
-        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable\\ps.png"
-    },
-    {
         "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome5.jpg",
         "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable\\awesome5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ps.png",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable\\ps.png"
     },
     {
         "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",

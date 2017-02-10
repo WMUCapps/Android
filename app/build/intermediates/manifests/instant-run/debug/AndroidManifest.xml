@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="wmuc.radio"
+    package="appinventor.ai_bengg.WMUC_Radio.radio"
     android:versionCode="3"
     android:versionName="1.2" >
 
@@ -20,27 +20,27 @@
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="wmuc.radio.Splash"
+            android:name="appinventor.ai_bengg.WMUC_Radio.Splash"
             android:label="@string/app_name"
             android:theme="@style/Theme.Transparent" >
-            <receiver android:name="wmuc.radio.MusicIntentReceiver" >
-                <intent-filter>
-                    <action android:name="android.media.AUDIO_BECOMING_NOISY" />
-                </intent-filter>
-            </receiver>
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <receiver android:name="appinventor.ai_bengg.WMUC_Radio.MusicIntentReceiver" >
+                <intent-filter>
+                    <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                </intent-filter>
+            </receiver>
         </activity>
         <activity
-            android:name="wmuc.radio.settings"
+            android:name="appinventor.ai_bengg.WMUC_Radio.settings"
             android:label="@string/title_activity_settings"
             android:screenOrientation="portrait" />
         <activity
-            android:name="wmuc.radio.Schedule"
+            android:name="appinventor.ai_bengg.WMUC_Radio.Schedule"
             android:label="@string/title_activity_schedule"
             android:screenOrientation="portrait" />
         <!--
@@ -52,16 +52,16 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="wmuc.radio.MainActivity"
+            android:name="appinventor.ai_bengg.WMUC_Radio.MainActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <activity
-            android:name="wmuc.radio.menu"
+            android:name="appinventor.ai_bengg.WMUC_Radio.menu"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
-        <service android:name="wmuc.radio.StreamingService" />
+        <service android:name="appinventor.ai_bengg.WMUC_Radio.StreamingService" />
     </application>
 
 </manifest>

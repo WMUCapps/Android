@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="wmuc.radio.test">
+    package="appinventor.ai_bengg.WMUC_Radio.radio.test">
 
     <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="23" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="wmuc.radio"
+                     android:targetPackage="appinventor.ai_bengg.WMUC_Radio.radio"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for wmuc.radio"/>
+                     android:label="Tests for appinventor.ai_bengg.WMUC_Radio.radio"/>
 </manifest>
