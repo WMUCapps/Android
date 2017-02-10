@@ -36,11 +36,9 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import appinventor.ai_bengg.WMUC_Radio.R;
-
 public class MainActivity extends Activity implements OnClickListener {
-    private final Uri fmURI = Uri.parse("http://appinventor.ai_bengg.WMUC_Radio.umd.edu:8000/appinventor.ai_bengg.WMUC_Radio-hq");
-    private final Uri digURI = Uri.parse("http://appinventor.ai_bengg.WMUC_Radio.umd.edu:8000/wmuc2-high");
+    private final Uri fmURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc-hq");
+    private final Uri digURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc2-high");
     private static final String TAG = "WMUC";
     private Uri currchan;
     private ImageButton playButton;
