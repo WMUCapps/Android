@@ -28,16 +28,16 @@
         "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/layout/activity_splash.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/layout/activity_schedule.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/layout/activity_schedule.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/layout/activity_settings.xml",
         "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/layout/activity_settings.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/layout/activity_schedule.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/layout/activity_schedule.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",

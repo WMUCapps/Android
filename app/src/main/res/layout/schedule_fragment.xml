@@ -11,21 +11,16 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
 
-        <EditText
+        <TextView
+            android:text="Day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="Day"
-            android:ems="10"
             android:id="@+id/day"
-            android:clickable="false"
+            android:textStyle="normal|bold"
             android:textColor="@android:color/holo_red_light"
-            android:textAllCaps="false"
-            android:textAlignment="center"
-            tools:textStyle="bold"
             android:gravity="center_horizontal"
-            android:textSize="20sp" />
-
+            android:textSize="22sp"
+            android:paddingBottom="5dp" />
     </TableRow>
 
     <TableRow
@@ -53,6 +48,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="8AM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time8am"
+                    android:paddingLeft="10dp"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+
             <TextView
                 android:text="Show Name"
                 android:layout_width="match_parent"
@@ -68,14 +81,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/host1"
                 android:gravity="center"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="Short description to get the point across."
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/description1"
-                android:gravity="center"
+                android:textSize="16sp"
                 android:paddingBottom="20dp"/>
 
             <TextView
@@ -93,15 +99,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/host2"
                 android:gravity="center"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="Short description to get the point across."
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/description2"
-                android:gravity="center"
+                android:textSize="16sp"
                 android:paddingBottom="20dp"/>
+
 
             <TextView
                 android:text="Show Name"
@@ -118,15 +118,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/host3"
                 android:gravity="center"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="Short description to get the point across."
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/description3"
-                android:gravity="center"
+                android:textSize="16sp"
                 android:paddingBottom="20dp"/>
+
 
             <TextView
                 android:text="Show Name"
@@ -143,15 +137,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/host4"
                 android:gravity="center"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="Short description to get the point across."
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/description4"
-                android:gravity="center"
+                android:textSize="16sp"
                 android:paddingBottom="20dp"/>
+
 
             <TextView
                 android:text="Show Name"
@@ -168,15 +156,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/host5"
                 android:gravity="center"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="Short description to get the point across."
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/description5"
-                android:gravity="center"
+                android:textSize="16sp"
                 android:paddingBottom="20dp"/>
+
+
 
             <TextView
                 android:text="Show Name"
@@ -193,15 +176,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/host6"
                 android:gravity="center"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="Short description to get the point across."
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/description6"
-                android:gravity="center"
+                android:textSize="16sp"
                 android:paddingBottom="20dp"/>
+
 
             <TextView
                 android:text="Show Name"
@@ -218,15 +195,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/host7"
                 android:gravity="center"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="Short description to get the point across."
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/description7"
-                android:gravity="center"
+                android:textSize="16sp"
                 android:paddingBottom="20dp"/>
+
         </LinearLayout>
     </ScrollView>
 </TableLayout>
