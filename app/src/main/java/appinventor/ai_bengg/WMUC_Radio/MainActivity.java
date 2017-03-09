@@ -39,9 +39,10 @@ import com.google.android.gms.common.api.GoogleApiClient;
 public class MainActivity extends Activity implements OnClickListener {
     private final Uri fmURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc-hq");
     private final Uri digURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc2-high");
-    private static final String TAG = "WMUC";
+    private static final String TAG = "wmuc";
     private Uri currchan;
     private ImageButton playButton;
+    private ImageButton schedButton;
     private ImageButton DIGButton;
     private ImageButton FMButton;
     private boolean playing = false;
@@ -148,22 +149,26 @@ public class MainActivity extends Activity implements OnClickListener {
         if(ongoing)
             builder.addAction(0, "Pause", playIntent);
         else
-            builder.addAction(0, "Play", playIntent);
+            builder.addAction(0, "play", playIntent);
 
-        builder.addAction(0, "FM", fmIntent);
-        builder.addAction(0, "Digital", digIntent);
+        builder.addAction(0, "fm", fmIntent);
+        builder.addAction(0, "digital", digIntent);
 
         builder.setContentIntent(playIntent);
         notificationManager.notify(notificationID, builder.build());
     }
 
     public void onClick(View v) {
+        if(v == schedButton) {
+            startActivity(new Intent(getApplicationContext(), Schedule.class));
+        }
+
         Log.d("THE BUCK STOPS HERE", "hopefully " + playing);
         if (v == DIGButton && !digHit) {
-            channel = "WMUC: Digital";
+            channel = "wmuc: digital";
             showNotification();
 
-            Log.d("Digital", "hit the button");
+            Log.d("digital", "hit the button");
 
             if (!fmHit) {
                 moveToCenter(v);
@@ -185,7 +190,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
             }
         } else if (v == FMButton && !fmHit) {
-            channel = "WMUC: FM";
+            channel = "wmuc: fm";
             showNotification();
 
             if (!digHit) {
@@ -209,11 +214,11 @@ public class MainActivity extends Activity implements OnClickListener {
             }
         } else if (v == playButton) {
 
-            Log.d("FM: " + fmHit + " DIG: " + digHit + " playing: " + playing, " In case you were curious");
+            Log.d("fm: " + fmHit + " DIG: " + digHit + " playing: " + playing, " In case you were curious");
             if (fmHit && playing) {
                 stopService(new Intent(getBaseContext(), StreamingService.class));
                 playing = false;
-                playButton.setImageResource(R.drawable.play1);
+                playButton.setImageResource(R.drawable.play);
                 abandonAudioFocus();
                 ongoing = false;
                 showNotification();
@@ -221,7 +226,7 @@ public class MainActivity extends Activity implements OnClickListener {
             } else if (digHit && playing) {
                 stopService(new Intent(getBaseContext(), StreamingService.class));
                 playing = false;
-                playButton.setImageResource(R.drawable.play1);
+                playButton.setImageResource(R.drawable.play);
                 abandonAudioFocus();
                 ongoing = false;
                 showNotification();
@@ -240,12 +245,12 @@ public class MainActivity extends Activity implements OnClickListener {
                     requestAudioFocus();
                     startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
                     playing = true;
-                    playButton.setImageResource(R.drawable.pause1);
+                    playButton.setImageResource(R.drawable.pause);
                     ongoing = true;
                     if(fmHit)
-                        channel = "WMUC: FM";
+                        channel = "wmuc: fm";
 
-                    else channel = "WMUC: Digital";
+                    else channel = "wmuc: digital";
                     showNotification();
 
                 }
@@ -262,6 +267,8 @@ public class MainActivity extends Activity implements OnClickListener {
         //       playSeekBar.setVisibility(View.INVISIBLE);
         playButton = (ImageButton) findViewById(R.id.Play);
         playButton.setOnClickListener(this);
+        schedButton = (ImageButton) findViewById(R.id.sched);
+        schedButton.setOnClickListener(this);
         DIGButton = (ImageButton) findViewById(R.id.DIG);
         DIGButton.setOnClickListener(this);
         FMButton = (ImageButton) findViewById(R.id.FM);
@@ -346,7 +353,7 @@ public class MainActivity extends Activity implements OnClickListener {
                             Log.wtf("Lost Audio Focus", "");
                             stopService(new Intent(context, StreamingService.class));
                             playing = false;
-                            playButton.setImageResource(R.drawable.play1);
+                            playButton.setImageResource(R.drawable.play);
                             abandonAudioFocus();
                             ongoing = false;
                             showNotification();
@@ -359,7 +366,7 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
     private void addDrawerItems() {
-        String[] osArray = {"Schedule", "Settings"};
+        String[] osArray = {"schedule", "Settings"};
         mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
 
@@ -391,7 +398,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 return true;
             }
             else if (id == R.id.action_schedule) {
-                startActivity(new Intent(getApplicationContext(), Schedule.class));
+                startActivity(new Intent(getApplicationContext(), schedule.class));
                 return true;
             }
 
@@ -459,7 +466,7 @@ public class MainActivity extends Activity implements OnClickListener {
             if (action.compareTo(AudioManager.ACTION_AUDIO_BECOMING_NOISY) == 0) {
                 stopService(new Intent(getBaseContext(), StreamingService.class));
                 playing = false;
-                playButton.setImageResource(R.drawable.play1);
+                playButton.setImageResource(R.drawable.play);
                 abandonAudioFocus();
                 ongoing = false;
                 showNotification();

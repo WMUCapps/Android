@@ -1,55 +1,106 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="w.wmucradio.Schedule">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="w.wmucradio.schedule">
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FM"
-        android:id="@+id/FM"
+    <ImageView
+        android:layout_height="40dp"
+        android:src="@drawable/wmuc"
+        android:id="@+id/wmucsched"
+        android:adjustViewBounds="false"
+        android:layout_width="130dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="S"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sunday"
+                android:paddingTop="50dp"
+                android:paddingLeft="80dp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="M"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/monday"
+                android:paddingLeft="20dp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="T"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tuesday"
+                android:paddingLeft="20dp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="W"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/wednesday"
+                android:paddingLeft="20dp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="Th"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/thursday"
+                android:paddingLeft="20dp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="F"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/friday"
+                android:paddingLeft="20dp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:text="S"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/saturday"
+                android:paddingLeft="20dp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/black" />
+
+        </TableRow>
+    </TableLayout>
+
+    <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/DIG"
-        android:layout_alignBottom="@+id/FM"
-        android:layout_toRightOf="@+id/FM"
-        android:layout_toEndOf="@+id/FM"
-        android:text="DIGITAL" />
+        class="appinventor.ai_bengg.WMUC_Radio.ScheduleFragment"
+        android:layout_marginTop="36dp"
+        android:id="@+id/sched_fragment"
+        tools:layout="@layout/schedule_fragment"
+        android:layout_below="@+id/wmucsched"
+        android:layout_centerHorizontal="true" />
 
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView"
-        android:layout_below="@+id/FM"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Showing: "
-        android:id="@+id/textView3"
-        android:layout_alignBottom="@+id/DIG"
-        android:layout_toRightOf="@+id/DIG"
-        android:layout_toEndOf="@+id/DIG" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="FM"
-        android:id="@+id/sh"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3" />
 </RelativeLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Day"
+            android:ems="10"
+            android:id="@+id/day"
+            android:clickable="false"
+            android:textColor="@android:color/holo_red_light"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            tools:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="20sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:text="Digital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currchan"
+            android:gravity="center"
+            android:textStyle="normal|bold"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="25dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Show Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/show1"
+                android:gravity="center"
+                android:textStyle="normal|bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:text="DJ and Cohost Names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/host1"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="Short description to get the point across."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description1"
+                android:gravity="center"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:text="Show Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/show2"
+                android:gravity="center"
+                android:textStyle="normal|bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:text="DJ and Cohost Names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/host2"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="Short description to get the point across."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description2"
+                android:gravity="center"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:text="Show Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/show3"
+                android:gravity="center"
+                android:textStyle="normal|bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:text="DJ and Cohost Names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/host3"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="Short description to get the point across."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description3"
+                android:gravity="center"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:text="Show Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/show4"
+                android:gravity="center"
+                android:textStyle="normal|bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:text="DJ and Cohost Names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/host4"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="Short description to get the point across."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description4"
+                android:gravity="center"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:text="Show Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/show5"
+                android:gravity="center"
+                android:textStyle="normal|bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:text="DJ and Cohost Names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/host5"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="Short description to get the point across."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description5"
+                android:gravity="center"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:text="Show Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/show6"
+                android:gravity="center"
+                android:textStyle="normal|bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:text="DJ and Cohost Names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/host6"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="Short description to get the point across."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description6"
+                android:gravity="center"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:text="Show Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/show7"
+                android:gravity="center"
+                android:textStyle="normal|bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:text="DJ and Cohost Names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/host7"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="Short description to get the point across."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description7"
+                android:gravity="center"
+                android:paddingBottom="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</TableLayout>
