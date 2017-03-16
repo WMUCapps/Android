@@ -5,33 +5,20 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.support.v4.app.FragmentActivity;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
 import appinventor.ai_bengg.WMUC_Radio.R;
 
-public class Schedule extends Activity implements View.OnClickListener {
+public class Schedule extends FragmentActivity implements View.OnClickListener {
 
-    private Button DIGButton;
-    private Button FMButton;
-    private TextView sh;
-    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-
-        DIGButton = (Button) findViewById(R.id.DIG);
-        DIGButton.setOnClickListener(this);
-        FMButton = (Button) findViewById(R.id.FM);
-        FMButton.setOnClickListener(this);
-
-        sh = (TextView) findViewById(R.id.sh);
-
-        webView = (WebView)findViewById(R.id.webView);
-        webView.loadUrl("http://appinventor.ai_bengg.WMUC_Radio.umd.edu/station/schedule?#now");
     }
 
     @Override
@@ -57,13 +44,6 @@ public class Schedule extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v == DIGButton && sh.getText().equals("FM")) {
-            sh.setText("Digital");
-            webView.loadUrl("http://appinventor.ai_bengg.WMUC_Radio.umd.edu/station/schedule/0/2?#now");
-        }
-        else if (v == FMButton && sh.getText().equals("Digital")) {
-            sh.setText("FM");
-            webView.loadUrl("http://appinventor.ai_bengg.WMUC_Radio.umd.edu/station/schedule?#now");
-        }
+
     }
 }

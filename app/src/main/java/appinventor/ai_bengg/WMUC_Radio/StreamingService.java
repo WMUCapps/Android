@@ -20,7 +20,7 @@ public class StreamingService extends Service{
 
     private ExoPlayer exp;
     private MediaCodecAudioTrackRenderer audioRenderer ;
-    private final String TAG = "WMUC";
+    private final String TAG = "wmuc";
 
     public IBinder onBind(Intent intent) {
         return null;
