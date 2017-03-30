@@ -92,21 +92,16 @@
 
         </TableRow>
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-
-            <fragment
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                class="appinventor.ai_bengg.WMUC_Radio.ScheduleFragment"
-                android:layout_marginTop="36dp"
-                android:id="@+id/sched_fragment"
-                tools:layout="@layout/schedule_fragment"
-                android:layout_below="@+id/wmucsched"
-                android:layout_centerHorizontal="true" />
-        </TableRow>
     </TableLayout>
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        class="appinventor.ai_bengg.WMUC_Radio.ScheduleFragment"
+        android:layout_marginTop="36dp"
+        android:id="@+id/sched_fragment"
+        tools:layout="@layout/schedule_fragment"
+        android:layout_below="@+id/wmucsched"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

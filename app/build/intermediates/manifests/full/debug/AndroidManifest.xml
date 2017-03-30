@@ -61,6 +61,17 @@
         </activity>
 
         <service android:name="appinventor.ai_bengg.WMUC_Radio.StreamingService" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="appinventor.ai_bengg.WMUC_Radio.radio.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
     </application>
 
 </manifest>
