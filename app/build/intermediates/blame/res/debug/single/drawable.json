@@ -5,7 +5,7 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome19.jpg",
@@ -33,7 +33,7 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_switch_thumb_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\launchimage.png",
@@ -45,7 +45,7 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_text_cursor_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome21.jpg",
@@ -56,8 +56,16 @@
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\awesome14.jpg"
     },
     {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_focused.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_focused.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
+    },
+    {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_check_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome22.jpg",
@@ -77,11 +85,15 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_light.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome3.jpg",
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\awesome3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome6.jpg",
@@ -89,7 +101,7 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_tab_indicator_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome32.jpg",
@@ -112,20 +124,20 @@
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\awesome35.jpg"
     },
     {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\schedule.png",
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\schedule.png"
     },
     {
-        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_track_material.xml"
-    },
-    {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_borderless_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_light.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back.png",
@@ -133,11 +145,11 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_ratingbar_full_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome16.jpg",
@@ -145,23 +157,27 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_textfield_search_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome4.jpg",
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\awesome4.jpg"
     },
     {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_fab_background.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fm.png",
@@ -169,11 +185,11 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_snackbar_background.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_light.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome11.jpg",
@@ -182,6 +198,10 @@
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome10.jpg",
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\awesome10.jpg"
+    },
+    {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circular_progress_bar.xml",
@@ -193,7 +213,7 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome25.jpg",
@@ -201,7 +221,11 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_colored_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome17.jpg",
@@ -209,7 +233,7 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome33.jpg",
@@ -244,12 +268,16 @@
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\wmuc.png"
     },
     {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome34.jpg",
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\awesome34.jpg"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_top_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome29.jpg",
@@ -260,12 +288,16 @@
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\awesome8.jpg"
     },
     {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome2.jpg",
@@ -273,11 +305,11 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_radio_material.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome31.jpg",
@@ -288,8 +320,16 @@
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
     {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fluffy.jpg",
         "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\drawable\\fluffy.jpg"
+    },
+    {
+        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_focused.xml",
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.8.0\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome20.jpg",
@@ -297,7 +337,7 @@
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\awesome5.jpg",
