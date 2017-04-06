@@ -2712,16 +2712,15 @@ containing a value of this type.
         public static final int ic_menu_send=0x7f02008e;
         public static final int ic_menu_share=0x7f02008f;
         public static final int ic_menu_slideshow=0x7f020090;
-        public static final int launchimage=0x7f020091;
-        public static final int launchscreen1=0x7f020092;
-        public static final int notification_template_icon_bg=0x7f02009a;
-        public static final int pause=0x7f020093;
-        public static final int play=0x7f020094;
-        public static final int ps=0x7f020095;
-        public static final int schedule=0x7f020096;
-        public static final int scheduleseperator=0x7f020097;
-        public static final int side_nav_bar=0x7f020098;
-        public static final int wmuc=0x7f020099;
+        public static final int notification_template_icon_bg=0x7f020099;
+        public static final int pause=0x7f020091;
+        public static final int play=0x7f020092;
+        public static final int ps=0x7f020093;
+        public static final int schedule=0x7f020094;
+        public static final int scheduleseperator=0x7f020095;
+        public static final int side_nav_bar=0x7f020096;
+        public static final int splashh=0x7f020097;
+        public static final int wmuc=0x7f020098;
     }
     public static final class id {
         public static final int DIG=0x7f0c008e;

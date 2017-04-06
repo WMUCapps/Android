@@ -33,7 +33,8 @@
                 android:id="@+id/sunday"
                 android:paddingTop="50dp"
                 android:textStyle="normal|bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:clickable="true" />
 
             <TextView
                 android:text="M"
@@ -42,7 +43,8 @@
                 android:id="@+id/monday"
                 android:paddingLeft="20dp"
                 android:textStyle="normal|bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:clickable="true" />
 
             <TextView
                 android:text="T"
@@ -51,7 +53,8 @@
                 android:id="@+id/tuesday"
                 android:paddingLeft="20dp"
                 android:textStyle="normal|bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:clickable="true" />
 
             <TextView
                 android:text="W"
@@ -61,7 +64,8 @@
                 android:id="@+id/wednesday"
                 android:paddingLeft="20dp"
                 android:textStyle="normal|bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:clickable="true" />
 
             <TextView
                 android:text="Th"
@@ -70,7 +74,8 @@
                 android:id="@+id/thursday"
                 android:paddingLeft="20dp"
                 android:textStyle="normal|bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:clickable="true" />
 
             <TextView
                 android:text="F"
@@ -79,7 +84,8 @@
                 android:id="@+id/friday"
                 android:paddingLeft="20dp"
                 android:textStyle="normal|bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:clickable="true" />
 
             <TextView
                 android:text="S"
@@ -88,14 +94,15 @@
                 android:id="@+id/saturday"
                 android:paddingLeft="20dp"
                 android:textStyle="normal|bold"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:clickable="true" />
 
         </TableRow>
 
     </TableLayout>
 
     <fragment
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         class="appinventor.ai_bengg.WMUC_Radio.ScheduleFragment"
         android:layout_marginTop="36dp"

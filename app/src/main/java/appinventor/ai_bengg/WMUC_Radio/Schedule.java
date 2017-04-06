@@ -181,6 +181,8 @@ public class Schedule extends FragmentActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        if(v == findViewById(R.id.sunday)) {
 
+        }
     }
 }
