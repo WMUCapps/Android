@@ -1,22 +1,22 @@
 [
     {
-        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\menu\\menu.xml"
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_settings.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\menu\\menu_settings.xml"
     },
     {
-        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_schedule.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\menu\\menu_schedule.xml"
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_menu_drawer.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\menu\\activity_menu_drawer.xml"
     },
     {
-        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_settings.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\menu\\menu_settings.xml"
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_schedule.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\menu\\menu_schedule.xml"
     },
     {
-        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\menu\\menu_main.xml"
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\menu\\menu_main.xml"
     },
     {
-        "merged": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_menu_drawer.xml",
-        "source": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\menu\\activity_menu_drawer.xml"
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\menu\\menu.xml"
     }
 ]

@@ -77,6 +77,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private GoogleApiClient client;
 
     private void moveToCenter(View v){
+
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics( dm );
         Log.wtf("Display Metrics", " "+ dm);
