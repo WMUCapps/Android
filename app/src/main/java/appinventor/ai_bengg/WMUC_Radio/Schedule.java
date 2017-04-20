@@ -1,6 +1,7 @@
 package appinventor.ai_bengg.WMUC_Radio;
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,16 +11,23 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import appinventor.ai_bengg.WMUC_Radio.R;
+import appinventor.ai_bengg.WMUC_Radio.CrawlerFragment;
 
 public class Schedule extends FragmentActivity implements View.OnClickListener {
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_schedule);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

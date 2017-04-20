@@ -1,40 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86_64,x86"
-    api-level="23"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="25"
     density="560dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="706233575147384"
-    token="3242749514005476125" >
+    timestamp="138710293303114"
+    token="3242749514005476125"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="178" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="741" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="42" />
     <task
         name="verifier"
-        duration="0" />
+        duration="17" />
+
+    <artifact
+        location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="705153637242919"
+        timestamp="138669629520350"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="705920342030435"
+        timestamp="138710293303114"
         verifier="COMPATIBLE" >
         <artifact
-            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
-    <build timestamp="706233575147384" />
 
 </instant-run>
