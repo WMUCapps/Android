@@ -23,11 +23,11 @@ ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/Androi
 		ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml:6:22-65
 application
 ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml:8:5-60:19
-MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:design:23.1.1] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /Users/Evan/.android/build-cache/816bffe50bd39c6e37bc019a4176a206a9d1aad0/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Evan/.android/build-cache/f6bd3a1581dbbea6e62192ab0c6127df0937f61c/output/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:design:23.1.1] /Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/Evan/.android/build-cache/67954aba6b6029a01544672d69b349b3d067b1d4/output/AndroidManifest.xml:22:5-20
 	android:screenOrientation
 		ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml:14:9-47
 	android:label
@@ -86,7 +86,7 @@ ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/Androi
 		ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml:39:13-68
 meta-data#com.google.android.gms.version
 ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml:45:9-47:69
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Evan/.android/build-cache/f6bd3a1581dbbea6e62192ab0c6127df0937f61c/output/AndroidManifest.xml:21:9-23:69
 	android:value
 		ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml:47:13-66
 	android:name
@@ -113,13 +113,13 @@ ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/Androi
 		ADDED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml:58:18-81
 uses-sdk
 INJECTED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.exoplayer:exoplayer:r1.5.8] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r1.5.8/AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:design:23.1.1] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /Users/Evan/.android/build-cache/816bffe50bd39c6e37bc019a4176a206a9d1aad0/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Evan/.android/build-cache/f6bd3a1581dbbea6e62192ab0c6127df0937f61c/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.exoplayer:exoplayer:r1.5.8] /Users/Evan/.android/build-cache/1442a6711ea25c58944822da97b563d3c83541fd/output/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:design:23.1.1] /Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/Evan/.android/build-cache/7477b3f2237ffde8b90f95fa9414e0c7dc42e01b/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/Evan/.android/build-cache/67954aba6b6029a01544672d69b349b3d067b1d4/output/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/AndroidManifest.xml

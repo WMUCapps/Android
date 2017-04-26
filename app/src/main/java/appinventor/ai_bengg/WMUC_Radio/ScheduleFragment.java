@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -37,6 +39,7 @@ public class ScheduleFragment extends FragmentActivity implements View.OnClickLi
     private View sat = findViewById(R.id.saturday);
     private TextView currDay = (TextView) findViewById(R.id.day);
     private ListView listView = (ListView) findViewById(R.id.list);
+    private List<ListItem> myList;
 
     public static String CRAWLER_FRAG_TAG = "CRAWL_FRAG";
 
@@ -143,8 +146,9 @@ public class ScheduleFragment extends FragmentActivity implements View.OnClickLi
         });
         thread.start();
         // thread.stop();
-        //listView.addView(new ListItem(this, 1 + ":00", sched[0][0].sName, sched[0][0].host));
-        //getScheduleData(mon);
+        myList = getScheduleData(mon);
+        ArrayAdapter<ListItem> listAdapter = new ArrayAdapter<ListItem>(this, R.layout.schedule_item, myList);
+        listView.setAdapter(listAdapter);
     }
 
     static class Show {
@@ -177,8 +181,7 @@ public class ScheduleFragment extends FragmentActivity implements View.OnClickLi
                 toAdd.setHost(sched[0][h].host);
                 toAdd.setShow(sched[0][h].sName);
                 toAdd.setTime(h + ":00");
-                listView.addView(toAdd);
-                //schedByDay.add(new ListItem());
+                schedByDay.add(new ListItem(this, h + ":00", sched[0][h].sName, sched[0][h].host));
             }
             currDay.setText("Sunday");
         } else if (view == mon) {
@@ -187,8 +190,7 @@ public class ScheduleFragment extends FragmentActivity implements View.OnClickLi
                 toAdd.setHost(sched[1][h].host);
                 toAdd.setShow(sched[1][h].sName);
                 toAdd.setTime(h + ":00");
-                listView.addView(toAdd);
-                //schedByDay.add(toAdd);
+                schedByDay.add(new ListItem(this, h + ":00", sched[1][h].sName, sched[1][h].host));
             }
             currDay.setText("Monday");
         } else if (view == tue) {
@@ -197,8 +199,7 @@ public class ScheduleFragment extends FragmentActivity implements View.OnClickLi
                 toAdd.setHost(sched[2][h].host);
                 toAdd.setShow(sched[2][h].sName);
                 toAdd.setTime(h + ":00");
-                listView.addView(toAdd);
-                //schedByDay.add(new ListItem());
+                schedByDay.add(new ListItem(this, h + ":00", sched[2][h].sName, sched[2][h].host));
             }
             currDay.setText("Tuesday");
         } else if (view == wed) {
@@ -207,8 +208,7 @@ public class ScheduleFragment extends FragmentActivity implements View.OnClickLi
                 toAdd.setHost(sched[3][h].host);
                 toAdd.setShow(sched[3][h].sName);
                 toAdd.setTime(h + ":00");
-                listView.addView(toAdd);
-                //schedByDay.add(new ListItem());
+                schedByDay.add(new ListItem(this, h + ":00", sched[3][h].sName, sched[3][h].host));
             }
             currDay.setText("Wednesday");
         } else if (view == thu) {
@@ -217,8 +217,7 @@ public class ScheduleFragment extends FragmentActivity implements View.OnClickLi
                 toAdd.setHost(sched[4][h].host);
                 toAdd.setShow(sched[4][h].sName);
                 toAdd.setTime(h + ":00");
-                listView.addView(toAdd);
-                //schedByDay.add(new ListItem());
+                schedByDay.add(new ListItem(this, h + ":00", sched[4][h].sName, sched[4][h].host));
             }
             currDay.setText("Thursday");
         } else if (view == fri) {
@@ -227,8 +226,7 @@ public class ScheduleFragment extends FragmentActivity implements View.OnClickLi
                 toAdd.setHost(sched[5][h].host);
                 toAdd.setShow(sched[5][h].sName);
                 toAdd.setTime(h + ":00");
-                listView.addView(toAdd);
-                //schedByDay.add(new ListItem());
+                schedByDay.add(new ListItem(this, h + ":00", sched[5][h].sName, sched[5][h].host));
             }
             currDay.setText("Friday");
         } else if (view == sat) {
@@ -237,8 +235,7 @@ public class ScheduleFragment extends FragmentActivity implements View.OnClickLi
                 toAdd.setHost(sched[6][h].host);
                 toAdd.setShow(sched[6][h].sName);
                 toAdd.setTime(h + ":00");
-                listView.addView(toAdd);
-                //schedByDay.add(new ListItem());
+                schedByDay.add(new ListItem(this, h + ":00", sched[6][h].sName, sched[6][h].host));
             }
             currDay.setText("Saturday");
         } else {
