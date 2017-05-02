@@ -308,7 +308,7 @@ public class Schedule extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         if (v == sun) {
-            getScheduleData(sun);
+            myList = getScheduleData(sun);
 
             listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
                 private View row;
