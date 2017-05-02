@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/drawable/abc_item_background_holo_dark.xml"
-    },
-    {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/awesome33.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable/awesome33.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/pause.png",
@@ -50,6 +50,10 @@
     {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/awesome16.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable/awesome16.jpg"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/splash.png",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable/splash.png"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/awesome10.jpg",
@@ -102,10 +106,6 @@
     {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/awesome2.jpg",
         "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable/awesome2.jpg"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/launchscreen1.png",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable/launchscreen1.png"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/awesome5.jpg",
@@ -206,10 +206,6 @@
     {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
         "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/drawable/abc_text_cursor_material.xml"
-    },
-    {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/launchimage.png",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable/launchimage.png"
     },
     {
         "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable/awesome28.jpg",
