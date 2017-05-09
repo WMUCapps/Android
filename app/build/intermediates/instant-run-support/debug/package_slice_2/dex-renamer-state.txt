@@ -1,4 +1,4 @@
-#Mon Apr 24 14:47:50 EDT 2017
-base.0=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2
+#Tue May 09 05:12:06 EDT 2017
+base.0=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2
 renamed.0=classes.dex
-file.0=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex
+file.0=C\:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2\\classes.dex

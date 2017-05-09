@@ -2,7 +2,10 @@ package appinventor.ai_bengg.WMUC_Radio;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View.OnClickListener;
 import android.view.Menu;
@@ -55,7 +58,7 @@ public class Schedule extends Activity implements OnClickListener {
 
     private Schedule.Show[][] sched = new Schedule.Show[7][24];
     private ArrayList<ListItem> myList;
-    private View sun, mon, tue, wed, thu, fri, sat;
+    private View sun, mon, tue, wed, thu, fri, sat, prev;
     private TextView currDay;
     private ListView listView;
 
@@ -189,22 +192,26 @@ public class Schedule extends Activity implements OnClickListener {
         }
         // Populating the list with sunday by default.
         myList = getScheduleData(sun);
-
+        sun.setBackgroundColor(Color.parseColor("#7c7a7a"));
+        prev = sun;
         listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-
             private View row;
             private LayoutInflater inflater = getLayoutInflater();
-            private TextView tv;
+            private TextView show;
+            private TextView dj;
+            private TextView time;
 
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
+                row = inflater.inflate(R.layout.schedule_item, parent, false);
+                show = (TextView) row.findViewById(R.id.recycshow);
+                show.setText(myList.get(position).getShow());
 
-                row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
+                dj = (TextView) row.findViewById(R.id.recychost);
+                dj.setText(myList.get(position).getHost());
 
-                tv = (TextView) row.findViewById(android.R.id.text1);
-
-                tv.setText(myList.get(position).getShow());
-
+                time = (TextView) row.findViewById(R.id.time);
+                time.setText(myList.get(position).getTime());
                 return row;
             }
         });
@@ -307,118 +314,40 @@ public class Schedule extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v == sun) {
-            myList = getScheduleData(sun);
+        prev.setBackgroundColor(Color.parseColor("#fafafa"));
+        prev = v;
+        myList = getScheduleData(v);
+        v.setBackgroundColor(Color.parseColor("#ff6b6b"));
 
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
+        listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
+            private View row;
+            private LayoutInflater inflater = getLayoutInflater();
+            private TextView show;
+            private TextView dj;
+            private TextView time;
 
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == mon) {
-            myList = getScheduleData(mon);
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                row = inflater.inflate(R.layout.schedule_item, parent, false);
 
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
+                show = (TextView) row.findViewById(R.id.recycshow);
+                show.setText(myList.get(position).getShow());
 
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == tue) {
-            myList = getScheduleData(tue);
+                dj = (TextView) row.findViewById(R.id.recychost);
+                dj.setText(myList.get(position).getHost());
 
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
+                time = (TextView) row.findViewById(R.id.time);
+                time.setText(myList.get(position).getTime());
 
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == wed) {
-            myList = getScheduleData(wed);
 
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
+                /* FOR UNDERLINE
+                SpannableString content = new SpannableString(myList.get(position).getShow());
+                content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+                show.setText(content);*/
 
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == thu) {
-            myList = getScheduleData(thu);
-
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
-
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == fri) {
-            myList = getScheduleData(fri);
-
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
-
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == sat) {
-            myList = getScheduleData(sat);
-
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
-
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        }
+                return row;
+            }
+        });
     }
+
 }

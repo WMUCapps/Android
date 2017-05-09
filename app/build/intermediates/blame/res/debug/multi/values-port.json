@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+        "outputFile": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/values-port/values-port.xml",
+                    "file": "C:\\Users\\Joseph\\.android\\build-cache\\1e0067a07780addf5f53bb550684576f866f4ea1\\output\\res\\values-port\\values-port.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
