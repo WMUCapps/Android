@@ -199,9 +199,9 @@ public class Schedule extends Activity implements OnClickListener {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
 
-                row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
+                row = inflater.inflate(R.layout.schedule_item, parent, false);
 
-                tv = (TextView) row.findViewById(android.R.id.text1);
+                tv = (TextView) row.findViewById(R.id.time);
 
                 tv.setText(myList.get(position).getShow());
 

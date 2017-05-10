@@ -1,4 +1,7 @@
-#Mon May 01 20:06:43 EDT 2017
-base.0=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+#Wed May 03 20:35:29 EDT 2017
+base.0=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8b3f02fcae4f1eb137eb3d1d567d53159cc2654d
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_276171e0bb1623591a81d8a5c14d61691abfbcd4/classes.dex
+base.1=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_276171e0bb1623591a81d8a5c14d61691abfbcd4
+file.0=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8b3f02fcae4f1eb137eb3d1d567d53159cc2654d/classes.dex

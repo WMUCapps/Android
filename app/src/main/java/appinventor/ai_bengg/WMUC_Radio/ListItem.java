@@ -17,9 +17,7 @@ public class ListItem extends View {
         this.host = host;
     }
 
-    public String getTime() {
-        return time;
-    }
+    public String getTime() { return time; }
 
     public String getShow() {
         return show;
