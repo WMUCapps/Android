@@ -1,8 +1,14 @@
 package appinventor.ai_bengg.WMUC_Radio;
 
+import appinventor.ai_bengg.WMUC_Radio.R;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View.OnClickListener;
 import android.view.Menu;
@@ -13,6 +19,7 @@ import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -21,15 +28,16 @@ import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import appinventor.ai_bengg.WMUC_Radio.R;
+
 
 public class Schedule extends Activity implements OnClickListener {
-
 
 
 //    @Override
@@ -53,11 +61,18 @@ public class Schedule extends Activity implements OnClickListener {
 //        return super.onOptionsItemSelected(item);
 //    }
 
+    private static final int FM = 1;
+    private static final int DIGITAL = 2;
+
     private Schedule.Show[][] sched = new Schedule.Show[7][24];
     private ArrayList<ListItem> myList;
-    private View sun, mon, tue, wed, thu, fri, sat;
+    private View sun, mon, tue, wed, thu, fri, sat, today, prev;
     private TextView currDay;
+    private Switch currChan;
     private ListView listView;
+    private String digUrl, fmUrl;
+    private int channel;
+    volatile Document doc;
 
     public static String CRAWLER_FRAG_TAG = "CRAWL_FRAG";
 
@@ -66,145 +81,31 @@ public class Schedule extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
 
-        sun = findViewById(R.id.sunday);
-        sun.setOnClickListener(this);
-        mon = findViewById(R.id.monday);
-        mon.setOnClickListener(this);
-        tue = findViewById(R.id.tuesday);
-        tue.setOnClickListener(this);
-        wed = findViewById(R.id.wednesday);
-        wed.setOnClickListener(this);
-        thu = findViewById(R.id.thursday);
-        thu.setOnClickListener(this);
-        fri = findViewById(R.id.friday);
-        fri.setOnClickListener(this);
-        sat = findViewById(R.id.saturday);
-        sat.setOnClickListener(this);
-        currDay = (TextView) findViewById(R.id.day);
-        listView = (ListView) findViewById(R.id.list);
+        today = initGui();
+        initCrawler(digUrl);
 
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Document doc;
-                ArrayList<Element> shtuff;
-                int row = 0;
-                int col = 0;
-                int rowspan = -1;                            // how long a show is (2x)
-                int rowIndex = -1;                            // tracking the current row
-                HashMap<Integer, Integer> colTrack = new HashMap<Integer, Integer>();
-                String[] none = {"Off Air", "N/A"};            // "null" show
-                Schedule.Show offAir = new Schedule.Show(none);
-
-                //Initializes the current row of each col in the sched as they may get out of order.
-                colTrack.put(0, 0);
-                colTrack.put(1, 0);
-                colTrack.put(2, 0);
-                colTrack.put(3, 0);
-                colTrack.put(4, 0);
-                colTrack.put(5, 0);
-                colTrack.put(6, 0);
-
-                try {
-                    doc = Jsoup.connect("http://www.wmuc.umd.edu/station/schedule/0/2").get();
-                    shtuff = doc.select("td");
-                    for (Element n : shtuff) {
-                        if (!n.text().isEmpty() && !(n.text().contains("Channel 2"))
-                                && !(n.text().contains(":30"))
-                                && !(n.text().contains("Get Involved Station History Donate"))
-                                && !(n.text().contains("Find us on Facebook Follow WMUC"))) {
-                            // sets the rowspan of the show
-                            rowspan = n.toString().indexOf("rowspan=\"") + 9;
-                            if (rowspan != 8) {
-                                if (n.toString().charAt(rowspan + 1) != ('\"')) {
-                                    rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 2));
-                                } else {
-                                    rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 1));
-                                }
-                            }
-
-                            if (!n.text().contains(":00")) {
-                                try {
-                                    while (sched[col][rowIndex].equals(offAir)) {
-                                        col++;
-                                    }
-                                } catch (NullPointerException np) {
-                                    //leave loop
-                                }
-                                if (col < 7) {
-                                    row = colTrack.get(col);
-                                    while (row > rowIndex) {
-                                        col++;
-                                        row = colTrack.get(col);
-                                    }
-                                    for (int i = 0; i < (rowspan / 2); i++) {
-                                        String currShow = n.text();
-                                        String[] curr = currShow.split("\\*\\*\\*");
-                                        if (curr.length > 1) {
-                                            sched[col][row++] = new Schedule.Show(curr);
-                                        } else {
-                                            sched[col][row++] = offAir;
-                                        }
-                                    }
-                                    colTrack.put(col, row);
-                                    rowspan = -1;
-                                    if (col == 6) {
-                                        col = 0;
-                                    } else {
-                                        col++;
-                                    }
-                                    row = 0;
-                                } else {
-                                    col = 0;
-                                }
-                            }
-
-                            if (n.text().contains(":00")) {
-                                rowIndex++;
-                                col = 0;
-                            }
-                        }
-                    }
-                } catch (MalformedURLException mue) {
-                    mue.printStackTrace();
-                } catch (IOException ioe) {
-                    ioe.printStackTrace();
-                }
-
-                for (int r = 0; r < 24; r++) {
-                    for (int c = 0; c < 7; c++) {
-                        System.out.print(sched[c][r] + " | ");
-                    }
-                    System.out.println();
-                }
-            }
-        });
-        thread.start();
-        // thread.stop();
-
-        try{
-            thread.join();
-        } catch (java.lang.InterruptedException e) {
-            System.out.println("Uh oh.");
-        }
-        // Populating the list with sunday by default.
-        myList = getScheduleData(sun);
-
+        // Populating the list with today digital by default.
+        myList = getScheduleData(today);
+        today.setBackgroundColor(Color.parseColor("#ff6b6b"));
+        prev = today;
         listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-
             private View row;
             private LayoutInflater inflater = getLayoutInflater();
-            private TextView tv;
+            private TextView show;
+            private TextView dj;
+            private TextView time;
 
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
-
                 row = inflater.inflate(R.layout.schedule_item, parent, false);
+                show = (TextView) row.findViewById(R.id.recycshow);
+                show.setText(myList.get(position).getShow());
 
-                tv = (TextView) row.findViewById(R.id.time);
+                dj = (TextView) row.findViewById(R.id.recychost);
+                dj.setText(myList.get(position).getHost());
 
-                tv.setText(myList.get(position).getShow());
-
+                time = (TextView) row.findViewById(R.id.time);
+                time.setText(myList.get(position).getTime());
                 return row;
             }
         });
@@ -307,118 +208,225 @@ public class Schedule extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v == sun) {
-            myList = getScheduleData(sun);
+        if(v == currChan) {
+            if(channel == DIGITAL) {
+                currChan.setText("FM");
+                channel = FM;
+                initCrawler(fmUrl);
+            } else {
+                currChan.setText("Digital");
+                channel = DIGITAL;
+                initCrawler(digUrl);
+            }
+        } else {
+
+            prev.setBackgroundColor(Color.parseColor("#fafafa"));
+            prev = v;
+            myList = getScheduleData(v);
+            v.setBackgroundColor(Color.parseColor("#ff6b6b"));
 
             listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
                 private View row;
                 private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
+                private TextView show;
+                private TextView dj;
+                private TextView time;
 
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == mon) {
-            myList = getScheduleData(mon);
+                    row = inflater.inflate(R.layout.schedule_item, parent, false);
 
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
+                    show = (TextView) row.findViewById(R.id.recycshow);
+                    show.setText(myList.get(position).getShow());
 
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == tue) {
-            myList = getScheduleData(tue);
+                    dj = (TextView) row.findViewById(R.id.recychost);
+                    dj.setText(myList.get(position).getHost());
 
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
+                    time = (TextView) row.findViewById(R.id.time);
+                    time.setText(myList.get(position).getTime());
 
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == wed) {
-            myList = getScheduleData(wed);
 
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
+                /* FOR UNDERLINE
+                SpannableString content = new SpannableString(myList.get(position).getShow());
+                content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+                show.setText(content);*/
 
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == thu) {
-            myList = getScheduleData(thu);
-
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
-
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == fri) {
-            myList = getScheduleData(fri);
-
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
-
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
-                    return row;
-                }
-            });
-        } else if (v == sat) {
-            myList = getScheduleData(sat);
-
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView tv;
-
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                    tv = (TextView) row.findViewById(android.R.id.text1);
-                    tv.setText(myList.get(position).getShow());
                     return row;
                 }
             });
         }
     }
+
+    private void initCrawler(String u) {
+        final String url = u;
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    doc = Jsoup.connect(url).get();
+                } catch (MalformedURLException mue) {
+                    mue.printStackTrace();
+                } catch (IOException ioe) {
+                    ioe.printStackTrace();
+                }
+
+            }
+
+        });
+        thread.start();
+        // thread.stop();
+
+        try {
+            thread.join();
+        } catch (java.lang.InterruptedException e) {
+            System.out.println("Uh oh.");
+        }
+
+        ArrayList<Element> shtuff;
+        int row = 0;
+        int col = 0;
+        int rowspan = -1;                            // how long a show is (2x)
+        int rowIndex = -1;                            // tracking the current row
+        HashMap<Integer, Integer> colTrack = new HashMap<Integer, Integer>();
+        String[] none = {"Off Air", "N/A"};            // "null" show
+        Schedule.Show offAir = new Schedule.Show(none);
+
+        //Initializes the current row of each col in the sched as they may get out of order.
+        colTrack.put(0, 0);
+        colTrack.put(1, 0);
+        colTrack.put(2, 0);
+        colTrack.put(3, 0);
+        colTrack.put(4, 0);
+        colTrack.put(5, 0);
+        colTrack.put(6, 0);
+
+        shtuff = doc.select("td");
+        for (Element n : shtuff) {
+            if (!n.text().isEmpty() && !(n.text().contains("Channel 2"))
+                    && !(n.text().contains(":30"))
+                    && !(n.text().contains("Get Involved Station History Donate"))
+                    && !(n.text().contains("Find us on Facebook Follow WMUC"))) {
+                // sets the rowspan of the show
+                rowspan = n.toString().indexOf("rowspan=\"") + 9;
+                if (rowspan != 8) {
+                    if (n.toString().charAt(rowspan + 1) != ('\"')) {
+                        rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 2));
+                    } else {
+                        rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 1));
+                    }
+                }
+
+                if (!n.text().contains(":00")) {
+                    try {
+                        while (sched[col][rowIndex].equals(offAir)) {
+                            System.out.println(col + " " + rowIndex);
+                            col++;
+                        }
+                    } catch (NullPointerException np) {
+                        //leave loop
+                    }
+                    if (col < 7) {
+                        row = colTrack.get(col);
+                        while (row > rowIndex) {
+                            col++;
+                            row = colTrack.get(col);
+                        }
+                        for (int i = 0; i < (rowspan / 2); i++) {
+                            String currShow = n.text();
+                            String[] curr = currShow.split("\\*\\*\\*");
+                            if (curr.length > 1) {
+                                sched[col][row++] = new Schedule.Show(curr);
+                            } else {
+                                sched[col][row++] = offAir;
+                            }
+                        }
+                        colTrack.put(col, row);
+                        rowspan = -1;
+                        if (col == 6) {
+                            col = 0;
+                        } else {
+                            col++;
+                        }
+                        row = 0;
+                    } else {
+                        col = 0;
+                    }
+                }
+
+                if (n.text().contains(":00")) {
+                    rowIndex++;
+                    col = 0;
+                }
+            }
+        }
+
+
+        for (int r = 0; r < 24; r++) {
+            for (int c = 0; c < 7; c++) {
+                System.out.print(sched[c][r] + " | ");
+            }
+            System.out.println();
+        }
+    }
+
+    private View initGui() {
+        View curDay = sun;
+
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+
+        sun = findViewById(R.id.sunday);
+        sun.setOnClickListener(this);
+        mon = findViewById(R.id.monday);
+        mon.setOnClickListener(this);
+        tue = findViewById(R.id.tuesday);
+        tue.setOnClickListener(this);
+        wed = findViewById(R.id.wednesday);
+        wed.setOnClickListener(this);
+        thu = findViewById(R.id.thursday);
+        thu.setOnClickListener(this);
+        fri = findViewById(R.id.friday);
+        fri.setOnClickListener(this);
+        sat = findViewById(R.id.saturday);
+        sat.setOnClickListener(this);
+
+        currDay = (TextView) findViewById(R.id.day);
+        listView = (ListView) findViewById(R.id.list);
+        currChan = (Switch) findViewById(R.id.currchan);
+        currChan.setOnClickListener(this);
+
+        channel = DIGITAL;
+
+        currChan.setText("Digital");
+        digUrl = "http://wmuc.umd.edu/station/schedule";
+        fmUrl = "http://wmuc.umd.edu/station/schedule";
+
+        switch (day) {
+            case Calendar.SUNDAY:
+                curDay = sun;
+                break;
+            case Calendar.MONDAY:
+                curDay = mon;
+                break;
+            case Calendar.TUESDAY:
+                curDay = tue;
+                break;
+            case Calendar.WEDNESDAY:
+                curDay = wed;
+                break;
+            case Calendar.THURSDAY:
+                curDay = thu;
+                break;
+            case Calendar.FRIDAY:
+                curDay = fri;
+                break;
+            case Calendar.SATURDAY:
+                curDay = sat;
+                break;
+        }
+
+        return curDay;
+    }
+
 }

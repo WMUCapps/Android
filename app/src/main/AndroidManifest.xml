@@ -30,6 +30,20 @@
             </receiver>
         </activity>
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name="appinventor.ai_bengg.WMUC_Radio.MainActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="appinventor.ai_bengg.WMUC_Radio.menu"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
         <activity
             android:screenOrientation="portrait"
             android:name="appinventor.ai_bengg.WMUC_Radio.settings"
@@ -37,24 +51,14 @@
         <activity
             android:screenOrientation="portrait"
             android:name="appinventor.ai_bengg.WMUC_Radio.Schedule"
-            android:label="@string/title_activity_schedule" />
+            android:label="@string/title_activity_schedule"
+            android:parentActivityName="appinventor.ai_bengg.WMUC_Radio.MainActivity"
+        />
         <!--
  ATTENTION: This was auto-generated to add Google play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
         -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
-        <activity android:name="appinventor.ai_bengg.WMUC_Radio.MainActivity"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="appinventor.ai_bengg.WMUC_Radio.menu"
-            android:label="@string/title_activity_menu"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
         <service android:name="appinventor.ai_bengg.WMUC_Radio.StreamingService"/>
 
     </application>
