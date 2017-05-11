@@ -61,14 +61,13 @@ public class Schedule extends Activity implements OnClickListener {
 //        return super.onOptionsItemSelected(item);
 //    }
 
-    private static final int FM = 1;
-    private static final int DIGITAL = 2;
+    private static int FM = 1;
+    private static int DIGITAL = 2;
 
     private Schedule.Show[][] sched = new Schedule.Show[7][24];
     private ArrayList<ListItem> myList;
     private View sun, mon, tue, wed, thu, fri, sat, today, prev;
-    private TextView currDay;
-    private Switch currChan;
+    private TextView currDay, fmToggle, digToggle;
     private ListView listView;
     private String digUrl, fmUrl;
     private int channel;
@@ -208,18 +207,75 @@ public class Schedule extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if(v == currChan) {
+        if (v == fmToggle) {
             if(channel == DIGITAL) {
-                currChan.setText("FM");
-                channel = FM;
+                fmToggle.setTextColor(Color.RED);
+                digToggle.setTextColor(Color.BLACK);
                 initCrawler(fmUrl);
-            } else {
-                currChan.setText("Digital");
-                channel = DIGITAL;
+                channel = FM;
+                myList = getScheduleData(today);
+                today.setBackgroundColor(Color.parseColor("#ff6b6b"));
+                if (prev != today) {
+                    prev.setBackgroundColor(Color.parseColor("#fafafa"));
+                    prev = today;
+                }
+                listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
+                    private View row;
+                    private LayoutInflater inflater = getLayoutInflater();
+                    private TextView show;
+                    private TextView dj;
+                    private TextView time;
+
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent) {
+                        row = inflater.inflate(R.layout.schedule_item, parent, false);
+                        show = (TextView) row.findViewById(R.id.recycshow);
+                        show.setText(myList.get(position).getShow());
+
+                        dj = (TextView) row.findViewById(R.id.recychost);
+                        dj.setText(myList.get(position).getHost());
+
+                        time = (TextView) row.findViewById(R.id.time);
+                        time.setText(myList.get(position).getTime());
+                        return row;
+                    }
+                });
+            }
+        } else if (v == digToggle) {
+            if(channel == FM) {
+                digToggle.setTextColor(Color.RED);
+                fmToggle.setTextColor(Color.BLACK);
                 initCrawler(digUrl);
+                myList = getScheduleData(today);
+                channel = DIGITAL;
+                today.setBackgroundColor(Color.parseColor("#ff6b6b"));
+                if (prev != today) {
+                    prev.setBackgroundColor(Color.parseColor("#fafafa"));
+                    prev = today;
+                }
+                listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
+                    private View row;
+                    private LayoutInflater inflater = getLayoutInflater();
+                    private TextView show;
+                    private TextView dj;
+                    private TextView time;
+
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent) {
+                        row = inflater.inflate(R.layout.schedule_item, parent, false);
+                        show = (TextView) row.findViewById(R.id.recycshow);
+                        show.setText(myList.get(position).getShow());
+
+                        dj = (TextView) row.findViewById(R.id.recychost);
+                        dj.setText(myList.get(position).getHost());
+
+                        time = (TextView) row.findViewById(R.id.time);
+                        time.setText(myList.get(position).getTime());
+                        return row;
+                    }
+                });
             }
         } else {
-
             prev.setBackgroundColor(Color.parseColor("#fafafa"));
             prev = v;
             myList = getScheduleData(v);
@@ -256,6 +312,7 @@ public class Schedule extends Activity implements OnClickListener {
             });
         }
     }
+
 
     private void initCrawler(String u) {
         final String url = u;
@@ -320,8 +377,11 @@ public class Schedule extends Activity implements OnClickListener {
                 if (!n.text().contains(":00")) {
                     try {
                         while (sched[col][rowIndex].equals(offAir)) {
-                            System.out.println(col + " " + rowIndex);
                             col++;
+                            if(col == 7) {
+                                col = 0;
+                                break;
+                            }
                         }
                     } catch (NullPointerException np) {
                         //leave loop
@@ -330,6 +390,9 @@ public class Schedule extends Activity implements OnClickListener {
                         row = colTrack.get(col);
                         while (row > rowIndex) {
                             col++;
+                            if(col == 7) {
+                                col = 0;
+                            }
                             row = colTrack.get(col);
                         }
                         for (int i = 0; i < (rowspan / 2); i++) {
@@ -390,17 +453,19 @@ public class Schedule extends Activity implements OnClickListener {
         fri.setOnClickListener(this);
         sat = findViewById(R.id.saturday);
         sat.setOnClickListener(this);
+        fmToggle = (TextView) findViewById(R.id.fmToggle);
+        fmToggle.setOnClickListener(this);
+        digToggle = (TextView) findViewById(R.id.digToggle);
+        digToggle.setOnClickListener(this);
+
+        digToggle.setTextColor(Color.RED);
 
         currDay = (TextView) findViewById(R.id.day);
         listView = (ListView) findViewById(R.id.list);
-        currChan = (Switch) findViewById(R.id.currchan);
-        currChan.setOnClickListener(this);
 
-        channel = DIGITAL;
-
-        currChan.setText("Digital");
-        digUrl = "http://wmuc.umd.edu/station/schedule";
+        digUrl = "http://wmuc.umd.edu/station/schedule/0/2";
         fmUrl = "http://wmuc.umd.edu/station/schedule";
+        channel = DIGITAL;
 
         switch (day) {
             case Calendar.SUNDAY:
