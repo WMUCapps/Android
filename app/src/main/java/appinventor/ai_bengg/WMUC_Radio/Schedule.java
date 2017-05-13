@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.method.Touch;
 import android.text.style.UnderlineSpan;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -79,6 +80,7 @@ public class Schedule extends Activity implements OnClickListener {
     private int channel;
     volatile Document doc;
     float swipeX1, swipeY1, swipeX2, swipeY2;
+    DisplayMetrics dm = new DisplayMetrics();
 
     public static String CRAWLER_FRAG_TAG = "CRAWL_FRAG";
 
@@ -446,6 +448,8 @@ public class Schedule extends Activity implements OnClickListener {
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_WEEK);
 
+        this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+
         sun = findViewById(R.id.sunday);
         sun.setOnClickListener(this);
         sun.setOnTouchListener(new TouchHandler());
@@ -541,12 +545,12 @@ public class Schedule extends Activity implements OnClickListener {
                     swipeY2 = touchevent.getY();
 
                     // if left to right sweep event on screen
-                    if ((swipeX2 - swipeX1) > 500) {
+                    if ((swipeX2 - swipeX1) > (dm.widthPixels / 3)) {
                         onClick(fmToggle);
                     }
 
                     // if right to left sweep event on screen
-                    if ((swipeX1 - swipeX2) > 500) {
+                    if ((swipeX1 - swipeX2) > (dm.widthPixels / 3)) {
                         onClick(digToggle);
 
                     }
