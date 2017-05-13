@@ -6,57 +6,54 @@
     density="560dpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1494532338080"
+    timestamp="1494690965088"
     token="3242749514005476125"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="435" />
     <task
         name="instant-run-dex"
-        duration="1347" />
+        duration="1343" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="24" />
     <task
         name="verifier"
-        duration="0" />
+        duration="3" />
 
-    <artifact
-        location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
     <artifact
         location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/reload-dex/debug/classes.dex"
         type="RELOAD_DEX" />
 
     <build
         build-mode="FULL"
-        timestamp="1494532232454"
+        timestamp="1494690291768"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
@@ -68,16 +65,64 @@
             location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/outputs/apk/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1494690570120"
+        verifier="METHOD_ADDED" >
+        <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/outputs/apk/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="HOT_WARM"
-        timestamp="1494532338080"
+        timestamp="1494690648696"
         verifier="COMPATIBLE" >
         <artifact
-            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/builds/debug/1494690648696/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1494690688890"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/builds/debug/1494690688890/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1494690705634"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/builds/debug/1494690705634/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1494690727346"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/builds/debug/1494690727346/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1494690834446"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/builds/debug/1494690834446/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1494690965088"
+        verifier="COMPATIBLE" >
         <artifact
             location="/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/reload-dex/debug/classes.dex"
             type="RELOAD_DEX" />

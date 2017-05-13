@@ -4,20 +4,26 @@ import appinventor.ai_bengg.WMUC_Radio.R;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.SpannableString;
+import android.text.method.Touch;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View.OnClickListener;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.TranslateAnimation;
 import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -72,6 +78,7 @@ public class Schedule extends Activity implements OnClickListener {
     private String digUrl, fmUrl;
     private int channel;
     volatile Document doc;
+    float swipeX1, swipeY1, swipeX2, swipeY2;
 
     public static String CRAWLER_FRAG_TAG = "CRAWL_FRAG";
 
@@ -213,12 +220,12 @@ public class Schedule extends Activity implements OnClickListener {
                 digToggle.setTextColor(Color.BLACK);
                 initCrawler(fmUrl);
                 channel = FM;
-                myList = getScheduleData(today);
-                today.setBackgroundColor(Color.parseColor("#ff6b6b"));
-                if (prev != today) {
-                    prev.setBackgroundColor(Color.parseColor("#fafafa"));
-                    prev = today;
-                }
+                myList = getScheduleData(prev);
+//                today.setBackgroundColor(Color.parseColor("#ff6b6b"));
+//                if (prev != today) {
+//                    prev.setBackgroundColor(Color.parseColor("#fafafa"));
+//                    prev = today;
+//                }
                 listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
                     private View row;
                     private LayoutInflater inflater = getLayoutInflater();
@@ -246,13 +253,13 @@ public class Schedule extends Activity implements OnClickListener {
                 digToggle.setTextColor(Color.RED);
                 fmToggle.setTextColor(Color.BLACK);
                 initCrawler(digUrl);
-                myList = getScheduleData(today);
+                myList = getScheduleData(prev);
                 channel = DIGITAL;
-                today.setBackgroundColor(Color.parseColor("#ff6b6b"));
-                if (prev != today) {
-                    prev.setBackgroundColor(Color.parseColor("#fafafa"));
-                    prev = today;
-                }
+//                today.setBackgroundColor(Color.parseColor("#ff6b6b"));
+//                if (prev != today) {
+//                    prev.setBackgroundColor(Color.parseColor("#fafafa"));
+//                    prev = today;
+//                }
                 listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
                     private View row;
                     private LayoutInflater inflater = getLayoutInflater();
@@ -441,27 +448,38 @@ public class Schedule extends Activity implements OnClickListener {
 
         sun = findViewById(R.id.sunday);
         sun.setOnClickListener(this);
+        sun.setOnTouchListener(new TouchHandler());
         mon = findViewById(R.id.monday);
         mon.setOnClickListener(this);
+        mon.setOnTouchListener(new TouchHandler());
         tue = findViewById(R.id.tuesday);
         tue.setOnClickListener(this);
+        tue.setOnTouchListener(new TouchHandler());
         wed = findViewById(R.id.wednesday);
         wed.setOnClickListener(this);
+        wed.setOnTouchListener(new TouchHandler());
         thu = findViewById(R.id.thursday);
         thu.setOnClickListener(this);
+        thu.setOnTouchListener(new TouchHandler());
         fri = findViewById(R.id.friday);
         fri.setOnClickListener(this);
+        fri.setOnTouchListener(new TouchHandler());
         sat = findViewById(R.id.saturday);
         sat.setOnClickListener(this);
+        sat.setOnTouchListener(new TouchHandler());
         fmToggle = (TextView) findViewById(R.id.fmToggle);
         fmToggle.setOnClickListener(this);
+        fmToggle.setOnTouchListener(new TouchHandler());
         digToggle = (TextView) findViewById(R.id.digToggle);
         digToggle.setOnClickListener(this);
-
+        digToggle.setOnTouchListener(new TouchHandler());
         digToggle.setTextColor(Color.RED);
 
         currDay = (TextView) findViewById(R.id.day);
         listView = (ListView) findViewById(R.id.list);
+        listView.setOnTouchListener(new TouchHandler());
+        currDay.setOnTouchListener(new TouchHandler());
+
 
         digUrl = "http://wmuc.umd.edu/station/schedule/0/2";
         fmUrl = "http://wmuc.umd.edu/station/schedule";
@@ -492,6 +510,61 @@ public class Schedule extends Activity implements OnClickListener {
         }
 
         return curDay;
+    }
+
+
+    private class TouchHandler implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent touchevent) {
+            final int X = (int) touchevent.getRawX();
+            final int Y = (int) touchevent.getRawY();
+            switch (touchevent.getAction()) {
+                // when user first touches the screen we get x and y coordinate
+                case MotionEvent.ACTION_DOWN: {
+ /*                   RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
+                    _xDelta = X - lParams.leftMargin;
+                    _yDelta = Y - lParams.topMargin;*/
+                    swipeX1 = touchevent.getX();
+                    swipeY1 = touchevent.getY();
+                    break;
+                }
+               /* case MotionEvent.ACTION_MOVE: {
+                    RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
+                    if(view == FMButton)
+                        layoutParams.leftMargin = Math.min(X - _xDelta, xDest);
+                    else
+                        layoutParams.leftMargin = Math.max(X - _xDelta, xDest);
+                    view.setLayoutParams(layoutParams);
+                    break;
+                }*/
+                case MotionEvent.ACTION_UP: {
+                    swipeX2 = touchevent.getX();
+                    swipeY2 = touchevent.getY();
+
+                    // if left to right sweep event on screen
+                    if ((swipeX2 - swipeX1) > 500) {
+                        onClick(fmToggle);
+                    }
+
+                    // if right to left sweep event on screen
+                    if ((swipeX1 - swipeX2) > 500) {
+                        onClick(digToggle);
+
+                    }
+
+                    // if UP to Down sweep event on screen
+                    if (swipeY1 < swipeY2) {
+                        //do nothing.
+                    }
+
+                    // if Down to UP sweep event on screen
+                    if (swipeY1 > swipeY2) {
+                        //do nothing.
+                    }
+                    break;
+                }
+            }
+            return false;
+        }
     }
 
 }
