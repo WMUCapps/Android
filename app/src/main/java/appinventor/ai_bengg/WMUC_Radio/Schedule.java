@@ -71,14 +71,16 @@ public class Schedule extends Activity implements OnClickListener {
     private static int FM = 1;
     private static int DIGITAL = 2;
 
-    private Schedule.Show[][] sched = new Schedule.Show[7][24];
+    private Schedule.Show[][] digSched = new Schedule.Show[7][24];
+    private Schedule.Show[][] fmSched = new Schedule.Show[7][24];
     private ArrayList<ListItem> myList;
     private View sun, mon, tue, wed, thu, fri, sat, today, prev;
     private TextView currDay, fmToggle, digToggle;
     private ListView listView;
     private String digUrl, fmUrl;
     private int channel;
-    volatile Document doc;
+    private Document docDig;
+    private Document docFM;
     float swipeX1, swipeY1, swipeX2, swipeY2;
     DisplayMetrics dm = new DisplayMetrics();
 
@@ -90,7 +92,7 @@ public class Schedule extends Activity implements OnClickListener {
         setContentView(R.layout.activity_schedule);
 
         today = initGui();
-        initCrawler(digUrl);
+        initCrawler();
 
         // Populating the list with today digital by default.
         myList = getScheduleData(today);
@@ -146,66 +148,136 @@ public class Schedule extends Activity implements OnClickListener {
     private ArrayList<ListItem> getScheduleData(View view) {
         ArrayList<ListItem> schedByDay = new ArrayList<ListItem>();
         if (view == sun) {
-            for (int h = 0; h < 24; h++) {
-                ListItem toAdd = new ListItem(this, h + ":00", sched[0][h].sName, sched[0][h].host);
-                toAdd.setHost(sched[0][h].host);
-                toAdd.setShow(sched[0][h].sName);
-                toAdd.setTime(h + ":00");
-                schedByDay.add(new ListItem(this, h + ":00", sched[0][h].sName, sched[0][h].host));
+            if(channel == DIGITAL) {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", digSched[0][h].sName, digSched[0][h].host);
+                    toAdd.setHost(digSched[0][h].host);
+                    toAdd.setShow(digSched[0][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", digSched[0][h].sName, digSched[0][h].host));
+                }
+            } else {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", fmSched[0][h].sName, fmSched[0][h].host);
+                    toAdd.setHost(fmSched[0][h].host);
+                    toAdd.setShow(fmSched[0][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", fmSched[0][h].sName, fmSched[0][h].host));
+                }
             }
             currDay.setText("Sunday");
         } else if (view == mon) {
-            for (int h = 0; h < 24; h++) {
-                ListItem toAdd = new ListItem(this, h + ":00", sched[1][h].sName, sched[1][h].host);
-                toAdd.setHost(sched[1][h].host);
-                toAdd.setShow(sched[1][h].sName);
-                toAdd.setTime(h + ":00");
-                schedByDay.add(new ListItem(this, h + ":00", sched[1][h].sName, sched[1][h].host));
+            if(channel == DIGITAL) {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", digSched[1][h].sName, digSched[1][h].host);
+                    toAdd.setHost(digSched[1][h].host);
+                    toAdd.setShow(digSched[1][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", digSched[1][h].sName, digSched[1][h].host));
+                }
+            } else {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", fmSched[1][h].sName, fmSched[1][h].host);
+                    toAdd.setHost(fmSched[1][h].host);
+                    toAdd.setShow(fmSched[1][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", fmSched[1][h].sName, fmSched[1][h].host));
+                }
             }
             currDay.setText("Monday");
         } else if (view == tue) {
-            for (int h = 0; h < 24; h++) {
-                ListItem toAdd = new ListItem(this, h + ":00", sched[2][h].sName, sched[2][h].host);
-                toAdd.setHost(sched[2][h].host);
-                toAdd.setShow(sched[2][h].sName);
-                toAdd.setTime(h + ":00");
-                schedByDay.add(new ListItem(this, h + ":00", sched[2][h].sName, sched[2][h].host));
+            if(channel == DIGITAL) {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", digSched[2][h].sName, digSched[2][h].host);
+                    toAdd.setHost(digSched[2][h].host);
+                    toAdd.setShow(digSched[2][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", digSched[2][h].sName, digSched[2][h].host));
+                }
+            } else {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", fmSched[2][h].sName, fmSched[2][h].host);
+                    toAdd.setHost(fmSched[2][h].host);
+                    toAdd.setShow(fmSched[2][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", fmSched[2][h].sName, fmSched[2][h].host));
+                }
             }
             currDay.setText("Tuesday");
         } else if (view == wed) {
-            for (int h = 0; h < 24; h++) {
-                ListItem toAdd = new ListItem(this, h + ":00", sched[3][h].sName, sched[3][h].host);
-                toAdd.setHost(sched[3][h].host);
-                toAdd.setShow(sched[3][h].sName);
-                toAdd.setTime(h + ":00");
-                schedByDay.add(new ListItem(this, h + ":00", sched[3][h].sName, sched[3][h].host));
+            if(channel == DIGITAL) {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", digSched[3][h].sName, digSched[3][h].host);
+                    toAdd.setHost(digSched[3][h].host);
+                    toAdd.setShow(digSched[3][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", digSched[3][h].sName, digSched[3][h].host));
+                }
+            } else {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", fmSched[3][h].sName, fmSched[3][h].host);
+                    toAdd.setHost(fmSched[3][h].host);
+                    toAdd.setShow(fmSched[3][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", fmSched[3][h].sName, fmSched[3][h].host));
+                }
             }
             currDay.setText("Wednesday");
         } else if (view == thu) {
-            for (int h = 0; h < 24; h++) {
-                ListItem toAdd = new ListItem(this, h + ":00", sched[4][h].sName, sched[4][h].host);
-                toAdd.setHost(sched[4][h].host);
-                toAdd.setShow(sched[4][h].sName);
-                toAdd.setTime(h + ":00");
-                schedByDay.add(new ListItem(this, h + ":00", sched[4][h].sName, sched[4][h].host));
+            if(channel == DIGITAL) {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", digSched[4][h].sName, digSched[4][h].host);
+                    toAdd.setHost(digSched[4][h].host);
+                    toAdd.setShow(digSched[4][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", digSched[4][h].sName, digSched[4][h].host));
+                }
+            } else {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", fmSched[4][h].sName, fmSched[4][h].host);
+                    toAdd.setHost(fmSched[4][h].host);
+                    toAdd.setShow(fmSched[4][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", fmSched[4][h].sName, fmSched[4][h].host));
+                }
             }
             currDay.setText("Thursday");
         } else if (view == fri) {
-            for (int h = 0; h < 24; h++) {
-                ListItem toAdd = new ListItem(this, h + ":00", sched[5][h].sName, sched[5][h].host);
-                toAdd.setHost(sched[5][h].host);
-                toAdd.setShow(sched[5][h].sName);
-                toAdd.setTime(h + ":00");
-                schedByDay.add(new ListItem(this, h + ":00", sched[5][h].sName, sched[5][h].host));
+            if(channel == DIGITAL) {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", digSched[5][h].sName, digSched[5][h].host);
+                    toAdd.setHost(digSched[5][h].host);
+                    toAdd.setShow(digSched[5][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", digSched[5][h].sName, digSched[5][h].host));
+                }
+            } else {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", fmSched[5][h].sName, fmSched[5][h].host);
+                    toAdd.setHost(fmSched[5][h].host);
+                    toAdd.setShow(fmSched[5][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", fmSched[5][h].sName, fmSched[5][h].host));
+                }
             }
             currDay.setText("Friday");
         } else if (view == sat) {
-            for (int h = 0; h < 24; h++) {
-                ListItem toAdd = new ListItem(this, h + ":00", sched[6][h].sName, sched[6][h].host);
-                toAdd.setHost(sched[6][h].host);
-                toAdd.setShow(sched[6][h].sName);
-                toAdd.setTime(h + ":00");
-                schedByDay.add(new ListItem(this, h + ":00", sched[6][h].sName, sched[6][h].host));
+            if(channel == DIGITAL) {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", digSched[6][h].sName, digSched[6][h].host);
+                    toAdd.setHost(digSched[6][h].host);
+                    toAdd.setShow(digSched[6][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", digSched[6][h].sName, digSched[6][h].host));
+                }
+            } else {
+                for (int h = 0; h < 24; h++) {
+                    ListItem toAdd = new ListItem(this, h + ":00", fmSched[6][h].sName, fmSched[6][h].host);
+                    toAdd.setHost(fmSched[6][h].host);
+                    toAdd.setShow(fmSched[6][h].sName);
+                    toAdd.setTime(h + ":00");
+                    schedByDay.add(new ListItem(this, h + ":00", fmSched[6][h].sName, fmSched[6][h].host));
+                }
             }
             currDay.setText("Saturday");
         } else {
@@ -220,14 +292,8 @@ public class Schedule extends Activity implements OnClickListener {
             if(channel == DIGITAL) {
                 fmToggle.setTextColor(Color.RED);
                 digToggle.setTextColor(Color.BLACK);
-                initCrawler(fmUrl);
                 channel = FM;
                 myList = getScheduleData(prev);
-//                today.setBackgroundColor(Color.parseColor("#ff6b6b"));
-//                if (prev != today) {
-//                    prev.setBackgroundColor(Color.parseColor("#fafafa"));
-//                    prev = today;
-//                }
                 listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
                     private View row;
                     private LayoutInflater inflater = getLayoutInflater();
@@ -254,14 +320,8 @@ public class Schedule extends Activity implements OnClickListener {
             if(channel == FM) {
                 digToggle.setTextColor(Color.RED);
                 fmToggle.setTextColor(Color.BLACK);
-                initCrawler(digUrl);
-                myList = getScheduleData(prev);
                 channel = DIGITAL;
-//                today.setBackgroundColor(Color.parseColor("#ff6b6b"));
-//                if (prev != today) {
-//                    prev.setBackgroundColor(Color.parseColor("#fafafa"));
-//                    prev = today;
-//                }
+                myList = getScheduleData(prev);
                 listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
                     private View row;
                     private LayoutInflater inflater = getLayoutInflater();
@@ -323,122 +383,211 @@ public class Schedule extends Activity implements OnClickListener {
     }
 
 
-    private void initCrawler(String u) {
-        final String url = u;
+    private void initCrawler() {
 
-        Thread thread = new Thread(new Runnable() {
+        Thread digThread = new Thread(new Runnable() {
             @Override
             public void run() {
+                ArrayList<Element> shtuff;
+                int row = 0;
+                int col = 0;
+                int rowspan = -1;                            // how long a show is (2x)
+                int rowIndex = -1;                            // tracking the current row
+                HashMap<Integer, Integer> colTrack = new HashMap<Integer, Integer>();
+                String[] none = {"Off Air", "N/A"};            // "null" show
+                Schedule.Show offAir = new Schedule.Show(none);
+
+                //Initializes the current row of each col in the sched as they may get out of order.
+                colTrack.put(0, 0);
+                colTrack.put(1, 0);
+                colTrack.put(2, 0);
+                colTrack.put(3, 0);
+                colTrack.put(4, 0);
+                colTrack.put(5, 0);
+                colTrack.put(6, 0);
+
                 try {
-                    doc = Jsoup.connect(url).get();
+                    docDig = Jsoup.connect(digUrl).get();
                 } catch (MalformedURLException mue) {
                     mue.printStackTrace();
                 } catch (IOException ioe) {
                     ioe.printStackTrace();
                 }
+                shtuff = docDig.select("td");
+                for (Element n : shtuff) {
+                    if (!n.text().isEmpty() && !(n.text().contains("Channel 2"))
+                            && !(n.text().contains(":30"))
+                            && !(n.text().contains("Get Involved Station History Donate"))
+                            && !(n.text().contains("Find us on Facebook Follow WMUC"))) {
+                        // sets the rowspan of the show
+                        rowspan = n.toString().indexOf("rowspan=\"") + 9;
+                        if (rowspan != 8) {
+                            if (n.toString().charAt(rowspan + 1) != ('\"')) {
+                                rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 2));
+                            } else {
+                                rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 1));
+                            }
+                        }
 
+                        if (!n.text().contains(":00")) {
+                            try {
+                                while (digSched[col][rowIndex].equals(offAir)) {
+                                    col++;
+                                }
+                            } catch (NullPointerException np) {
+                                //leave loop
+                            }
+                            if (col < 7) {
+                                row = colTrack.get(col);
+                                while (row > rowIndex) {
+                                    col++;
+                                    row = colTrack.get(col);
+                                }
+                                for (int i = 0; i < (rowspan / 2); i++) {
+                                    String currShow = n.text();
+                                    String[] curr = currShow.split("\\*\\*\\*");
+                                    if (curr.length > 1) {
+                                        digSched[col][row++] = new Schedule.Show(curr);
+                                    } else {
+                                        digSched[col][row++] = offAir;
+                                    }
+                                }
+                                colTrack.put(col, row);
+                                rowspan = -1;
+                                if (col == 6) {
+                                    col = 0;
+                                } else {
+                                    col++;
+                                }
+                                row = 0;
+                            } else {
+                                col = 0;
+                            }
+                        }
+
+                        if (n.text().contains(":00")) {
+                            rowIndex++;
+                            col = 0;
+                        }
+                    }
+                }
+
+
+                for (int r = 0; r < 24; r++) {
+                    for (int c = 0; c < 7; c++) {
+                        System.out.print(digSched[c][r] + " | ");
+                    }
+                    System.out.println();
+                }
+            }
+        });
+        digThread.start();
+
+        Thread fmThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ArrayList<Element> shtuff;
+                int row = 0;
+                int col = 0;
+                int rowspan = -1;                            // how long a show is (2x)
+                int rowIndex = -1;                            // tracking the current row
+                HashMap<Integer, Integer> colTrack = new HashMap<Integer, Integer>();
+                String[] none = {"Off Air", "N/A"};            // "null" show
+                Schedule.Show offAir = new Schedule.Show(none);
+
+                //Initializes the current row of each col in the sched as they may get out of order.
+                colTrack.put(0, 0);
+                colTrack.put(1, 0);
+                colTrack.put(2, 0);
+                colTrack.put(3, 0);
+                colTrack.put(4, 0);
+                colTrack.put(5, 0);
+                colTrack.put(6, 0);
+
+                try {
+                    docFM = Jsoup.connect(fmUrl).get();
+                } catch (MalformedURLException mue) {
+                    mue.printStackTrace();
+                } catch (IOException ioe) {
+                    ioe.printStackTrace();
+                }
+                shtuff = docFM.select("td");
+                for (Element n : shtuff) {
+                    if (!n.text().isEmpty() && !(n.text().contains("Channel 2"))
+                            && !(n.text().contains(":30"))
+                            && !(n.text().contains("Get Involved Station History Donate"))
+                            && !(n.text().contains("Find us on Facebook Follow WMUC"))) {
+                        // sets the rowspan of the show
+                        rowspan = n.toString().indexOf("rowspan=\"") + 9;
+                        if (rowspan != 8) {
+                            if (n.toString().charAt(rowspan + 1) != ('\"')) {
+                                rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 2));
+                            } else {
+                                rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 1));
+                            }
+                        }
+
+                        if (!n.text().contains(":00")) {
+                            try {
+                                while (fmSched[col][rowIndex].equals(offAir)) {
+                                    col++;
+                                }
+                            } catch (NullPointerException np) {
+                                //leave loop
+                            }
+                            if (col < 7) {
+                                row = colTrack.get(col);
+                                while (row > rowIndex) {
+                                    col++;
+                                    row = colTrack.get(col);
+                                }
+                                for (int i = 0; i < (rowspan / 2); i++) {
+                                    String currShow = n.text();
+                                    String[] curr = currShow.split("\\*\\*\\*");
+                                    if (curr.length > 1) {
+                                        fmSched[col][row++] = new Schedule.Show(curr);
+                                    } else {
+                                        fmSched[col][row++] = offAir;
+                                    }
+                                }
+                                colTrack.put(col, row);
+                                rowspan = -1;
+                                if (col == 6) {
+                                    col = 0;
+                                } else {
+                                    col++;
+                                }
+                                row = 0;
+                            } else {
+                                col = 0;
+                            }
+                        }
+
+                        if (n.text().contains(":00")) {
+                            rowIndex++;
+                            col = 0;
+                        }
+                    }
+                }
+
+
+                for (int r = 0; r < 24; r++) {
+                    for (int c = 0; c < 7; c++) {
+                        System.out.print(fmSched[c][r] + " | ");
+                    }
+                    System.out.println();
+                }
             }
 
         });
-        thread.start();
+        fmThread.start();
         // thread.stop();
 
         try {
-            thread.join();
+            digThread.join();
+            fmThread.join();
         } catch (java.lang.InterruptedException e) {
             System.out.println("Uh oh.");
-        }
-
-        ArrayList<Element> shtuff;
-        int row = 0;
-        int col = 0;
-        int rowspan = -1;                            // how long a show is (2x)
-        int rowIndex = -1;                            // tracking the current row
-        HashMap<Integer, Integer> colTrack = new HashMap<Integer, Integer>();
-        String[] none = {"Off Air", "N/A"};            // "null" show
-        Schedule.Show offAir = new Schedule.Show(none);
-
-        //Initializes the current row of each col in the sched as they may get out of order.
-        colTrack.put(0, 0);
-        colTrack.put(1, 0);
-        colTrack.put(2, 0);
-        colTrack.put(3, 0);
-        colTrack.put(4, 0);
-        colTrack.put(5, 0);
-        colTrack.put(6, 0);
-
-        shtuff = doc.select("td");
-        for (Element n : shtuff) {
-            if (!n.text().isEmpty() && !(n.text().contains("Channel 2"))
-                    && !(n.text().contains(":30"))
-                    && !(n.text().contains("Get Involved Station History Donate"))
-                    && !(n.text().contains("Find us on Facebook Follow WMUC"))) {
-                // sets the rowspan of the show
-                rowspan = n.toString().indexOf("rowspan=\"") + 9;
-                if (rowspan != 8) {
-                    if (n.toString().charAt(rowspan + 1) != ('\"')) {
-                        rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 2));
-                    } else {
-                        rowspan = Integer.parseInt(n.toString().substring(rowspan, rowspan + 1));
-                    }
-                }
-
-                if (!n.text().contains(":00")) {
-                    try {
-                        while (sched[col][rowIndex].equals(offAir)) {
-                            col++;
-                            if(col == 7) {
-                                col = 0;
-                                break;
-                            }
-                        }
-                    } catch (NullPointerException np) {
-                        //leave loop
-                    }
-                    if (col < 7) {
-                        row = colTrack.get(col);
-                        while (row > rowIndex) {
-                            col++;
-                            if(col == 7) {
-                                col = 0;
-                            }
-                            row = colTrack.get(col);
-                        }
-                        for (int i = 0; i < (rowspan / 2); i++) {
-                            String currShow = n.text();
-                            String[] curr = currShow.split("\\*\\*\\*");
-                            if (curr.length > 1) {
-                                sched[col][row++] = new Schedule.Show(curr);
-                            } else {
-                                sched[col][row++] = offAir;
-                            }
-                        }
-                        colTrack.put(col, row);
-                        rowspan = -1;
-                        if (col == 6) {
-                            col = 0;
-                        } else {
-                            col++;
-                        }
-                        row = 0;
-                    } else {
-                        col = 0;
-                    }
-                }
-
-                if (n.text().contains(":00")) {
-                    rowIndex++;
-                    col = 0;
-                }
-            }
-        }
-
-
-        for (int r = 0; r < 24; r++) {
-            for (int c = 0; c < 7; c++) {
-                System.out.print(sched[c][r] + " | ");
-            }
-            System.out.println();
         }
     }
 
