@@ -1,16 +1,8 @@
 package appinventor.ai_bengg.WMUC_Radio;
 
-import appinventor.ai_bengg.WMUC_Radio.R;
-
 import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.method.Touch;
-import android.text.style.UnderlineSpan;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,27 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.TranslateAnimation;
-import android.webkit.WebView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Switch;
 import android.widget.TextView;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 
 
@@ -77,10 +54,7 @@ public class Schedule extends Activity implements OnClickListener {
     private View sun, mon, tue, wed, thu, fri, sat, today, prev;
     private TextView currDay, fmToggle, digToggle;
     private ListView listView;
-    private String digUrl, fmUrl;
     private int channel;
-    private Document docDig;
-    private Document docFM;
     private float swipeX1, swipeY1, swipeX2, swipeY2;
     private DisplayMetrics dm = new DisplayMetrics();
     private int hourOfDay;
@@ -736,9 +710,6 @@ public class Schedule extends Activity implements OnClickListener {
         listView.setOnTouchListener(new TouchHandler());
         currDay.setOnTouchListener(new TouchHandler());
 
-
-        digUrl = "http://wmuc.umd.edu/station/schedule/0/2";
-        fmUrl = "http://wmuc.umd.edu/station/schedule";
         channel = DIGITAL;
 
         switch (day) {
