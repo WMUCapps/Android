@@ -32,16 +32,22 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.exoplayer.C;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+
+import java.util.Calendar;
 
 public class MainActivity extends Activity implements OnClickListener {
     private final Uri fmURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc-hq");
     private final Uri digURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc2-high");
     private static final String TAG = "wmuc";
+    private TextView currShow;
+    private TextView currHost;
     private Uri currchan;
     private ImageButton playButton;
     private ImageButton schedButton;
@@ -183,6 +189,8 @@ public class MainActivity extends Activity implements OnClickListener {
             }
 
             currchan = digURI;
+            currShow.setText(getCurrShow(Schedule.DIGITAL).sName);
+            currHost.setText(getCurrShow(Schedule.DIGITAL).host);
             digHit = true;
             fmHit = false;
             if (playing) {
@@ -211,6 +219,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 Log.d("This one is for", " visibility");
             }
             currchan = fmURI;
+            currShow.setText(getCurrShow(Schedule.FM).sName);
+            currHost.setText(getCurrShow(Schedule.FM).host);
             digHit = false;
             fmHit = true;
             if (playing) {
@@ -269,6 +279,10 @@ public class MainActivity extends Activity implements OnClickListener {
         //       playSeekBar = (ProgressBar) findViewById(R.id.progressBar);
         //       playSeekBar.setMax(100);
         //       playSeekBar.setVisibility(View.INVISIBLE);
+        currShow = (TextView) findViewById(R.id.currShow);
+        currShow.setText("");
+        currHost = (TextView) findViewById(R.id.currHost);
+        currHost.setText("");
         playButton = (ImageButton) findViewById(R.id.Play);
         playButton.setOnClickListener(this);
         schedButton = (ImageButton) findViewById(R.id.sched);
@@ -547,7 +561,47 @@ public class MainActivity extends Activity implements OnClickListener {
         }
     }
 
+    private Schedule.Show getCurrShow(int channel) {
+        Calendar c = Calendar.getInstance();
+        int hourOfDay = c.get(Calendar.HOUR_OF_DAY);
+        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 
+        Schedule.Show show = null;
 
+        if(currchan == digURI) {
+            if (dayOfWeek == Calendar.SUNDAY) {
+                show = Splash.digSched[0][hourOfDay];
+            } else if (dayOfWeek == Calendar.MONDAY) {
+                show = Splash.digSched[1][hourOfDay];
+            } else if (dayOfWeek == Calendar.TUESDAY) {
+                show = Splash.digSched[2][hourOfDay];
+            } else if (dayOfWeek == Calendar.WEDNESDAY) {
+                show = Splash.digSched[3][hourOfDay];
+            } else if (dayOfWeek == Calendar.THURSDAY) {
+                show = Splash.digSched[4][hourOfDay];
+            } else if (dayOfWeek == Calendar.FRIDAY) {
+                show = Splash.digSched[5][hourOfDay];
+            } else if (dayOfWeek == Calendar.SATURDAY) {
+                show = Splash.digSched[6][hourOfDay];
+            }
+        } else if(currchan == fmURI) {
+            if (dayOfWeek == Calendar.SUNDAY) {
+                show = Splash.fmSched[0][hourOfDay];
+            } else if (dayOfWeek == Calendar.MONDAY) {
+                show = Splash.fmSched[1][hourOfDay];
+            } else if (dayOfWeek == Calendar.TUESDAY) {
+                show = Splash.fmSched[2][hourOfDay];
+            } else if (dayOfWeek == Calendar.WEDNESDAY) {
+                show = Splash.fmSched[3][hourOfDay];
+            } else if (dayOfWeek == Calendar.THURSDAY) {
+                show = Splash.fmSched[4][hourOfDay];
+            } else if (dayOfWeek == Calendar.FRIDAY) {
+                show = Splash.fmSched[5][hourOfDay];
+            } else if (dayOfWeek == Calendar.SATURDAY) {
+                show = Splash.fmSched[6][hourOfDay];
+            }
+        }
+        return show;
+    }
 
 }

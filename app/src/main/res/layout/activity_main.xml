@@ -90,6 +90,26 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp" />
 
+    <TextView
+        android:id="@+id/currShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/wmuc"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/currHost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/currShow"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
     <ListView
         android:id="@+id/navList"
