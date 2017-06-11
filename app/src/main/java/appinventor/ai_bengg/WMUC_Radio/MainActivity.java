@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -30,16 +31,23 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.exoplayer.C;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+
+import java.util.Calendar;
 
 public class MainActivity extends Activity implements OnClickListener {
     private final Uri fmURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc-hq");
     private final Uri digURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc2-high");
     private static final String TAG = "wmuc";
+    private TextView currShow;
+    private TextView currHost;
     private Uri currchan;
     private ImageButton playButton;
     private ImageButton schedButton;
@@ -69,7 +77,8 @@ public class MainActivity extends Activity implements OnClickListener {
     private final NotificationBroadcastReciver NBR = new NotificationBroadcastReciver();
     private String channel;
     float swipeX1,swipeY1,swipeX2,swipeY2;
-
+    DisplayMetrics dm = new DisplayMetrics();
+    int xDest;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -77,10 +86,9 @@ public class MainActivity extends Activity implements OnClickListener {
     private GoogleApiClient client;
 
     private void moveToCenter(View v){
-        DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+        xDest = dm.widthPixels/2;
         Log.wtf("Display Metrics", " "+ dm);
-        int xDest = dm.widthPixels/2;
         xDest -= (v.getMeasuredWidth()*1.5/2);
         int originalPos[] = new int[2];
         Log.wtf("x Destination", " "+ xDest);
@@ -160,9 +168,11 @@ public class MainActivity extends Activity implements OnClickListener {
 
     public void onClick(View v) {
         if(v == schedButton) {
-            startActivity(new Intent(getApplicationContext(), Schedule.class));
-        }
 
+            Intent intent = new Intent(getApplicationContext(), Schedule.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
         Log.d("THE BUCK STOPS HERE", "hopefully " + playing);
         if (v == DIGButton && !digHit) {
             channel = "wmuc: digital";
@@ -179,6 +189,8 @@ public class MainActivity extends Activity implements OnClickListener {
             }
 
             currchan = digURI;
+            currShow.setText(getCurrShow(Schedule.DIGITAL).sName);
+            currHost.setText(getCurrShow(Schedule.DIGITAL).host);
             digHit = true;
             fmHit = false;
             if (playing) {
@@ -207,6 +219,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 Log.d("This one is for", " visibility");
             }
             currchan = fmURI;
+            currShow.setText(getCurrShow(Schedule.FM).sName);
+            currHost.setText(getCurrShow(Schedule.FM).host);
             digHit = false;
             fmHit = true;
             if (playing) {
@@ -248,9 +262,9 @@ public class MainActivity extends Activity implements OnClickListener {
                     playButton.setImageResource(R.drawable.pause);
                     ongoing = true;
                     if(fmHit)
-                        channel = "wmuc: fm";
+                        channel = "WMUC: FM";
 
-                    else channel = "wmuc: digital";
+                    else channel = "WMUC: Digital";
                     showNotification();
 
                 }
@@ -265,6 +279,10 @@ public class MainActivity extends Activity implements OnClickListener {
         //       playSeekBar = (ProgressBar) findViewById(R.id.progressBar);
         //       playSeekBar.setMax(100);
         //       playSeekBar.setVisibility(View.INVISIBLE);
+        currShow = (TextView) findViewById(R.id.currShow);
+        currShow.setText("");
+        currHost = (TextView) findViewById(R.id.currHost);
+        currHost.setText("");
         playButton = (ImageButton) findViewById(R.id.Play);
         playButton.setOnClickListener(this);
         schedButton = (ImageButton) findViewById(R.id.sched);
@@ -391,7 +409,6 @@ public class MainActivity extends Activity implements OnClickListener {
             // automatically handle clicks on the Home/Up button, so long
             // as you specify a parent activity in AndroidManifest.xml.
             int id = item.getItemId();
-
             //noinspection SimplifiableIfStatement
             if (id == R.id.action_settings) {
                 startActivity(new Intent(getApplicationContext(), settings.class));
@@ -401,7 +418,6 @@ public class MainActivity extends Activity implements OnClickListener {
                 startActivity(new Intent(getApplicationContext(), schedule.class));
                 return true;
             }
-
             return super.onOptionsItemSelected(item);
         }
     */
@@ -484,16 +500,35 @@ public class MainActivity extends Activity implements OnClickListener {
                 onClick(DIGButton);
         }
     }
+    private int _xDelta;
+    private int _yDelta;
 
+    /*@TODO: add swiping correctly*/
     private class TouchHandler implements View.OnTouchListener {
         public boolean onTouch(View view, MotionEvent touchevent) {
+            Log.d("X value:" , " " + touchevent.getX());
+            final int X = (int) touchevent.getRawX();
+            final int Y = (int) touchevent.getRawY();
             switch (touchevent.getAction()) {
                 // when user first touches the screen we get x and y coordinate
                 case MotionEvent.ACTION_DOWN: {
+ /*                   RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
+                    _xDelta = X - lParams.leftMargin;
+                    _yDelta = Y - lParams.topMargin;*/
                     swipeX1 = touchevent.getX();
                     swipeY1 = touchevent.getY();
+                    Log.d("Just checking if ", " this runs constantly");
                     break;
                 }
+               /* case MotionEvent.ACTION_MOVE: {
+                    RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
+                    if(view == FMButton)
+                        layoutParams.leftMargin = Math.min(X - _xDelta, xDest);
+                    else
+                        layoutParams.leftMargin = Math.max(X - _xDelta, xDest);
+                    view.setLayoutParams(layoutParams);
+                    break;
+                }*/
                 case MotionEvent.ACTION_UP: {
                     swipeX2 = touchevent.getX();
                     swipeY2 = touchevent.getY();
@@ -512,12 +547,12 @@ public class MainActivity extends Activity implements OnClickListener {
 
                     // if UP to Down sweep event on screen
                     if (swipeY1 < swipeY2) {
-                    //do nothing.
+                        //do nothing.
                     }
 
                     // if Down to UP sweep event on screen
                     if (swipeY1 > swipeY2) {
-                    //do nothing.
+                        //do nothing.
                     }
                     break;
                 }
@@ -526,7 +561,47 @@ public class MainActivity extends Activity implements OnClickListener {
         }
     }
 
+    private Schedule.Show getCurrShow(int channel) {
+        Calendar c = Calendar.getInstance();
+        int hourOfDay = c.get(Calendar.HOUR_OF_DAY);
+        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 
+        Schedule.Show show = null;
 
+        if(currchan == digURI) {
+            if (dayOfWeek == Calendar.SUNDAY) {
+                show = Splash.digSched[0][hourOfDay];
+            } else if (dayOfWeek == Calendar.MONDAY) {
+                show = Splash.digSched[1][hourOfDay];
+            } else if (dayOfWeek == Calendar.TUESDAY) {
+                show = Splash.digSched[2][hourOfDay];
+            } else if (dayOfWeek == Calendar.WEDNESDAY) {
+                show = Splash.digSched[3][hourOfDay];
+            } else if (dayOfWeek == Calendar.THURSDAY) {
+                show = Splash.digSched[4][hourOfDay];
+            } else if (dayOfWeek == Calendar.FRIDAY) {
+                show = Splash.digSched[5][hourOfDay];
+            } else if (dayOfWeek == Calendar.SATURDAY) {
+                show = Splash.digSched[6][hourOfDay];
+            }
+        } else if(currchan == fmURI) {
+            if (dayOfWeek == Calendar.SUNDAY) {
+                show = Splash.fmSched[0][hourOfDay];
+            } else if (dayOfWeek == Calendar.MONDAY) {
+                show = Splash.fmSched[1][hourOfDay];
+            } else if (dayOfWeek == Calendar.TUESDAY) {
+                show = Splash.fmSched[2][hourOfDay];
+            } else if (dayOfWeek == Calendar.WEDNESDAY) {
+                show = Splash.fmSched[3][hourOfDay];
+            } else if (dayOfWeek == Calendar.THURSDAY) {
+                show = Splash.fmSched[4][hourOfDay];
+            } else if (dayOfWeek == Calendar.FRIDAY) {
+                show = Splash.fmSched[5][hourOfDay];
+            } else if (dayOfWeek == Calendar.SATURDAY) {
+                show = Splash.fmSched[6][hourOfDay];
+            }
+        }
+        return show;
+    }
 
 }

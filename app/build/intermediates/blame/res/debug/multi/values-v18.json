@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+        "outputFile": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 99
                 },
                 "from": {
-                    "file": "C:\\Users\\jakegluckdog\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v18\\values-v18.xml",
+                    "file": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/values-v18/values-v18.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 229,
                         "endColumn": 48,
-                        "endOffset": 99
+                        "endOffset": 273
                     }
                 }
             }
