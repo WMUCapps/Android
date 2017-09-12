@@ -1,4 +1,0 @@
-#Sat May 20 13:12:53 EDT 2017
-base.0=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7
-renamed.0=classes.dex
-file.0=/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex

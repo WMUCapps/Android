@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/common_signin_btn_text_light.xml",
+        "source": "/Users/Evan/.android/build-cache/f6bd3a1581dbbea6e62192ab0c6127df0937f61c/output/res/color/common_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/common_signin_btn_text_dark.xml",
+        "source": "/Users/Evan/.android/build-cache/f6bd3a1581dbbea6e62192ab0c6127df0937f61c/output/res/color/common_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/abc_search_url_text.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/switch_thumb_material_light.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/abc_primary_text_material_light.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/color/switch_thumb_material_dark.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/color/switch_thumb_material_dark.xml"
+    }
+]

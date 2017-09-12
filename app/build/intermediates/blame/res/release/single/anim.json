@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/design_fab_out.xml",
+        "source": "/Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/res/anim/design_fab_out.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_slide_in_top.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_popup_enter.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/shrink_fm_right.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/shrink_fm_right.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/design_fab_in.xml",
+        "source": "/Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/res/anim/design_fab_in.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/anim_slide_dig_right.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/anim_slide_dig_right.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/just_shrink_right.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/just_shrink_right.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/design_snackbar_out.xml",
+        "source": "/Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/just_shrink_left.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/just_shrink_left.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/fm_grow_to_pause.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/fm_grow_to_pause.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/anim_slide_fm_left.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/anim_slide_fm_left.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/shrink_dg_left.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/shrink_dg_left.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/anim_slide_left.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/anim_slide_left.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/pause_fm.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/pause_fm.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_slide_out_top.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_fade_out.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/anim_slide_right.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/anim_slide_right.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/design_snackbar_in.xml",
+        "source": "/Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_fade_in.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/dig_grow_to_pause.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/dig_grow_to_pause.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/pause_dig.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/pause_dig.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/anim/abc_popup_exit.xml",
+        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_popup_exit.xml"
+    }
+]
