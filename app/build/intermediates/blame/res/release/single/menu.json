@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/menu/menu_settings.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/menu/menu_settings.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/menu/activity_menu_drawer.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/menu/activity_menu_drawer.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/menu/menu_schedule.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/menu/menu_schedule.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/menu/menu.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/menu/menu.xml"
+    },
+    {
+        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/release/menu/menu_main.xml",
+        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/menu/menu_main.xml"
+    }
+]

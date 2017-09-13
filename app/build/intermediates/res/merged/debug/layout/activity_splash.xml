@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="appinventor.ai_bengg.WMUC_Radio.Splash">
+    tools:context="appinventor.ai_bengg.Android_Radio.Android_Radio.Android_Radio.Splash">
 
     <ImageView
         android:layout_width="match_parent"
