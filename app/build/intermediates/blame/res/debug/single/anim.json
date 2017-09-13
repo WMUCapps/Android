@@ -1,106 +1,106 @@
 [
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/anim_slide_right.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/anim_slide_right.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_popup_enter.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\dc9b11c6ccdd16b341a499f8780937d165727246\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/pause_dig.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/pause_dig.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/shrink_fm_right.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/shrink_fm_right.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_popup_exit.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shrink_fm_right.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\shrink_fm_right.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_slide_left.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\anim_slide_left.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/anim_slide_fm_left.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/anim_slide_fm_left.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shrink_dg_left.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\shrink_dg_left.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
-        "source": "/Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/res/anim/design_fab_out.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pause_dig.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\pause_dig.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_slide_in_bottom.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/dig_grow_to_pause.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/dig_grow_to_pause.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
-        "source": "/Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/res/anim/design_snackbar_out.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
-        "source": "/Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/res/anim/design_fab_in.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\dc9b11c6ccdd16b341a499f8780937d165727246\\output\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/shrink_dg_left.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/shrink_dg_left.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\dig_grow_to_pause.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\dig_grow_to_pause.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/just_shrink_left.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/just_shrink_left.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/fm_grow_to_pause.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/fm_grow_to_pause.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\dc9b11c6ccdd16b341a499f8780937d165727246\\output\\res\\anim\\design_fab_in.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_fade_out.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_slide_right.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\anim_slide_right.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_slide_out_top.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_fade_in.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_slide_dig_right.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\anim_slide_dig_right.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_slide_in_top.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\dc9b11c6ccdd16b341a499f8780937d165727246\\output\\res\\anim\\design_fab_out.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_slide_out_bottom.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\pause_fm.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\pause_fm.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/pause_fm.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/pause_fm.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\anim_slide_fm_left.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\anim_slide_fm_left.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\just_shrink_right.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\just_shrink_right.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/anim_slide_left.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/anim_slide_left.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\just_shrink_left.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\just_shrink_left.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/just_shrink_right.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/just_shrink_right.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\fm_grow_to_pause.xml",
+        "source": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\src\\main\\res\\anim\\fm_grow_to_pause.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/anim_slide_dig_right.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/anim/anim_slide_dig_right.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
-        "source": "/Users/Evan/.android/build-cache/f5c14303626f7372c5f37cd08d447f8501636302/output/res/anim/design_snackbar_in.xml"
+        "merged": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\anim\\abc_slide_in_bottom.xml"
     }
 ]

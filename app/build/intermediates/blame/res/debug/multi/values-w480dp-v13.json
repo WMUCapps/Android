@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-v13/values-w480dp-v13.xml",
+        "outputFile": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w480dp-v13\\values-w480dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 112
                 },
                 "from": {
-                    "file": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/values-w480dp/values-w480dp.xml",
+                    "file": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\values-w480dp\\values-w480dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 184
                 },
                 "from": {
-                    "file": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/values-w480dp/values-w480dp.xml",
+                    "file": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\values-w480dp\\values-w480dp.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,

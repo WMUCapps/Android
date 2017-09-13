@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w720dp-v13/values-w720dp-v13.xml",
+        "outputFile": "C:\\Users\\Aditya\\Documents\\Projects\\wmuc-app\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w720dp-v13\\values-w720dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 127
                 },
                 "from": {
-                    "file": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/values-w720dp/values-w720dp.xml",
+                    "file": "C:\\Users\\Aditya\\.android\\build-cache\\2855517d5a5b53ebe7692e6561cbcdce2cba2488\\output\\res\\values-w720dp\\values-w720dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
