@@ -185,21 +185,23 @@ public class MainActivity extends Activity implements OnClickListener {
                 FMButton.startAnimation(shrinkLeft);
             }
 
+            if (playing) {
+                stopService(new Intent(getBaseContext(), StreamingService.class));
+                Log.wtf("Service", "Service stopped");
+            }
+
+
             currchan = digURI;
             currShow.setText(getCurrShow(Schedule.DIGITAL).sName);
             currHost.setText(getCurrShow(Schedule.DIGITAL).host);
             digHit = true;
             fmHit = false;
-            if (playing) {
-                stopService(new Intent(getBaseContext(), StreamingService.class));
-                Log.d("This one is for", " visibility");
-            }
 
             if (playing) {
                 startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
             }
         } else if (v == FMButton && !fmHit) {
-            channel = "wmuc: fm";
+            channel = "WMUC: FM";
             showNotification();
 
             if (!digHit) {
@@ -213,7 +215,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
             if (playing) {
                 stopService(new Intent(getBaseContext(), StreamingService.class));
-                Log.d("This one is for", " visibility");
+                Log.wtf("Service", "Service stopped");
             }
             currchan = fmURI;
             currShow.setText(getCurrShow(Schedule.FM).sName);
@@ -464,7 +466,6 @@ public class MainActivity extends Activity implements OnClickListener {
         this.unregisterReceiver(hRemoval);
         this.unregisterReceiver(NBR);
 
-        Log.wtf("Bye Bye now", "");
         notificationManager.cancel(notificationID);
         super.onDestroy();
 
