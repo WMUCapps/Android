@@ -20,7 +20,7 @@ public class StreamingService extends Service{
 
     private ExoPlayer exp;
     private MediaCodecAudioTrackRenderer audioRenderer ;
-    private final String TAG = "wmuc";
+    private final String TAG = "WMUC Android App";
 
     public IBinder onBind(Intent intent) {
         return null;
@@ -37,14 +37,15 @@ public class StreamingService extends Service{
 
     @Override
     public void onDestroy() {
+        Log.wtf("Service", "Stream destroying");
+        exp.stop();
         exp.setPlayWhenReady(false);
-
+        exp.release();
         super.onDestroy();
-
     }
 
     private void initializeExoPlayer(Uri channel){
-        Log.wtf("Hello?","Is it me you're coding for?");
+        Log.wtf("Service", "Stream initializing");
         exp = ExoPlayer.Factory.newInstance(1,1000,0); // new Exoplayer instance, only one render, as we're playing only audio, in case of video
         // we need two renders, one for audio and one for video
         DefaultUriDataSource dataSource = new DefaultUriDataSource(this, TAG); // this instance is reqd to pass data to exoplayer

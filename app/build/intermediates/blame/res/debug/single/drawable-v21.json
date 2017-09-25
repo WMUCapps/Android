@@ -1,34 +1,66 @@
 [
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+        "merged": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_manage.xml",
+        "source": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_manage.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
-        "source": "/Users/Evan/.android/build-cache/bac01110576a3a60322d65689e784f9b42f2002e/output/res/drawable-v21/abc_btn_colored_material.xml"
+        "merged": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_gallery.xml",
+        "source": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_camera.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable-v21/ic_menu_camera.xml"
+        "merged": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
+        "source": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_gallery.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable-v21/ic_menu_gallery.xml"
+        "merged": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Evan\\.android\\build-cache\\bac01110576a3a60322d65689e784f9b42f2002e\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_manage.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable-v21/ic_menu_manage.xml"
+        "merged": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_camera.xml",
+        "source": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_slideshow.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable-v21/ic_menu_slideshow.xml"
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_share.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable-v21/ic_menu_share.xml"
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Joseph\\.android\\build-cache\\406ba42cc73ed605294187e20a4698b31a2c5920\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_send.xml",
-        "source": "/Users/Evan/AndroidStudioProjects/AndroidRadioApp/app/src/main/res/drawable-v21/ic_menu_send.xml"
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_send.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable-v21\\ic_menu_send.xml"
+    },
+    {
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Joseph\\.android\\build-cache\\406ba42cc73ed605294187e20a4698b31a2c5920\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_send.xml",
+        "source": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_send.xml"
+    },
+    {
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_share.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Evan\\.android\\build-cache\\bac01110576a3a60322d65689e784f9b42f2002e\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_share.xml",
+        "source": "C:\\Users\\Evan\\AndroidStudioProjects\\AndroidRadioApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_gallery.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_camera.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_manage.xml",
+        "source": "C:\\Users\\Joseph\\Documents\\Programming\\Android\\Android\\app\\src\\main\\res\\drawable-v21\\ic_menu_manage.xml"
     }
 ]
