@@ -137,6 +137,14 @@ public class MainActivity extends Activity implements OnClickListener {
         builder.setContentTitle(channel);
         builder.setPriority(Notification.PRIORITY_MAX);
         Intent play = new Intent();
+
+        Intent homescreenintent = new Intent(this, MainActivity.class);
+        homescreenintent.setAction(Intent.ACTION_MAIN);
+        homescreenintent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
+                homescreenintent, PendingIntent.FLAG_UPDATE_CURRENT);
+
         play.putExtra("message", "play");
         play.setAction("PLAY_BUTTON_ACTION");
         PendingIntent playIntent = PendingIntent.getBroadcast(this, 123, play, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -159,7 +167,7 @@ public class MainActivity extends Activity implements OnClickListener {
         builder.addAction(0, "fm", fmIntent);
         builder.addAction(0, "digital", digIntent);
 
-        builder.setContentIntent(playIntent);
+        builder.setContentIntent(contentIntent);
         notificationManager.notify(notificationID, builder.build());
     }
 
@@ -172,7 +180,7 @@ public class MainActivity extends Activity implements OnClickListener {
         }
         Log.d("THE BUCK STOPS HERE", "hopefully " + playing);
         if (v == DIGButton && !digHit) {
-            channel = "wmuc: digital";
+            channel = "WMUC: Digital";
             showNotification();
 
             Log.d("digital", "hit the button");
@@ -192,8 +200,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 
             currchan = digURI;
-            currShow.setText(getCurrShow(Schedule.DIGITAL).sName);
-            currHost.setText(getCurrShow(Schedule.DIGITAL).host);
+            getCurrShow(Schedule.DIGITAL);
             digHit = true;
             fmHit = false;
 
@@ -218,8 +225,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 Log.wtf("Service", "Service stopped");
             }
             currchan = fmURI;
-            currShow.setText(getCurrShow(Schedule.FM).sName);
-            currHost.setText(getCurrShow(Schedule.FM).host);
+            getCurrShow(Schedule.FM);
+
             digHit = false;
             fmHit = true;
             if (playing) {
@@ -335,7 +342,6 @@ public class MainActivity extends Activity implements OnClickListener {
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("Creating", "does the log even work");
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         justShrinkRight = AnimationUtils.loadAnimation(this, R.anim.just_shrink_right);
@@ -599,6 +605,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 show = Splash.fmSched[6][hourOfDay];
             }
         }
+        currShow.setText(show.sName);
+        currHost.setText(show.host);
+
         return show;
     }
 
