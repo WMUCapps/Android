@@ -48,6 +48,8 @@ public class Schedule extends Activity implements OnClickListener {
     private Schedule.Show[][] fmSched = Splash.fmSched;
     private ArrayList<ListItem> myList;
     private View sun, mon, tue, wed, thu, fri, sat, today, prev;
+    private View[] days = new View[7];
+    private String[] dayNames = new String[]{"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     private TextView currDay, fmToggle, digToggle;
     private ListView listView;
     private int channel;
@@ -121,421 +123,74 @@ public class Schedule extends Activity implements OnClickListener {
 
     private ArrayList<ListItem> getScheduleData(View view) {
         ArrayList<ListItem> schedByDay = new ArrayList<ListItem>();
-        if (view == sun) {
-            if(channel == DIGITAL) {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", digSched[0][h].sName, digSched[0][h].host);
-                        toAdd.setHost(digSched[0][h].host);
-                        toAdd.setShow(digSched[0][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", digSched[0][h].sName, digSched[0][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", digSched[0][h].sName, digSched[0][h].host);
-                        toAdd.setHost(digSched[0][h].host);
-                        toAdd.setShow(digSched[0][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", digSched[0][h].sName, digSched[0][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", digSched[0][h].sName, digSched[0][h].host);
-                        toAdd.setHost(digSched[0][h].host);
-                        toAdd.setShow(digSched[0][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", digSched[0][h].sName, digSched[0][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", digSched[0][h].sName, digSched[0][h].host);
-                        toAdd.setHost(digSched[0][h].host);
-                        toAdd.setShow(digSched[0][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", digSched[0][h].sName, digSched[0][h].host));
+        System.out.println("hello cruel " + view);
+        for (int i = 0;i < 7; i++) {
+            System.out.println("world is this " + i + " " + days[i] + "  " + dayNames[i]);
+            if (view == days[i]) {
+                System.out.println("real or just " + i);
+                if (channel == DIGITAL) {
+
+                    System.out.println("a dream");
+                    for (int h = 0; h < 24; h++) {
+                        if (h == 12) {
+                            ListItem toAdd = new ListItem(this, "12:00pm", digSched[i][h].sName, digSched[i][h].host);
+                            toAdd.setHost(digSched[i][h].host);
+                            toAdd.setShow(digSched[i][h].sName);
+                            toAdd.setTime("12:00pm");
+                            schedByDay.add(new ListItem(this, "12:00pm", digSched[i][h].sName, digSched[i][h].host));
+                        } else if (h == 0) {
+                            ListItem toAdd = new ListItem(this, "12:00am", digSched[i][h].sName, digSched[i][h].host);
+                            toAdd.setHost(digSched[i][h].host);
+                            toAdd.setShow(digSched[i][h].sName);
+                            toAdd.setTime("12:00am");
+                            schedByDay.add(new ListItem(this, "12:00am", digSched[i][h].sName, digSched[i][h].host));
+                        } else if (h > 11) {
+                            ListItem toAdd = new ListItem(this, (h - 12) + ":00pm", digSched[i][h].sName, digSched[i][h].host);
+                            toAdd.setHost(digSched[i][h].host);
+                            toAdd.setShow(digSched[i][h].sName);
+                            toAdd.setTime((h - 12) + ":00pm");
+                            schedByDay.add(new ListItem(this, (h - 12) + ":00pm", digSched[i][h].sName, digSched[i][h].host));
+                        } else {
+                            ListItem toAdd = new ListItem(this, h + ":00am", digSched[i][h].sName, digSched[i][h].host);
+                            toAdd.setHost(digSched[i][h].host);
+                            toAdd.setShow(digSched[i][h].sName);
+                            toAdd.setTime(h + ":00am");
+                            schedByDay.add(new ListItem(this, h + ":00am", digSched[i][h].sName, digSched[i][h].host));
+                        }
+                    }
+                } else {
+
+                    System.out.println("because I");
+                    for (int h = 0; h < 24; h++) {
+                        if (h == 12) {
+                            ListItem toAdd = new ListItem(this, "12:00pm", fmSched[i][h].sName, fmSched[i][h].host);
+                            toAdd.setHost(fmSched[i][h].host);
+                            toAdd.setShow(fmSched[i][h].sName);
+                            toAdd.setTime("12:00pm");
+                            schedByDay.add(new ListItem(this, "12:00pm", fmSched[i][h].sName, fmSched[i][h].host));
+                        } else if (h == 0) {
+                            ListItem toAdd = new ListItem(this, "12:00am", fmSched[i][h].sName, fmSched[i][h].host);
+                            toAdd.setHost(fmSched[i][h].host);
+                            toAdd.setShow(fmSched[i][h].sName);
+                            toAdd.setTime("12:00am");
+                            schedByDay.add(new ListItem(this, "12:00am", fmSched[i][h].sName, fmSched[i][h].host));
+                        } else if (h > 11) {
+                            ListItem toAdd = new ListItem(this, (h - 12) + ":00pm", fmSched[i][h].sName, fmSched[i][h].host);
+                            toAdd.setHost(fmSched[i][h].host);
+                            toAdd.setShow(fmSched[i][h].sName);
+                            toAdd.setTime((h - 12) + ":00pm");
+                            schedByDay.add(new ListItem(this, (h - 12) + ":00pm", fmSched[i][h].sName, fmSched[i][h].host));
+                        } else {
+                            ListItem toAdd = new ListItem(this, h + ":00am", fmSched[i][h].sName, fmSched[i][h].host);
+                            toAdd.setHost(fmSched[i][h].host);
+                            toAdd.setShow(fmSched[i][h].sName);
+                            toAdd.setTime(h + ":00am");
+                            schedByDay.add(new ListItem(this, h + ":00am", fmSched[i][h].sName, fmSched[i][h].host));
+                        }
                     }
                 }
-            } else {
-                for (int h = 0; h < 24; h++) {
-                    if (h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", fmSched[0][h].sName, fmSched[0][h].host);
-                        toAdd.setHost(fmSched[0][h].host);
-                        toAdd.setShow(fmSched[0][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", fmSched[0][h].sName, fmSched[0][h].host));
-                    } else if (h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", fmSched[0][h].sName, fmSched[0][h].host);
-                        toAdd.setHost(fmSched[0][h].host);
-                        toAdd.setShow(fmSched[0][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", fmSched[0][h].sName, fmSched[0][h].host));
-                    } else if (h > 11) {
-                        ListItem toAdd = new ListItem(this, (h - 12) + ":00pm", fmSched[0][h].sName, fmSched[0][h].host);
-                        toAdd.setHost(fmSched[0][h].host);
-                        toAdd.setShow(fmSched[0][h].sName);
-                        toAdd.setTime((h - 12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h - 12) + ":00pm", fmSched[0][h].sName, fmSched[0][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", fmSched[0][h].sName, fmSched[0][h].host);
-                        toAdd.setHost(fmSched[0][h].host);
-                        toAdd.setShow(fmSched[0][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", fmSched[0][h].sName, fmSched[0][h].host));
-                    }
-                }
+                currDay.setText(dayNames[i]);
             }
-            currDay.setText("Sunday");
-        } else if (view == mon) {
-            if(channel == DIGITAL) {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", digSched[1][h].sName, digSched[1][h].host);
-                        toAdd.setHost(digSched[1][h].host);
-                        toAdd.setShow(digSched[1][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", digSched[1][h].sName, digSched[1][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", digSched[1][h].sName, digSched[1][h].host);
-                        toAdd.setHost(digSched[1][h].host);
-                        toAdd.setShow(digSched[1][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", digSched[1][h].sName, digSched[1][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", digSched[1][h].sName, digSched[1][h].host);
-                        toAdd.setHost(digSched[1][h].host);
-                        toAdd.setShow(digSched[1][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", digSched[1][h].sName, digSched[1][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", digSched[1][h].sName, digSched[1][h].host);
-                        toAdd.setHost(digSched[1][h].host);
-                        toAdd.setShow(digSched[1][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", digSched[1][h].sName, digSched[1][h].host));
-                    }
-                }
-            } else {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", fmSched[1][h].sName, fmSched[1][h].host);
-                        toAdd.setHost(fmSched[1][h].host);
-                        toAdd.setShow(fmSched[1][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", fmSched[1][h].sName, fmSched[1][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", fmSched[1][h].sName, fmSched[1][h].host);
-                        toAdd.setHost(fmSched[1][h].host);
-                        toAdd.setShow(fmSched[1][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", fmSched[1][h].sName, fmSched[1][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", fmSched[1][h].sName, fmSched[1][h].host);
-                        toAdd.setHost(fmSched[1][h].host);
-                        toAdd.setShow(fmSched[1][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", fmSched[1][h].sName, fmSched[1][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", fmSched[1][h].sName, fmSched[1][h].host);
-                        toAdd.setHost(fmSched[1][h].host);
-                        toAdd.setShow(fmSched[1][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", fmSched[1][h].sName, fmSched[1][h].host));
-                    }
-                }
-            }
-            currDay.setText("Monday");
-        } else if (view == tue) {
-            if(channel == DIGITAL) {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", digSched[2][h].sName, digSched[2][h].host);
-                        toAdd.setHost(digSched[2][h].host);
-                        toAdd.setShow(digSched[2][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", digSched[2][h].sName, digSched[2][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", digSched[2][h].sName, digSched[2][h].host);
-                        toAdd.setHost(digSched[2][h].host);
-                        toAdd.setShow(digSched[2][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", digSched[2][h].sName, digSched[2][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", digSched[2][h].sName, digSched[2][h].host);
-                        toAdd.setHost(digSched[2][h].host);
-                        toAdd.setShow(digSched[2][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", digSched[2][h].sName, digSched[2][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", digSched[2][h].sName, digSched[2][h].host);
-                        toAdd.setHost(digSched[2][h].host);
-                        toAdd.setShow(digSched[2][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", digSched[2][h].sName, digSched[2][h].host));
-                    }
-                }
-            } else {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", fmSched[2][h].sName, fmSched[2][h].host);
-                        toAdd.setHost(fmSched[2][h].host);
-                        toAdd.setShow(fmSched[2][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", fmSched[2][h].sName, fmSched[2][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", fmSched[2][h].sName, fmSched[2][h].host);
-                        toAdd.setHost(fmSched[2][h].host);
-                        toAdd.setShow(fmSched[2][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", fmSched[2][h].sName, fmSched[2][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", fmSched[2][h].sName, fmSched[2][h].host);
-                        toAdd.setHost(fmSched[2][h].host);
-                        toAdd.setShow(fmSched[2][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", fmSched[2][h].sName, fmSched[2][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", fmSched[2][h].sName, fmSched[2][h].host);
-                        toAdd.setHost(fmSched[2][h].host);
-                        toAdd.setShow(fmSched[2][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", fmSched[2][h].sName, fmSched[2][h].host));
-                    }
-                }
-            }
-            currDay.setText("Tuesday");
-        } else if (view == wed) {
-            if(channel == DIGITAL) {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", digSched[3][h].sName, digSched[3][h].host);
-                        toAdd.setHost(digSched[3][h].host);
-                        toAdd.setShow(digSched[3][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", digSched[3][h].sName, digSched[3][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", digSched[3][h].sName, digSched[3][h].host);
-                        toAdd.setHost(digSched[3][h].host);
-                        toAdd.setShow(digSched[3][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", digSched[3][h].sName, digSched[3][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", digSched[3][h].sName, digSched[3][h].host);
-                        toAdd.setHost(digSched[3][h].host);
-                        toAdd.setShow(digSched[3][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", digSched[3][h].sName, digSched[3][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", digSched[3][h].sName, digSched[3][h].host);
-                        toAdd.setHost(digSched[3][h].host);
-                        toAdd.setShow(digSched[3][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", digSched[3][h].sName, digSched[3][h].host));
-                    }
-                }
-            } else {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", fmSched[3][h].sName, fmSched[3][h].host);
-                        toAdd.setHost(fmSched[3][h].host);
-                        toAdd.setShow(fmSched[3][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", fmSched[3][h].sName, fmSched[3][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", fmSched[3][h].sName, fmSched[3][h].host);
-                        toAdd.setHost(fmSched[3][h].host);
-                        toAdd.setShow(fmSched[3][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", fmSched[3][h].sName, fmSched[3][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", fmSched[3][h].sName, fmSched[3][h].host);
-                        toAdd.setHost(fmSched[3][h].host);
-                        toAdd.setShow(fmSched[3][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", fmSched[3][h].sName, fmSched[3][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", fmSched[3][h].sName, fmSched[3][h].host);
-                        toAdd.setHost(fmSched[3][h].host);
-                        toAdd.setShow(fmSched[3][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", fmSched[3][h].sName, fmSched[3][h].host));
-                    }
-                }
-            }
-            currDay.setText("Wednesday");
-        } else if (view == thu) {
-            if(channel == DIGITAL) {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", digSched[4][h].sName, digSched[4][h].host);
-                        toAdd.setHost(digSched[4][h].host);
-                        toAdd.setShow(digSched[4][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", digSched[4][h].sName, digSched[4][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", digSched[4][h].sName, digSched[4][h].host);
-                        toAdd.setHost(digSched[4][h].host);
-                        toAdd.setShow(digSched[4][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", digSched[4][h].sName, digSched[4][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", digSched[4][h].sName, digSched[4][h].host);
-                        toAdd.setHost(digSched[4][h].host);
-                        toAdd.setShow(digSched[4][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", digSched[4][h].sName, digSched[4][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", digSched[4][h].sName, digSched[4][h].host);
-                        toAdd.setHost(digSched[4][h].host);
-                        toAdd.setShow(digSched[4][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", digSched[4][h].sName, digSched[4][h].host));
-                    }
-                }
-            } else {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", fmSched[4][h].sName, fmSched[4][h].host);
-                        toAdd.setHost(fmSched[4][h].host);
-                        toAdd.setShow(fmSched[4][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", fmSched[4][h].sName, fmSched[4][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", fmSched[4][h].sName, fmSched[4][h].host);
-                        toAdd.setHost(fmSched[4][h].host);
-                        toAdd.setShow(fmSched[4][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", fmSched[4][h].sName, fmSched[4][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", fmSched[4][h].sName, fmSched[4][h].host);
-                        toAdd.setHost(fmSched[4][h].host);
-                        toAdd.setShow(fmSched[4][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", fmSched[4][h].sName, fmSched[4][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", fmSched[4][h].sName, fmSched[4][h].host);
-                        toAdd.setHost(fmSched[4][h].host);
-                        toAdd.setShow(fmSched[4][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", fmSched[4][h].sName, fmSched[4][h].host));
-                    }
-                }
-            }
-            currDay.setText("Thursday");
-        } else if (view == fri) {
-            if(channel == DIGITAL) {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", digSched[5][h].sName, digSched[5][h].host);
-                        toAdd.setHost(digSched[5][h].host);
-                        toAdd.setShow(digSched[5][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", digSched[5][h].sName, digSched[5][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", digSched[5][h].sName, digSched[5][h].host);
-                        toAdd.setHost(digSched[5][h].host);
-                        toAdd.setShow(digSched[5][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", digSched[5][h].sName, digSched[5][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", digSched[5][h].sName, digSched[5][h].host);
-                        toAdd.setHost(digSched[5][h].host);
-                        toAdd.setShow(digSched[5][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", digSched[5][h].sName, digSched[5][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", digSched[5][h].sName, digSched[5][h].host);
-                        toAdd.setHost(digSched[5][h].host);
-                        toAdd.setShow(digSched[5][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", digSched[5][h].sName, digSched[5][h].host));
-                    }
-                }
-            } else {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", fmSched[5][h].sName, fmSched[5][h].host);
-                        toAdd.setHost(fmSched[5][h].host);
-                        toAdd.setShow(fmSched[5][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", fmSched[5][h].sName, fmSched[5][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", fmSched[5][h].sName, fmSched[5][h].host);
-                        toAdd.setHost(fmSched[5][h].host);
-                        toAdd.setShow(fmSched[5][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", fmSched[5][h].sName, fmSched[5][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", fmSched[5][h].sName, fmSched[5][h].host);
-                        toAdd.setHost(fmSched[5][h].host);
-                        toAdd.setShow(fmSched[5][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", fmSched[5][h].sName, fmSched[5][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", fmSched[5][h].sName, fmSched[5][h].host);
-                        toAdd.setHost(fmSched[5][h].host);
-                        toAdd.setShow(fmSched[5][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", fmSched[5][h].sName, fmSched[5][h].host));
-                    }
-                }
-            }
-            currDay.setText("Friday");
-        } else if (view == sat) {
-            if(channel == DIGITAL) {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", digSched[6][h].sName, digSched[6][h].host);
-                        toAdd.setHost(digSched[6][h].host);
-                        toAdd.setShow(digSched[6][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", digSched[6][h].sName, digSched[6][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", digSched[6][h].sName, digSched[6][h].host);
-                        toAdd.setHost(digSched[6][h].host);
-                        toAdd.setShow(digSched[6][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", digSched[6][h].sName, digSched[6][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", digSched[6][h].sName, digSched[6][h].host);
-                        toAdd.setHost(digSched[6][h].host);
-                        toAdd.setShow(digSched[6][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", digSched[6][h].sName, digSched[6][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", digSched[6][h].sName, digSched[6][h].host);
-                        toAdd.setHost(digSched[6][h].host);
-                        toAdd.setShow(digSched[6][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", digSched[6][h].sName, digSched[6][h].host));
-                    }
-                }
-            } else {
-                for (int h = 0; h < 24; h++) {
-                    if(h == 12) {
-                        ListItem toAdd = new ListItem(this, "12:00pm", fmSched[6][h].sName, fmSched[6][h].host);
-                        toAdd.setHost(fmSched[6][h].host);
-                        toAdd.setShow(fmSched[6][h].sName);
-                        toAdd.setTime("12:00pm");
-                        schedByDay.add(new ListItem(this, "12:00pm", fmSched[6][h].sName, fmSched[6][h].host));
-                    } else if(h == 0) {
-                        ListItem toAdd = new ListItem(this, "12:00am", fmSched[6][h].sName, fmSched[6][h].host);
-                        toAdd.setHost(fmSched[6][h].host);
-                        toAdd.setShow(fmSched[6][h].sName);
-                        toAdd.setTime("12:00am");
-                        schedByDay.add(new ListItem(this, "12:00am", fmSched[6][h].sName, fmSched[6][h].host));
-                    } else if(h > 11) {
-                        ListItem toAdd = new ListItem(this, (h-12) + ":00pm", fmSched[6][h].sName, fmSched[6][h].host);
-                        toAdd.setHost(fmSched[6][h].host);
-                        toAdd.setShow(fmSched[6][h].sName);
-                        toAdd.setTime((h-12) + ":00pm");
-                        schedByDay.add(new ListItem(this, (h-12) + ":00pm", fmSched[6][h].sName, fmSched[6][h].host));
-                    } else {
-                        ListItem toAdd = new ListItem(this, h + ":00am", fmSched[6][h].sName, fmSched[6][h].host);
-                        toAdd.setHost(fmSched[6][h].host);
-                        toAdd.setShow(fmSched[6][h].sName);
-                        toAdd.setTime(h + ":00am");
-                        schedByDay.add(new ListItem(this, h + ":00am", fmSched[6][h].sName, fmSched[6][h].host));
-                    }
-                }
-            }
-            currDay.setText("Saturday");
-        } else {
-            return null;
         }
         return schedByDay;
     }
@@ -766,6 +421,13 @@ public class Schedule extends Activity implements OnClickListener {
                 show = fmSched[6][hourOfDay];
             }
         }
+        days[0] = sun;
+        days[1] = mon;
+        days[2] = tue;
+        days[3] = wed;
+        days[4] = thu;
+        days[5] = fri;
+        days[6] = sat;
         return show;
     }
 
