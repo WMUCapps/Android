@@ -11,6 +11,15 @@
         <dex dex="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\pre-dexed\debug\classes_36d44f54990c562965fd141d3bbdac73c47331cb.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="37e1e0603884763b58ed12db56111e80399007c3">
+        <dex dex="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_71b54bf547a93562a3c0b7d8a70879f830e72c8e\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\Joseph\Documents\Programming\Android\Android\app\libs\jsoup-1.10.2.jar"
         jumboMode="false"
@@ -27,6 +36,15 @@
         revision="25.0.0"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
         <dex dex="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\pre-dexed\debug\classes_86f5c011ba36124c4673451f0fa8b09d19716954.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Joseph\Documents\Programming\Android\Android\app\libs\jsoup-1.10.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="61f84a97f1a4f5905547b8b74afff8dc93f4cfce">
+        <dex dex="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.10.2_5b17a020e6b395e1c5f905e621b772131f9bdfdb\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -90,6 +108,15 @@
         revision="25.0.0"
         sha1="09c5e804bc67fc0580360043dff067df574a60d4">
         <dex dex="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\pre-dexed\debug\classes_20af669384a4d5b249ae5a358f69c6da8a56dc26.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\Joseph\Documents\Programming\Android\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_f2562a837dbb24f3cd76ac2e313867a2d7f9cf39\classes.dex" />
     </item>
 
 </items>

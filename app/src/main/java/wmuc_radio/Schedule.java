@@ -99,7 +99,6 @@ public class Schedule extends Activity implements OnClickListener {
             }
         });
 
-
     }
 
     static class Show {
@@ -116,11 +115,7 @@ public class Schedule extends Activity implements OnClickListener {
         }
 
         public boolean equals(Schedule.Show o) {
-            if (sName.equals(o.sName)) {
-                return true;
-            } else {
-                return false;
-            }
+            return sName.equals(o.sName);
         }
     }
 
