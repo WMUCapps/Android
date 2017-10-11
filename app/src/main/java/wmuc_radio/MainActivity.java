@@ -37,6 +37,14 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -234,55 +242,117 @@ public class MainActivity extends Activity implements OnClickListener {
             if (playing) {
                 startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
             }
-        } else if (v == favoriteButton){
-            if (favorited){
-                favoriteButton.setImageResource(R.drawable.nofavorite);
-                favorited = false;
-            }else{
-                favoriteButton.setImageResource(R.drawable.favorited);
-                favorited = true;
-            }
-        } else if (v == playButton) {
+        } else {
+            if (v == favoriteButton) {
+                String string = (String) currShow.getText();
+                ArrayList<String> favshows = new ArrayList<String>();
+                String nl = "\n";
 
-            Log.d("fm: " + fmHit + " DIG: " + digHit + " playing: " + playing, " In case you were curious");
-            if (fmHit && playing) {
-                stopService(new Intent(getBaseContext(), StreamingService.class));
-                playing = false;
-                playButton.setImageResource(R.drawable.play);
-                abandonAudioFocus();
-                ongoing = false;
-                showNotification();
+                if (favorited) {
+                    favoriteButton.setImageResource(R.drawable.nofavorite);
+                    favorited = false;
 
-            } else if (digHit && playing) {
-                stopService(new Intent(getBaseContext(), StreamingService.class));
-                playing = false;
-                playButton.setImageResource(R.drawable.play);
-                abandonAudioFocus();
-                ongoing = false;
-                showNotification();
+                    try {
+                        FileInputStream stream = openFileInput("myfile");
+                        BufferedReader r = new BufferedReader(new InputStreamReader(stream));
+                        String line;
+                        while ((line = r.readLine()) != null) {
+                            favshows.add(line);
+                        }
+                        stream.close();
 
-            } else if (!fmHit && !digHit && !playing) {
-                Context context = getApplicationContext();
-                CharSequence text = "Please select a station.";
-                int duration = Toast.LENGTH_SHORT;
+                        FileOutputStream outputStream = openFileOutput("myfile", Context.MODE_PRIVATE);
 
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-                playing = false;
+                        for (int i = 0;i < favshows.size();i++){
+                            String currFavShow = favshows.get(i);
+                            if (!currFavShow.equals(string)){
+                                System.out.println("write past " + currFavShow);
+                                outputStream.write(currFavShow.getBytes());
+                                outputStream.write(nl.getBytes());
+                            }
+                        }
 
-            } else {
-                if (!playing) {
-                    requestAudioFocus();
-                    startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
-                    playing = true;
-                    playButton.setImageResource(R.drawable.pause);
-                    ongoing = true;
-                    if(fmHit)
-                        channel = "WMUC: FM";
+                        outputStream.close();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
 
-                    else channel = "WMUC: Digital";
+                } else {
+                    favoriteButton.setImageResource(R.drawable.favorited);
+                    favorited = true;
+
+                    try {
+                            FileInputStream stream = openFileInput("myfile");
+                            BufferedReader r = new BufferedReader(new InputStreamReader(stream));
+                            String line;
+                            while ((line = r.readLine()) != null) {
+                                favshows.add(line);
+                            }
+                            stream.close();
+
+                        FileOutputStream outputStream = openFileOutput("myfile", Context.MODE_PRIVATE);
+
+                        for (int i = 0;i < favshows.size();i++){
+                            String currFavShow = favshows.get(i);
+                            System.out.println("write past " + currFavShow);
+                            outputStream.write(currFavShow.getBytes());
+                            outputStream.write(nl.getBytes());
+                        }
+
+                        System.out.println("write current " + string);
+                        outputStream.write(string.getBytes());
+                        outputStream.close();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            } else if (v == playButton) {
+
+                Log.d("fm: " + fmHit + " DIG: " + digHit + " playing: " + playing, " In case you were curious");
+                if (fmHit && playing) {
+                    stopService(new Intent(getBaseContext(), StreamingService.class));
+                    playing = false;
+                    playButton.setImageResource(R.drawable.play);
+                    abandonAudioFocus();
+                    ongoing = false;
                     showNotification();
 
+                } else if (digHit && playing) {
+                    stopService(new Intent(getBaseContext(), StreamingService.class));
+                    playing = false;
+                    playButton.setImageResource(R.drawable.play);
+                    abandonAudioFocus();
+                    ongoing = false;
+                    showNotification();
+
+                } else if (!fmHit && !digHit && !playing) {
+                    Context context = getApplicationContext();
+                    CharSequence text = "Please select a station.";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                    playing = false;
+
+                } else {
+                    if (!playing) {
+                        requestAudioFocus();
+                        startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
+                        playing = true;
+                        playButton.setImageResource(R.drawable.pause);
+                        ongoing = true;
+                        if (fmHit)
+                            channel = "WMUC: FM";
+
+                        else channel = "WMUC: Digital";
+                        showNotification();
+
+                    }
                 }
             }
         }
@@ -620,6 +690,27 @@ public class MainActivity extends Activity implements OnClickListener {
         currShow.setText(show.sName);
         currHost.setText(show.host);
         favoriteButton.setVisibility(View.VISIBLE);
+        favoriteButton.setImageResource(R.drawable.nofavorite);
+        favorited = false;
+        //check here if show is favorited or not
+
+        try {
+            FileInputStream stream = openFileInput("myfile");
+            BufferedReader r = new BufferedReader(new InputStreamReader(stream));
+            String line;
+            while ((line = r.readLine()) != null) {
+                System.out.println(line);
+                if (line.equals(show.sName)){
+                    favoriteButton.setImageResource(R.drawable.favorited);
+                    favorited = true;
+                }
+            }
+            stream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return show;
     }
 
