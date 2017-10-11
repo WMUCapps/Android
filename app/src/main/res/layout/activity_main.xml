@@ -59,8 +59,7 @@
         android:longClickable="true"
         android:background="@null"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/Play"
-        android:layout_toEndOf="@+id/Play"/>
+        android:layout_toEndOf="@+id/Play" />
 
     <ImageButton
         android:src="@drawable/fm"
@@ -89,6 +88,24 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp" />
+
+    <ImageButton
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nofavorite"
+        android:id="@+id/favorite"
+        android:background="@null"
+        android:adjustViewBounds="true"
+        android:maxWidth="45dp"
+        android:maxHeight="85dp"
+        android:scaleType="fitCenter"
+        android:clickable="true"
+        android:paddingBottom="15dp"
+        android:layout_alignTop="@+id/currShow"
+        android:layout_toEndOf="@+id/wmuc"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/currHost" />
 
     <TextView
         android:id="@+id/currShow"
