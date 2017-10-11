@@ -1,5 +1,6 @@
 package wmuc_radio;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
@@ -17,6 +19,7 @@ public class Splash extends Activity {
 
     static public Schedule.Show[][] digSched = new Schedule.Show[7][24];
     static public Schedule.Show[][] fmSched = new Schedule.Show[7][24];
+    static public String storage = new String();
     private String digUrl = "http://wmuc.umd.edu/station/schedule/0/2";
     private String fmUrl = "http://wmuc.umd.edu/station/schedule";
     private Document docDig;
@@ -29,12 +32,17 @@ public class Splash extends Activity {
         Thread myThread = new Thread() {
             public void run() {
                 initCrawler();
+                getFile();
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
                 finish();
             }
         };
         myThread.start();
+    }
+
+    private void getFile() {
+        File file = getCacheDir();
     }
 
     private void initCrawler() {

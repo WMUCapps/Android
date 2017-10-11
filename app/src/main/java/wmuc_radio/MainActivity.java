@@ -50,6 +50,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private ImageButton schedButton;
     private ImageButton DIGButton;
     private ImageButton FMButton;
+    private ImageButton favoriteButton;
     private boolean playing = false;
     private Animation justShrinkLeft;
     private Animation justShrinkRight;
@@ -73,6 +74,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private final IntentFilter digFilter = new IntentFilter("DIG_BUTTON_ACTION");
     private final NotificationBroadcastReciver NBR = new NotificationBroadcastReciver();
     private String channel;
+    private boolean favorited = false;
     float swipeX1,swipeY1,swipeX2,swipeY2;
     DisplayMetrics dm = new DisplayMetrics();
     int xDest;
@@ -232,6 +234,14 @@ public class MainActivity extends Activity implements OnClickListener {
             if (playing) {
                 startService(new Intent("", currchan, getBaseContext(), StreamingService.class));
             }
+        } else if (v == favoriteButton){
+            if (favorited){
+                favoriteButton.setImageResource(R.drawable.nofavorite);
+                favorited = false;
+            }else{
+                favoriteButton.setImageResource(R.drawable.favorited);
+                favorited = true;
+            }
         } else if (v == playButton) {
 
             Log.d("fm: " + fmHit + " DIG: " + digHit + " playing: " + playing, " In case you were curious");
@@ -299,6 +309,8 @@ public class MainActivity extends Activity implements OnClickListener {
         FMButton.setOnClickListener(this);
         DIGButton.setOnTouchListener(new TouchHandler());
         FMButton.setOnTouchListener(new TouchHandler());
+        favoriteButton = (ImageButton) findViewById(R.id.favorite);
+        favoriteButton.setOnClickListener(this);
 
     }
 
@@ -607,7 +619,7 @@ public class MainActivity extends Activity implements OnClickListener {
         }
         currShow.setText(show.sName);
         currHost.setText(show.host);
-
+        favoriteButton.setVisibility(View.VISIBLE);
         return show;
     }
 
