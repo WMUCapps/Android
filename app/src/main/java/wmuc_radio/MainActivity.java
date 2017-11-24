@@ -9,10 +9,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.NotificationCompat;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -37,15 +39,9 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashSet;
+import java.util.Set;
 
 public class MainActivity extends Activity implements OnClickListener {
     private final Uri fmURI = Uri.parse("http://wmuc.umd.edu:8000/wmuc-hq");
@@ -245,70 +241,42 @@ public class MainActivity extends Activity implements OnClickListener {
         } else {
             if (v == favoriteButton) {
                 String string = (String) currShow.getText();
-                ArrayList<String> favshows = new ArrayList<String>();
-                String nl = "\n";
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor editor = prefs.edit();
+
+                Set<String> shows = prefs.getStringSet("favorite_shows",null);
+                Set<String> newList = new HashSet<String>();
+
+                if (shows != null) {
+                    for (String each : shows) {
+                        newList.add(each);
+                    }
+                }
 
                 if (favorited) {
                     favoriteButton.setImageResource(R.drawable.nofavorite);
                     favorited = false;
 
-                    try {
-                        FileInputStream stream = openFileInput("myfile");
-                        BufferedReader r = new BufferedReader(new InputStreamReader(stream));
-                        String line;
-                        while ((line = r.readLine()) != null) {
-                            favshows.add(line);
+                    if (shows != null){
+                        if (newList.contains(string)){
+                            newList.remove(string);
+                            editor.putStringSet("favorite_shows", newList);
+                            Boolean removed = editor.commit();
+                            System.out.println("**** ^ shows " + newList.toString());
+                            System.out.println("**** ^ did it commit " + removed.toString());
                         }
-                        stream.close();
-
-                        FileOutputStream outputStream = openFileOutput("myfile", Context.MODE_PRIVATE);
-
-                        for (int i = 0;i < favshows.size();i++){
-                            String currFavShow = favshows.get(i);
-                            if (!currFavShow.equals(string)){
-                                System.out.println("write past " + currFavShow);
-                                outputStream.write(currFavShow.getBytes());
-                                outputStream.write(nl.getBytes());
-                            }
-                        }
-
-                        outputStream.close();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
                     }
+
 
                 } else {
                     favoriteButton.setImageResource(R.drawable.favorited);
                     favorited = true;
 
-                    try {
-                            FileInputStream stream = openFileInput("myfile");
-                            BufferedReader r = new BufferedReader(new InputStreamReader(stream));
-                            String line;
-                            while ((line = r.readLine()) != null) {
-                                favshows.add(line);
-                            }
-                            stream.close();
-
-                        FileOutputStream outputStream = openFileOutput("myfile", Context.MODE_PRIVATE);
-
-                        for (int i = 0;i < favshows.size();i++){
-                            String currFavShow = favshows.get(i);
-                            System.out.println("write past " + currFavShow);
-                            outputStream.write(currFavShow.getBytes());
-                            outputStream.write(nl.getBytes());
-                        }
-
-                        System.out.println("write current " + string);
-                        outputStream.write(string.getBytes());
-                        outputStream.close();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    newList.add(string);
+                    editor.putStringSet("favorite_shows", newList);
+                    Boolean removed = editor.commit();
+                    System.out.println("******* > shows " + newList.toString());
+                    System.out.println("******* > did it commit " + removed.toString());
 
                 }
             } else if (v == playButton) {
@@ -693,24 +661,19 @@ public class MainActivity extends Activity implements OnClickListener {
         favoriteButton.setImageResource(R.drawable.nofavorite);
         favorited = false;
         //check here if show is favorited or not
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = prefs.edit();
 
-        try {
-            FileInputStream stream = openFileInput("myfile");
-            BufferedReader r = new BufferedReader(new InputStreamReader(stream));
-            String line;
-            while ((line = r.readLine()) != null) {
-                System.out.println(line);
-                if (line.equals(show.sName)){
-                    favoriteButton.setImageResource(R.drawable.favorited);
-                    favorited = true;
-                }
+
+        Set<String> shows = prefs.getStringSet("favorite_shows",null);
+        if (shows != null) {
+            System.out.println("**** ^ shows " + shows.toString());
+            if (shows.contains(show.sName)) {
+                favoriteButton.setImageResource(R.drawable.favorited);
+                favorited = true;
             }
-            stream.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
         return show;
     }
 

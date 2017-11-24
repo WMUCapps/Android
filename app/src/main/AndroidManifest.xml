@@ -54,6 +54,7 @@
             android:name="wmuc_radio.Schedule"
             android:label="@string/title_activity_schedule"
             android:parentActivityName="wmuc_radio.MainActivity"
+            android:launchMode="singleInstance"
         />
         <!--
  ATTENTION: This was auto-generated to add Google play services to your project for

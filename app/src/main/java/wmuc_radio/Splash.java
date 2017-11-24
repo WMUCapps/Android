@@ -3,7 +3,9 @@ package wmuc_radio;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -38,8 +40,10 @@ public class Splash extends Activity {
                 finish();
             }
         };
+
         myThread.start();
     }
+
 
     private void getFile() {
         File file = getCacheDir();
@@ -243,4 +247,6 @@ public class Splash extends Activity {
             System.out.println("Uh oh.");
         }
     }
+
+
 }
