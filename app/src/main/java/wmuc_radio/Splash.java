@@ -3,6 +3,7 @@ package wmuc_radio;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -70,8 +71,8 @@ public class Splash extends Activity {
                 for (Element n : shtuff) {
                     if (!n.text().isEmpty() && !(n.text().contains("Channel 2"))
                             && !(n.text().contains(":30"))
-                            && !(n.text().contains("Get Involved Station History Donate"))
-                            && !(n.text().contains("Find us on Facebook Follow WMUC"))) {
+                            && !(n.text().contains("Get Involved"))
+                            && !(n.text().contains("Find us on Facebook"))) {
                         // sets the rowspan of the show
                         rowspan = n.toString().indexOf("rowspan=\"") + 9;
                         if (rowspan != 8) {
@@ -84,6 +85,7 @@ public class Splash extends Activity {
 
                         if (!n.text().contains(":00")) {
                             try {
+
                                 while (digSched[col][rowIndex].equals(offAir)) {
                                     col++;
                                 }
@@ -168,8 +170,8 @@ public class Splash extends Activity {
                 for (Element n : shtuff) {
                     if (!n.text().isEmpty() && !(n.text().contains("Channel 2"))
                             && !(n.text().contains(":30"))
-                            && !(n.text().contains("Get Involved Station History Donate"))
-                            && !(n.text().contains("Find us on Facebook Follow WMUC"))) {
+                            && !(n.text().contains("Get Involved"))
+                            && !(n.text().contains("Find us on Facebook"))) {
                         // sets the rowspan of the show
                         rowspan = n.toString().indexOf("rowspan=\"") + 9;
                         if (rowspan != 8) {
