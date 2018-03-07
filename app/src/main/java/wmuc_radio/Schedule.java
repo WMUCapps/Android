@@ -77,6 +77,57 @@ public class Schedule extends Activity implements OnClickListener {
 
     public static String CRAWLER_FRAG_TAG = "CRAWL_FRAG";
 
+    public ArrayAdapter<ListItem> getAdapter(Context context) {
+
+        ArrayAdapter<ListItem> adapter = new ArrayAdapter<ListItem>(context, 0, myList) {
+            private View row;
+            private LayoutInflater inflater = getLayoutInflater();
+            private TextView show;
+            private TextView dj;
+            private TextView time;
+            private ImageButton favoriteButton;
+            private boolean favorited;
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                row = inflater.inflate(R.layout.schedule_item, parent, false);
+                show = (TextView) row.findViewById(R.id.recycshow);
+                show.setText(myList.get(position).getShow());
+
+                dj = (TextView) row.findViewById(R.id.recychost);
+                dj.setText(myList.get(position).getHost());
+
+                time = (TextView) row.findViewById(R.id.time);
+                time.setText(myList.get(position).getTime());
+
+                if (show.getText().equals(currShow.sName) && position == hourOfDay) {
+                    row.setBackgroundColor(Color.LTGRAY);
+                }
+
+                favoriteButton = (ImageButton) row.findViewById(R.id.favorite);
+                favorited = false;
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor editor = prefs.edit();
+                Set<String> shows = prefs.getStringSet("favorite_shows", null);
+                if (shows != null) {
+                    if (shows.contains(show.getText())) {
+                        favoriteButton.setImageResource(R.drawable.favorited);
+                    }
+                }
+
+                     /* FOR UNDERLINE
+                SpannableString content = new SpannableString(myList.get(position).getShow());
+                content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+                show.setText(content);*/
+
+                return row;
+            }
+
+
+        };
+        return adapter;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -272,43 +323,7 @@ public class Schedule extends Activity implements OnClickListener {
                 digToggle.setTextColor(Color.BLACK);
                 channel = FM;
                 myList = getScheduleData(prev);
-                listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                    private View row;
-                    private LayoutInflater inflater = getLayoutInflater();
-                    private TextView show;
-                    private TextView dj;
-                    private TextView time;
-                    private ImageButton favoriteButton;
-
-                    @Override
-                    public View getView(int position, View convertView, ViewGroup parent) {
-                        row = inflater.inflate(R.layout.schedule_item, parent, false);
-                        show = (TextView) row.findViewById(R.id.recycshow);
-                        show.setText(myList.get(position).getShow());
-
-                        dj = (TextView) row.findViewById(R.id.recychost);
-                        dj.setText(myList.get(position).getHost());
-
-                        time = (TextView) row.findViewById(R.id.time);
-                        time.setText(myList.get(position).getTime());
-
-                        if(show.getText().equals(currShow.sName) && position == hourOfDay) {
-                            row.setBackgroundColor(Color.LTGRAY);
-                        }
-
-                        favoriteButton = (ImageButton) row.findViewById(R.id.favorite);
-                        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                        SharedPreferences.Editor editor = prefs.edit();
-                        Set<String> shows = prefs.getStringSet("favorite_shows",null);
-                        if (shows != null) {
-                            if (shows.contains(show.getText())){
-                                favoriteButton.setImageResource(R.drawable.favorited);
-                            }
-                        }
-
-                        return row;
-                    }
-                });
+                listView.setAdapter(getAdapter(this));
             }
         } else if (v == digToggle) {
             if(channel == FM) {
@@ -319,43 +334,7 @@ public class Schedule extends Activity implements OnClickListener {
                 fmToggle.setTextColor(Color.BLACK);
                 channel = DIGITAL;
                 myList = getScheduleData(prev);
-                listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                    private View row;
-                    private LayoutInflater inflater = getLayoutInflater();
-                    private TextView show;
-                    private TextView dj;
-                    private TextView time;
-                    private ImageButton favoriteButton;
-
-                    @Override
-                    public View getView(int position, View convertView, ViewGroup parent) {
-                        row = inflater.inflate(R.layout.schedule_item, parent, false);
-                        show = (TextView) row.findViewById(R.id.recycshow);
-                        show.setText(myList.get(position).getShow());
-
-                        dj = (TextView) row.findViewById(R.id.recychost);
-                        dj.setText(myList.get(position).getHost());
-
-                        time = (TextView) row.findViewById(R.id.time);
-                        time.setText(myList.get(position).getTime());
-
-                        if(show.getText().equals(currShow.sName) && position == hourOfDay) {
-                            row.setBackgroundColor(Color.LTGRAY);
-                        }
-
-                        favoriteButton = (ImageButton) row.findViewById(R.id.favorite);
-                        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                        SharedPreferences.Editor editor = prefs.edit();
-                        Set<String> shows = prefs.getStringSet("favorite_shows",null);
-                        if (shows != null) {
-                            if (shows.contains(show.getText())){
-                                favoriteButton.setImageResource(R.drawable.favorited);
-                            }
-                        }
-
-                        return row;
-                    }
-                });
+                listView.setAdapter(getAdapter(this));
             }
         } else {
             prev.setBackgroundColor(Color.parseColor("#fafafa"));
@@ -366,54 +345,7 @@ public class Schedule extends Activity implements OnClickListener {
             }
             v.setBackgroundColor(Color.parseColor("#ff6b6b"));
 
-            listView.setAdapter(new ArrayAdapter<ListItem>(this, 0, myList) {
-                private View row;
-                private LayoutInflater inflater = getLayoutInflater();
-                private TextView show;
-                private TextView dj;
-                private TextView time;
-                private ImageButton favoriteButton;
-                private boolean favorited;
-
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent) {
-                    row = inflater.inflate(R.layout.schedule_item, parent, false);
-                    show = (TextView) row.findViewById(R.id.recycshow);
-                    show.setText(myList.get(position).getShow());
-
-                    dj = (TextView) row.findViewById(R.id.recychost);
-                    dj.setText(myList.get(position).getHost());
-
-                    time = (TextView) row.findViewById(R.id.time);
-                    time.setText(myList.get(position).getTime());
-
-                    if(show.getText().equals(currShow.sName) && position == hourOfDay) {
-                        row.setBackgroundColor(Color.LTGRAY);
-                    }
-
-                    favoriteButton = (ImageButton) row.findViewById(R.id.favorite);
-                    favorited = false;
-                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                    SharedPreferences.Editor editor = prefs.edit();
-                    Set<String> shows = prefs.getStringSet("favorite_shows",null);
-                    if (shows != null) {
-                        if (shows.contains(show.getText())){
-                            favoriteButton.setImageResource(R.drawable.favorited);
-                        }
-                    }
-
-                     /* FOR UNDERLINE
-                SpannableString content = new SpannableString(myList.get(position).getShow());
-                content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-                show.setText(content);*/
-
-                    return row;
-                }
-
-
-
-
-            });
+            listView.setAdapter(getAdapter(this));
         }
     }
 
