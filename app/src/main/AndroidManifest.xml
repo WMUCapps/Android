@@ -13,6 +13,12 @@
         android:theme="@style/AppTheme"
         android:screenOrientation = "portrait">
 
+        <receiver android:name="wmuc_radio.MainActivity$MusicIntentReceiver">
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="wmuc_radio.Splash"
             android:label="@string/app_name"
@@ -23,11 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <receiver android:name=".MusicIntentReceiver">
-                <intent-filter>
-                    <action android:name="android.media.AUDIO_BECOMING_NOISY" />
-                </intent-filter>
-            </receiver>
+
         </activity>
 
         <meta-data
